@@ -10,7 +10,7 @@ interface SectionHeaderProps {
   className?: string
 }
 
-/** One header style for every homepage section: gold kicker, serif title with a gold italic accent, plain subtitle. */
+/** One header style for every homepage section: gold kicker, serif title with a gold accent, plain subtitle. */
 export function SectionHeader({
   kicker,
   title,

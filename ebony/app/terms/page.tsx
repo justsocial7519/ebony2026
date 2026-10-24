@@ -1,5 +1,6 @@
 import { Navbar } from "@/components/navbar"
 import { Footer } from "@/components/footer"
+import { EnquiryModal } from "@/components/enquiry-modal"
 import { BRAND } from "@/lib/content"
 
 export const metadata = {
@@ -56,6 +57,8 @@ export default function TermsPage() {
           </div>
         </div>
       </main>
+
+      <EnquiryModal />
 
       <Footer />
     </div>

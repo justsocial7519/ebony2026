@@ -23,7 +23,7 @@ export function WardrobesSection() {
             >
               <Image
                 src={type.image}
-                alt={type.name}
+                alt={type.alt ?? type.name}
                 fill
                 className="object-cover transition-transform duration-[1.2s] ease-out group-hover:scale-[1.06]"
                 sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 33vw"

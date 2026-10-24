@@ -97,7 +97,7 @@ export function KitchenStylesSection() {
                     ))}
                   </span>
 
-                  {/* "Get this look" appears on hover */}
+                  {/* "Make This Mine" appears on hover */}
                   <span className="absolute inset-x-4 bottom-4 hidden lg:flex justify-end translate-y-3 opacity-0 group-hover:translate-y-0 group-hover:opacity-100 transition-all duration-500">
                     <span className="inline-flex items-center gap-1.5 px-4 py-2 rounded-full bg-slate-950 text-white text-sm font-semibold">
                       <Plus className="w-4 h-4" />

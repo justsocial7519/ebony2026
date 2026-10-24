@@ -21,7 +21,7 @@ export function StudioCtaSection() {
 
     const cleanedPhone = form.phone.replace(/\D/g, "")
     if (cleanedPhone.length < 10) {
-      setError("Please enter your 10-digit mobile number.")
+      setError("Please enter a valid mobile number so we can reach you.")
       return
     }
 
@@ -45,7 +45,7 @@ export function StudioCtaSection() {
         setError(data.error || "Something went wrong. Please try again.")
       }
     } catch {
-      setError(`We couldn't send that. Please call us on ${BRAND.phone}.`)
+      setError(`That did not go through. Please call us on ${BRAND.phone}.`)
     } finally {
       setLoading(false)
     }
@@ -58,7 +58,7 @@ export function StudioCtaSection() {
     <section id="consultation" className="relative py-24 sm:py-32 bg-[#0A0D14] text-white overflow-hidden">
       <div className="absolute inset-0 z-0">
         <Image
-          src="/img/living-room-showcase.jpg"
+          src="/img/kitchen-glass-glow.jpg"
           alt=""
           fill
           className="object-cover brightness-[0.22] contrast-[1.1]"
@@ -115,8 +115,8 @@ export function StudioCtaSection() {
                 </div>
                 <h3 className="font-serif text-3xl text-white font-normal">Thank you, {form.name}!</h3>
                 <p className="text-white/80 text-base max-w-sm mx-auto leading-relaxed">
-                  Our team will call you on <span className="text-[#D8B97F] font-semibold">{form.phone}</span> soon to
-                  plan your visit.
+                  We will ring you on <span className="text-[#D8B97F] font-semibold">{form.phone}</span> soon to plan
+                  your space.
                 </p>
               </div>
             ) : (
@@ -188,7 +188,7 @@ export function StudioCtaSection() {
                     disabled={loading}
                     className="group w-full py-4 rounded-full bg-[#C5A572] hover:bg-[#D4B582] disabled:opacity-60 text-slate-950 text-base font-semibold transition-colors flex items-center justify-center gap-2 cursor-pointer shadow-lg shadow-amber-500/20 active:scale-[0.99]"
                   >
-                    {loading ? "Sending…" : primaryBtn}
+                    {loading ? "Reserving…" : primaryBtn}
                     {!loading && <ArrowRight className="w-4 h-4 transition-transform duration-300 group-hover:translate-x-1" />}
                   </button>
                 </form>

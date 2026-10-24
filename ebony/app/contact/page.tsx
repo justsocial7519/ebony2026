@@ -10,7 +10,7 @@ import { BRAND, CITIES } from "@/lib/content"
 export const metadata = {
   title: "Contact Ebony — Call, WhatsApp or Visit Our Raipur Studio",
   description:
-    "Talk to Ebony about your new kitchen or wardrobe. Call, WhatsApp, visit our Raipur studio, or ask us to call you back.",
+    "Talk to Ebony about your new kitchen or wardrobe. Call, WhatsApp, visit our Raipur studio, or tell us about your space and we will ring you.",
 }
 
 const WHATSAPP_URL = "https://wa.me/917974209352?text=Hello%20Ebony%2C%20I%20would%20like%20to%20talk%20about%20my%20home."
@@ -27,7 +27,7 @@ const QUICK = [
   },
   {
     label: "WhatsApp",
-    value: "Send us a message",
+    value: "Chat with us",
     note: "Share photos of your space",
     href: WHATSAPP_URL,
     icon: MessageCircle,
@@ -46,7 +46,7 @@ const QUICK = [
 ]
 
 const NEXT_STEPS = [
-  { title: "We call you", line: "A friendly chat about your home, your needs and your budget." },
+  { title: "We ring you", line: "A friendly chat about your home, your needs and your budget." },
   { title: "Home visit", line: "We come over and measure every wall before we design." },
   { title: "See it in 3D", line: "You see exactly how your new kitchen will look before we make it." },
 ]
@@ -125,7 +125,7 @@ export default function ContactPage() {
                 <div className="relative aspect-[16/10]">
                   <Image
                     src="/img/kitchen-island-real.jpg"
-                    alt="An island kitchen made by Ebony"
+                    alt="Display kitchen with a curved two-level island, bar stools and a lit arch"
                     fill
                     className="object-cover"
                     sizes="(max-width: 1024px) 100vw, 40vw"

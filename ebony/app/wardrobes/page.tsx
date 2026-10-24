@@ -2,15 +2,15 @@ import Image from "next/image"
 import Link from "next/link"
 import { Navbar } from "@/components/navbar"
 import { Footer } from "@/components/footer"
-import { WardrobesSection } from "@/components/wardrobes-section"
 import { EnquiryModal } from "@/components/enquiry-modal"
+import { WardrobesSection } from "@/components/wardrobes-section"
 import { MobileStickyBar } from "@/components/mobile-sticky-bar"
 import { ArrowUpRight, CheckCircle2, Sparkles, Layers, SlidersHorizontal } from "lucide-react"
 
 export const metadata = {
   title: "Bespoke Wardrobes — EBONY Modular Interiors",
   description:
-    "Explore bespoke sliding and hinged wardrobe systems with Italian damping, internal velvet jewelry organizers, pull-out mirrors, and floor-to-ceiling profiles up to 3 meters.",
+    "Explore bespoke sliding and hinged wardrobe systems with Italian damping, internal velvet jewelry organizers, pull-out mirrors, and floor-to-ceiling profiles made to your room height.",
 }
 
 export default function WardrobesPage() {
@@ -63,7 +63,7 @@ export default function WardrobesPage() {
           </div>
         </section>
 
-        {/* 3 Core Advantages */}
+        {/* Core Advantages */}
         <section className="py-16 bg-[#FAFAFA] border-b border-slate-200">
           <div className="max-w-7xl mx-auto px-5 sm:px-8 lg:px-12">
             <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
@@ -76,7 +76,7 @@ export default function WardrobesPage() {
                     Floor-to-Ceiling Custom Fit
                   </h3>
                   <p className="font-sans text-xs text-slate-600 font-normal leading-relaxed">
-                    Custom built to your room height with zero wasted space above. Seamless profiles eliminate dust ledges and create a grand, built-in look.
+                    Custom built to your room height with no wasted space above. Seamless profiles eliminate dust ledges and create a grand, built-in look.
                   </p>
                 </div>
               </div>
@@ -90,7 +90,7 @@ export default function WardrobesPage() {
                     Concealed Sensor LED
                   </h3>
                   <p className="font-sans text-xs text-slate-600 font-normal leading-relaxed">
-                    Warm 3000K vertical LED channels integrated into the aluminum stiles ignite automatically when doors slide or hinge open.
+                    Warm vertical LED channels integrated into the aluminum stiles ignite automatically when doors slide or hinge open.
                   </p>
                 </div>
               </div>
@@ -123,8 +123,8 @@ export default function WardrobesPage() {
             <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
               <div className="lg:col-span-6 relative h-[420px] sm:h-[520px] rounded-3xl overflow-hidden shadow-xl">
                 <Image
-                  src="/img/pullout-mirror-real.jpg"
-                  alt="EBONY pull-out rotating wardrobe mirror"
+                  src="/img/collections/dressing-room-full-mirror.jpg"
+                  alt="Dressing room with a tall full-length mirror panel beside the storage units"
                   fill
                   className="object-cover"
                   sizes="(max-width: 1024px) 100vw, 50vw"
@@ -157,7 +157,7 @@ export default function WardrobesPage() {
                 </ul>
 
                 <Link
-                  href="/contact"
+                  href="/collections#wardrobes"
                   className="inline-flex items-center gap-2 px-7 py-3.5 rounded-full bg-slate-950 hover:bg-[#B8923A] text-white font-mono text-xs uppercase tracking-wider font-bold transition-all duration-300"
                 >
                   <span>Curate Your Storage Suite</span>
@@ -172,13 +172,13 @@ export default function WardrobesPage() {
         <section className="py-20 bg-[#0B0F19] text-white text-center">
           <div className="max-w-4xl mx-auto px-5 sm:px-8">
             <span className="font-mono text-xs uppercase tracking-[0.12em] text-[#B8923A] font-bold block mb-3">
-              ELEVATE YOUR BEDROOM
+              MADE FOR YOUR BEDROOM
             </span>
             <h2 className="font-serif text-3xl sm:text-5xl text-white font-normal mb-6">
               Customized to Your Exact Ceiling Height.
             </h2>
             <p className="font-sans text-sm sm:text-base text-white/70 font-normal leading-relaxed mb-8 max-w-xl mx-auto">
-              Our master craftsmen build to 0.1mm tolerances. Visit our showroom or request a home space audit in Raipur and across India.
+              Our master craftsmen build to your exact measurements. Visit our showroom or invite a designer to measure your space in Raipur and across India.
             </p>
             <Link
               href="/contact"

@@ -15,7 +15,7 @@ export function CollectionsSection() {
             <span className="font-mono text-[13px] uppercase tracking-[0.12em] text-[#B8923A] font-semibold block mb-3">
               OUR COLLECTIONS
             </span>
-            <h2 className="font-serif italic text-3xl sm:text-5xl md:text-6xl text-slate-950 font-normal tracking-tight">
+            <h2 className="font-serif text-3xl sm:text-5xl md:text-6xl text-slate-950 font-normal tracking-tight">
               Spaces designed <br className="hidden sm:block" />
               for modern living.
             </h2>
@@ -64,7 +64,7 @@ export function CollectionsSection() {
               {/* Title & Arrow Row */}
               <div className="flex items-center justify-between gap-3 pt-1">
                 <div>
-                  <h3 className="font-serif italic text-xl sm:text-2xl text-slate-950 group-hover:text-[#855E15] transition-colors">
+                  <h3 className="font-serif text-xl sm:text-2xl text-slate-950 group-hover:text-[#855E15] transition-colors">
                     {item.title}
                   </h3>
                   <p className="text-slate-500 text-xs font-normal mt-0.5">

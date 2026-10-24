@@ -2,9 +2,9 @@ import Image from "next/image"
 import Link from "next/link"
 import { Navbar } from "@/components/navbar"
 import { Footer } from "@/components/footer"
+import { EnquiryModal } from "@/components/enquiry-modal"
 import { HardwareBrandsSection } from "@/components/hardware-brands-section"
 import { InternalFittingsSection } from "@/components/internal-fittings-section"
-import { EnquiryModal } from "@/components/enquiry-modal"
 import { MobileStickyBar } from "@/components/mobile-sticky-bar"
 import { ArrowUpRight, Cpu, ShieldCheck, Cog } from "lucide-react"
 
@@ -51,7 +51,7 @@ export default function HardwarePage() {
                   href="#brands"
                   className="px-6 py-3.5 rounded-full bg-[#B8923A] hover:bg-[#C99E4B] text-slate-950 font-mono text-xs uppercase tracking-wider font-bold transition-all duration-300 shadow-lg"
                 >
-                  View Hardware Brands
+                  Meet the Brands
                 </Link>
                 <Link
                   href="/contact"
@@ -64,7 +64,7 @@ export default function HardwarePage() {
           </div>
         </section>
 
-        {/* 3 Engineering Standards */}
+        {/* Engineering Standards */}
         <section className="py-16 bg-[#FAFAFA] border-b border-slate-200">
           <div className="max-w-7xl mx-auto px-5 sm:px-8 lg:px-12">
             <div className="grid grid-cols-1 md:grid-cols-3 gap-8">

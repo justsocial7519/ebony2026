@@ -23,6 +23,8 @@ export interface HomeContent {
       description: string
       href: string
       image: string
+      /** Describes what the photo actually shows */
+      alt?: string
     }[]
   }
   collections: {
@@ -36,6 +38,8 @@ export interface HomeContent {
       line: string
       tag: string
       image: string
+      /** Describes what the photo actually shows */
+      alt?: string
       href: string
     }[]
   }
@@ -49,6 +53,8 @@ export interface HomeContent {
       title: string
       line: string
       image: string
+      /** Describes what the photo actually shows */
+      alt?: string
       tag: string
     }[]
   }
@@ -98,6 +104,8 @@ export interface HomeContent {
       name: string
       line: string
       image: string
+      /** Describes what the photo actually shows */
+      alt?: string
       href: string
     }[]
   }
@@ -111,6 +119,8 @@ export interface HomeContent {
       title: string
       line: string
       image: string
+      /** Describes what the photo actually shows */
+      alt?: string
     }[]
     brandsKicker: string
     trustedBrands: string[]
@@ -124,9 +134,12 @@ export interface HomeContent {
     items: {
       id: string
       title: string
-      location: string
+      /** Short note on what makes the look */
+      tag: string
       category: string
       image: string
+      /** Describes what the photo actually shows */
+      alt?: string
     }[]
   }
   testimonials: {
@@ -154,6 +167,8 @@ export interface HomeContent {
       line: string
       icon: string
       image: string
+      /** Describes what the photo actually shows */
+      alt?: string
     }[]
     footnote: {
       text: string
@@ -185,7 +200,7 @@ export const HOME_CONTENT: HomeContent = {
   trustStrip: [
     { title: "Bespoke Design", subtitle: "Tailored to your family's routine & space", icon: "Compass" },
     { title: "Curated Finishes", subtitle: "Anti-scratch, moisture & heat resistant textures", icon: "Sparkles" },
-    { title: "Machine Precision", subtitle: "Factory-calibrated with 0.1mm joinery accuracy", icon: "Layers" },
+    { title: "Machine Precision", subtitle: "Factory-cut for tight, accurate joints", icon: "Layers" },
     { title: "Dedicated Care", subtitle: "Direct studio guidance from measurement to handover", icon: "ShieldCheck" },
   ],
 
@@ -210,6 +225,7 @@ export const HOME_CONTENT: HomeContent = {
         description: "Room for every outfit, with doors that close softly.",
         href: "/wardrobes",
         image: "/img/wardrobe-bespoke-real.jpg",
+        alt: "Floor-to-ceiling wardrobe with white framed glass doors and long brass handles",
       },
       {
         id: "closets",
@@ -218,6 +234,7 @@ export const HOME_CONTENT: HomeContent = {
         description: "Open shelves, soft lights and a place for everything.",
         href: "/walk-in-closets",
         image: "/img/walk-in-closet-luxury.jpg",
+        alt: "Walk-in closet with lit glass-front wardrobes and a marble-topped island in the middle",
       },
       {
         id: "living-bar",
@@ -226,6 +243,7 @@ export const HOME_CONTENT: HomeContent = {
         description: "Stylish units for movie nights and weekend guests.",
         href: "/collections",
         image: "/img/bar-unit-luxury.jpg",
+        alt: "Arched bar unit with lit bottle shelves, a wine rack and drawers between two gold columns",
       },
     ],
   },
@@ -241,7 +259,8 @@ export const HOME_CONTENT: HomeContent = {
         name: "L-Shaped",
         line: "Uses two walls. Great for corners and most Indian homes.",
         tag: "Most popular",
-        image: "/img/kitchen-contemporary-real.jpg",
+        image: "/img/collections/kitchen-l-shaped-white.jpg",
+        alt: "L-shaped kitchen with white gloss cabinets along two walls and a steel range cooker",
         href: "/kitchens#l-shape",
       },
       {
@@ -249,7 +268,8 @@ export const HOME_CONTENT: HomeContent = {
         name: "U-Shaped",
         line: "Storage on three sides. Perfect for big families who cook a lot.",
         tag: "Most storage",
-        image: "/img/kitchen-layout-real.jpg",
+        image: "/img/kitchen-contemporary-real.jpg",
+        alt: "U-shaped kitchen with cabinets on three walls, white framed doors and lit tall glass units",
         href: "/kitchens#u-shape",
       },
       {
@@ -266,6 +286,7 @@ export const HOME_CONTENT: HomeContent = {
         line: "A counter in the middle to cook, chat and eat together.",
         tag: "Big & open",
         image: "/img/kitchen-island-real.jpg",
+        alt: "Island kitchen with a curved two-level island, bar stools and a lit arch behind",
         href: "/kitchens#island",
       },
       {
@@ -273,7 +294,8 @@ export const HOME_CONTENT: HomeContent = {
         name: "Parallel",
         line: "Two counters facing each other. Quick and easy to cook in.",
         tag: "Chef's favourite",
-        image: "/img/kitchen-twotone-twist.jpg",
+        image: "/img/collections/kitchen-parallel-peach.jpg",
+        alt: "Parallel kitchen with two facing runs of peach cabinets and a window at the far end",
         href: "/kitchens#parallel",
       },
       {
@@ -281,7 +303,8 @@ export const HOME_CONTENT: HomeContent = {
         name: "Open Kitchen",
         line: "Opens into your living room, so you're never cut off from family.",
         tag: "Modern living",
-        image: "/img/kitchen-garden-green.jpg",
+        image: "/img/collections/kitchen-open-plan-living.jpg",
+        alt: "Open kitchen with wood cabinets that flows into a dining table and the living room sofas",
         href: "/kitchens#open",
       },
     ],
@@ -298,20 +321,23 @@ export const HOME_CONTENT: HomeContent = {
         title: "For Small Homes",
         line: "Smart storage that makes a small kitchen feel big.",
         image: "/img/kitchen-small-spaces.jpg",
+        alt: "Compact L-shaped kitchen with a tall pull-out pantry open beside the oven",
         tag: "Small spaces",
       },
       {
         id: "luxury-homes",
         title: "For Big Homes",
-        line: "Rich finishes and soft lighting that feel like a five-star hotel.",
-        image: "/img/kitchen-glass-glow.jpg",
+        line: "Rich finishes and soft lighting that feel like a luxury hotel.",
+        image: "/img/project-shankar-nagar.jpg",
+        alt: "Large walnut kitchen with a stone island, four bar stools and warm cove lighting",
         tag: "Luxury",
       },
       {
         id: "budget-homes",
         title: "Beautiful on a Budget",
         line: "The premium look you want, at a price that works for you.",
-        image: "/img/kitchen-curves-arches.jpg",
+        image: "/img/collections/kitchen-wood-white.jpg",
+        alt: "Simple kitchen with white wall cabinets, a wood-look worktop and backsplash and a steel sink",
         tag: "Best value",
       },
       {
@@ -319,20 +345,23 @@ export const HOME_CONTENT: HomeContent = {
         title: "Made for Indian Cooking",
         line: "Tough surfaces and deep drawers for daily tadka and masala.",
         image: "/img/kitchen-rasoi-special.jpg",
+        alt: "Kitchen with a granite worktop, gas hob and spice pull-outs open below",
         tag: "Daily cooking",
       },
       {
         id: "open-airy",
         title: "Open & Airy",
         line: "Light colours and open shelves that feel calm and fresh.",
-        image: "/img/kitchen-style-boho.jpg",
+        image: "/img/hero-kitchen.jpg",
+        alt: "Bright kitchen with cream cabinets, open shelves and tall windows onto a garden",
         tag: "Calm & bright",
       },
       {
         id: "smart-storage",
         title: "Smart Storage",
         line: "A place for everything, so your counters stay clear.",
-        image: "/img/kitchen-colour-pop.jpg",
+        image: "/img/collections/kitchen-drawer-organiser.jpg",
+        alt: "Open kitchen drawer with a cutlery organiser and a knife insert",
         tag: "Clutter-proof",
       },
     ],
@@ -359,7 +388,7 @@ export const HOME_CONTENT: HomeContent = {
         num: "03",
         title: "Start cooking",
         line: "Swift, seamless fitting.",
-        desc: "Our master fitting team installs everything cleanly at your home — precision aligned, dust-free, and move-in ready.",
+        desc: "Our master fitting team installs everything cleanly at your home — precisely aligned, tidy and move-in ready.",
       },
     ],
     cta: "Reserve Your Design Session",
@@ -369,8 +398,8 @@ export const HOME_CONTENT: HomeContent = {
     kicker: "Kitchen styles",
     title: "Find the look that",
     accent: "feels like you",
-    subtitle: "Twelve looks our families love. Tap the one you like and we'll make it yours.",
-    showMore: "Show all 12 styles",
+    subtitle: "Looks our families love. Tap the one you like and we'll make it yours.",
+    showMore: "Show all styles",
     showLess: "Show fewer styles",
   },
 
@@ -401,7 +430,7 @@ export const HOME_CONTENT: HomeContent = {
         colorHint: "#C2B6A6",
         tag: "Hard-wearing",
         image: "/img/collections/kitchen-wood-white.jpg",
-        finishDetail: "1mm Calibrated HPL · Thermal Healing",
+        finishDetail: "High-Pressure Laminate · Scratch Resistant",
       },
       {
         id: "acrylic",
@@ -410,7 +439,7 @@ export const HOME_CONTENT: HomeContent = {
         colorHint: "#1E293B",
         tag: "Ultra reflective",
         image: "/img/kitchen-detail-real.jpg",
-        finishDetail: "Optical 2mm Acrylic · UV Resistant",
+        finishDetail: "Optical Acrylic · UV Resistant",
       },
       {
         id: "glass",
@@ -437,7 +466,7 @@ export const HOME_CONTENT: HomeContent = {
         colorHint: "#7E7468",
         tag: "Heat & stain proof",
         image: "/img/kitchen-island-real.jpg",
-        finishDetail: "Engineered Quartz · 0% Porosity",
+        finishDetail: "Engineered Quartz · Non-Porous",
       },
       {
         id: "metal",
@@ -500,25 +529,29 @@ export const HOME_CONTENT: HomeContent = {
         id: "drawers",
         title: "Soft-Close Drawers",
         line: "No more banging. Drawers close gently, even when full of pots.",
-        image: "/img/hardware-fittings-luxury.jpg",
+        image: "/img/collections/kitchen-soft-close-drawers.jpg",
+        alt: "White kitchen drawers pulled open on full-extension runners",
       },
       {
         id: "lift-up",
         title: "Lift-Up Doors",
         line: "Top cabinets open upward and stay open. No bumping your head.",
-        image: "/img/craftsmanship-detail.jpg",
+        image: "/img/hardware-fittings-luxury.jpg",
+        alt: "Wall cabinet door lifted up and held open by a lift-up fitting",
       },
       {
         id: "magic-corner",
         title: "Corner Pull-Outs",
         line: "Corner shelves slide out, so nothing gets lost at the back.",
-        image: "/img/kitchen-detail-real.jpg",
+        image: "/img/collections/kitchen-corner-pull-out.jpg",
+        alt: "Hand pulling a curved corner shelf out of a kitchen base cabinet",
       },
       {
         id: "mirror",
         title: "Pull-Out Mirror",
         line: "A full-length mirror that slides out of your wardrobe.",
-        image: "/img/pullout-mirror-real.jpg",
+        image: "/img/collections/dressing-room-full-mirror.jpg",
+        alt: "Dressing room with a tall full-length mirror panel beside the storage units",
       },
     ],
     brandsKicker: "Fittings from brands you can trust",
@@ -538,12 +571,12 @@ export const HOME_CONTENT: HomeContent = {
       { id: "living", label: "Living Room" },
     ],
     items: [
-      { id: "proj-1", title: "Island Kitchen", location: "Shankar Nagar, Raipur", category: "kitchen", image: "/img/kitchen-island-real.jpg" },
-      { id: "proj-2", title: "Floor-to-Ceiling Sliding Wardrobe", location: "VIP Road, Raipur", category: "wardrobe", image: "/img/wardrobe-bespoke-real.jpg" },
-      { id: "proj-3", title: "Walk-in Closet with Glass Doors", location: "Civil Lines, Raipur", category: "closet", image: "/img/walk-in-closet-luxury.jpg" },
-      { id: "proj-4", title: "Glowing Bar Unit", location: "Devendra Nagar, Raipur", category: "living", image: "/img/bar-unit-luxury.jpg" },
-      { id: "proj-5", title: "Modern L-Shaped Kitchen", location: "Bilaspur", category: "kitchen", image: "/img/kitchen-contemporary-real.jpg" },
-      { id: "proj-6", title: "TV Unit with Wood Panels", location: "Raipur", category: "living", image: "/img/living-room-showcase.jpg" },
+      { id: "proj-1", title: "Island Kitchen", tag: "Curved island and lit arch", category: "kitchen", image: "/img/kitchen-island-real.jpg", alt: "Island kitchen with a curved two-level island, bar stools and a lit arch" },
+      { id: "proj-2", title: "Floor-to-Ceiling Glass-Door Wardrobe", tag: "Framed glass and brass handles", category: "wardrobe", image: "/img/wardrobe-bespoke-real.jpg", alt: "Floor-to-ceiling wardrobe with white framed glass doors and long brass handles" },
+      { id: "proj-3", title: "Walk-in Closet with Glass Doors", tag: "Lit cabinets and a centre island", category: "closet", image: "/img/walk-in-closet-luxury.jpg", alt: "Walk-in closet with lit glass-front wardrobes and a marble-topped island" },
+      { id: "proj-4", title: "Glowing Bar Unit", tag: "Lit shelves and a wine rack", category: "living", image: "/img/bar-unit-luxury.jpg", alt: "Arched bar unit with lit bottle shelves and a wine rack between two gold columns" },
+      { id: "proj-5", title: "L-Shaped Kitchen with Island", tag: "Wood grain with tall oven units", category: "kitchen", image: "/img/kitchen-layout-real.jpg", alt: "L-shaped kitchen with wood-grain base units, tall oven units and a white island" },
+      { id: "proj-6", title: "TV Unit with Wood Panels", tag: "Oak panels over a floating unit", category: "living", image: "/img/collections/tv-unit-white-oak.jpg", alt: "Wall-mounted TV on oak wood panels above a floating white TV unit" },
     ],
   },
 
@@ -552,7 +585,7 @@ export const HOME_CONTENT: HomeContent = {
     title: "In their",
     accent: "own words",
     subtitle: "Real words from families who trusted us with their homes.",
-    // Verbatim reviews from the live site (brief/content-inventory.md §6). Do not edit the quotes.
+    // Reviews from the live site (brief/content-inventory.md §6). Quotes are verbatim excerpts, trimmed only to drop numeric claims. Do not reword them.
     items: [
       {
         id: "t-1",
@@ -609,14 +642,15 @@ export const HOME_CONTENT: HomeContent = {
     kicker: "Why Ebony",
     title: "Why families",
     accent: "choose us",
-    subtitle: "Seven simple promises we keep in every home.",
+    subtitle: "Simple promises we keep in every home.",
     points: [
       {
         id: "lifetime-ss304",
         title: "Rust-Proof SS 304 Guarantee",
-        line: "Every SS 304 stainless steel basket and wet-zone fitting is backed by our rust-free promise.",
+        line: "Every SS 304 stainless steel basket and wet-zone fitting is backed by our rust-proof promise.",
         icon: "ShieldCheck",
-        image: "/img/why-ss304-basket.jpg",
+        image: "/img/collections/kitchen-steel-wire-baskets.jpg",
+        alt: "Stainless steel wire basket pulled out of a kitchen base cabinet",
       },
       {
         id: "warranty",
@@ -624,6 +658,7 @@ export const HOME_CONTENT: HomeContent = {
         line: "Multi-point precision checks and certified marine-grade joinery engineered to endure everyday Indian living.",
         icon: "Award",
         image: "/img/craftsmanship-detail.jpg",
+        alt: "Carpenter's hands chiselling a wooden joint at a workbench",
       },
       {
         id: "materials",
@@ -631,6 +666,7 @@ export const HOME_CONTENT: HomeContent = {
         line: "Waterproof plywood, branded hardware and SS 304 steel. You see every sample first.",
         icon: "Layers",
         image: "/img/core-materials-luxury.jpg",
+        alt: "Samples of waterproof plywood, moisture-resistant board and stainless steel on a table",
       },
       {
         id: "after-sales",
@@ -638,6 +674,7 @@ export const HOME_CONTENT: HomeContent = {
         line: "A hinge to adjust or a drawer to fix later? Call us and our team comes back to help.",
         icon: "Wrench",
         image: "/img/why-after-sales.jpg",
+        alt: "Technician adjusting the hinge of a kitchen wall cabinet door",
       },
       {
         id: "delivery",
@@ -645,20 +682,23 @@ export const HOME_CONTENT: HomeContent = {
         line: "Everything is made in our factory, so fitting is quick and clean, with almost no dust.",
         icon: "Clock",
         image: "/img/process-engineering.jpg",
+        alt: "Clean factory floor with a CNC machine cutting cabinet panels",
       },
       {
         id: "pricing",
         title: "Clear, Honest Pricing",
         line: "You get transparent, itemized investment estimates upfront. No hidden costs, no surprises.",
         icon: "BadgeCheck",
-        image: "/img/kitchen-curves-arches.jpg",
+        image: "/img/quote-review-at-home.jpg",
+        alt: "Fitter going through a written quote with a homeowner at her kitchen table",
       },
       {
         id: "visit",
         title: "Bespoke On-Site Consultation",
         line: "We visit your home, measure every wall and curate the design in immersive 3D.",
         icon: "Ruler",
-        image: "/img/kitchen-layout-real.jpg",
+        image: "/img/designer-home-consultation.jpg",
+        alt: "Designer showing plans to a homeowner on the sofa in his living room",
       },
     ],
     footnote: {

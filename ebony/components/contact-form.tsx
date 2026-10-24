@@ -24,7 +24,7 @@ export function ContactForm() {
     setError("")
 
     if (form.phone.replace(/\D/g, "").length < 10) {
-      setError("Please enter your 10-digit mobile number so we can call you back.")
+      setError("Please enter a valid mobile number so we can ring you.")
       return
     }
 
@@ -42,7 +42,7 @@ export function ContactForm() {
         setError(data.error || "Something went wrong. Please try again, or message us on WhatsApp.")
       }
     } catch {
-      setError(`We couldn't send that. Please call us on ${BRAND.phone} or message us on WhatsApp.`)
+      setError(`That did not go through. Please call us on ${BRAND.phone} or message us on WhatsApp.`)
     } finally {
       setLoading(false)
     }
@@ -179,7 +179,7 @@ export function ContactForm() {
           value={form.message}
           onChange={(e) => setForm((s) => ({ ...s, message: e.target.value }))}
           className={cn(fieldClass, "resize-none")}
-          placeholder="For example: a 2BHK flat, moving in next month, we love light wood colours…"
+          placeholder="For example: a flat we are moving into soon, we love light wood colours…"
         />
       </div>
 

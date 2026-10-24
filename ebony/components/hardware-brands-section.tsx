@@ -22,11 +22,11 @@ export function HardwareBrandsSection() {
             </h2>
           </div>
           <p className="font-sans text-sm sm:text-base text-slate-600 max-w-md font-normal leading-relaxed">
-            We partner with Europe and India&apos;s most rigorous motion engineering brands to ensure every hinge, slide, and lift lasts 200,000+ cycles.
+            We partner with Europe and India&apos;s most rigorous motion engineering brands to ensure every hinge, slide, and lift stays smooth and quiet through years of daily use.
           </p>
         </div>
 
-        {/* 5 Brands Clean Grid */}
+        {/* Brands Clean Grid */}
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-5 gap-6">
           {HARDWARE_BRANDS.map((brand) => (
             <div
@@ -69,7 +69,7 @@ export function HardwareBrandsSection() {
             href="/hardware"
             className="inline-flex items-center gap-2 font-mono text-xs uppercase tracking-wider font-bold text-slate-950 hover:text-[#B8923A] transition-colors"
           >
-            <span>Read Complete Hardware Specifications</span>
+            <span>Explore the Hardware</span>
             <ArrowUpRight className="w-4 h-4" />
           </Link>
         </div>

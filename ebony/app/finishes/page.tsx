@@ -2,9 +2,9 @@ import Image from "next/image"
 import Link from "next/link"
 import { Navbar } from "@/components/navbar"
 import { Footer } from "@/components/footer"
+import { EnquiryModal } from "@/components/enquiry-modal"
 import { SurfaceFinishesSection } from "@/components/surface-finishes-section"
 import { CoreMaterialsSection } from "@/components/core-materials-section"
-import { EnquiryModal } from "@/components/enquiry-modal"
 import { MobileStickyBar } from "@/components/mobile-sticky-bar"
 import { ArrowUpRight, Palette, Layers, Sparkles } from "lucide-react"
 
@@ -43,7 +43,7 @@ export default function FinishesPage() {
                 <span className="not-italic text-[#D8B97F]">Enduring Tactile Luxury.</span>
               </h1>
               <p className="font-sans text-sm sm:text-base text-white/80 font-normal leading-relaxed mb-8 max-w-2xl">
-                From 6-sided seamless Italian PU lacquers and optical acrylics to indestructible SS 304 surgical stainless steel and BWP Marine Plywood. Explore materials engineered for a lifetime.
+                From seamless all-round Italian PU lacquers and optical acrylics to indestructible SS 304 surgical stainless steel and BWP Marine Plywood. Explore materials engineered for a lifetime.
               </p>
 
               <div className="flex flex-wrap items-center gap-4">
@@ -51,7 +51,7 @@ export default function FinishesPage() {
                   href="#finishes-section"
                   className="px-6 py-3.5 rounded-full bg-[#B8923A] hover:bg-[#C99E4B] text-slate-950 font-mono text-xs uppercase tracking-wider font-bold transition-all duration-300 shadow-lg"
                 >
-                  Explore Finishes Matrix
+                  Browse the Finishes
                 </Link>
                 <Link
                   href="/contact"
@@ -64,7 +64,7 @@ export default function FinishesPage() {
           </div>
         </section>
 
-        {/* 3 Pillars */}
+        {/* Pillars */}
         <section className="py-16 bg-[#FAFAFA] border-b border-slate-200">
           <div className="max-w-7xl mx-auto px-5 sm:px-8 lg:px-12">
             <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
@@ -88,7 +88,7 @@ export default function FinishesPage() {
                 </div>
                 <div>
                   <h3 className="font-serif text-lg text-slate-950 font-normal mb-1">
-                    Zero-Joint Laser Edging
+                    Invisible Laser Edging
                   </h3>
                   <p className="font-sans text-xs text-slate-600 font-normal leading-relaxed">
                     German laser edge-banding seals panel borders invisibly with waterproof polymer fusion, eliminating dirt lines and water ingress.
@@ -113,10 +113,10 @@ export default function FinishesPage() {
           </div>
         </section>
 
-        {/* 8 Finishes Interactive Swatch Matrix */}
+        {/* Interactive Swatch Matrix */}
         <SurfaceFinishesSection />
 
-        {/* 3 Core Materials Substrate Section */}
+        {/* Core Materials Substrate Section */}
         <CoreMaterialsSection />
 
         {/* Studio Swatch Invitation CTA */}

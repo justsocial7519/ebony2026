@@ -53,6 +53,7 @@ export function ComfortSection() {
                     onMouseLeave={() => setActive(null)}
                     onFocus={() => setActive(index)}
                     onBlur={() => setActive(null)}
+                    onClick={() => setActive(index)}
                     className={cn(
                       "w-full text-left flex items-start gap-4 rounded-2xl p-3 -mx-3 transition-colors duration-300",
                       active === index ? "bg-white" : "hover:bg-white/60"

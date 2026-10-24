@@ -3,12 +3,20 @@
 import { useState } from "react"
 import Image from "next/image"
 import Link from "next/link"
-import { ArrowRight, MapPin } from "lucide-react"
+import { ArrowRight, Sparkles } from "lucide-react"
 import { HOME_CONTENT } from "@/lib/home-content"
 import { SectionHeader } from "@/components/ui/section-header"
 import { cn } from "@/lib/utils"
 
-export function ProjectsShowcaseSection() {
+// Each card opens the matching category on the Collections page
+const CATEGORY_LINKS: Record<string, string> = {
+  kitchen: "/collections#kitchens",
+  wardrobe: "/collections#wardrobes",
+  closet: "/collections#wardrobes",
+  living: "/collections#tv-bar",
+}
+
+export function HomesShowcaseSection() {
   const { kicker, title, accent, subtitle, filters, items } = HOME_CONTENT.projects
   const [activeFilter, setActiveFilter] = useState("all")
 
@@ -49,7 +57,7 @@ export function ProjectsShowcaseSection() {
             >
               <Image
                 src={project.image}
-                alt={project.title}
+                alt={project.alt ?? project.title}
                 fill
                 className="object-cover transition-transform duration-[1.2s] ease-out group-hover:scale-[1.06]"
                 sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 33vw"
@@ -58,8 +66,8 @@ export function ProjectsShowcaseSection() {
               <div className="absolute inset-x-0 bottom-0 p-6 sm:p-7">
                 <h3 className="font-serif text-2xl text-white font-normal leading-tight">{project.title}</h3>
                 <p className="flex items-center gap-1.5 text-[15px] text-white/85 mt-1.5">
-                  <MapPin className="w-4 h-4 text-[#D8B97F]" />
-                  {project.location}
+                  <Sparkles className="w-4 h-4 text-[#D8B97F]" />
+                  {project.tag}
                 </p>
               </div>
             </Link>

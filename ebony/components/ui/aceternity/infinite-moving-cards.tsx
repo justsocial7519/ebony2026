@@ -107,7 +107,7 @@ export const InfiniteMovingCards = ({
                     ))}
                     <span className="font-mono text-xs text-slate-500 ml-1.5 font-semibold">VERIFIED HOME</span>
                   </div>
-                  <p className="font-serif italic text-base leading-relaxed text-slate-800 font-normal mb-6">
+                  <p className="font-serif text-base leading-relaxed text-slate-800 font-normal mb-6">
                     &ldquo;{item.quote}&rdquo;
                   </p>
                 </div>
@@ -129,7 +129,7 @@ export const InfiniteMovingCards = ({
             {!item.quote && (
               <div className="flex items-center justify-between py-1">
                 <div>
-                  <h4 className="font-serif italic text-lg text-slate-900">{item.name}</h4>
+                  <h4 className="font-serif text-lg text-slate-900">{item.name}</h4>
                   <p className="font-mono text-[13px] text-slate-500">{item.title}</p>
                 </div>
                 {item.badge && (

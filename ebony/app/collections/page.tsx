@@ -8,7 +8,7 @@ import { StudioCtaSection } from "@/components/studio-cta-section"
 import { EnquiryModal } from "@/components/enquiry-modal"
 import { MobileStickyBar } from "@/components/mobile-sticky-bar"
 import { CollectionsBrowser } from "@/components/collections/collections-browser"
-import { ProjectsShowcaseSection } from "@/components/projects-showcase-section"
+import { HomesShowcaseSection } from "@/components/homes-showcase-section"
 import { COLLECTION_CATEGORIES, COLLECTION_ITEMS } from "@/lib/collections"
 
 export const metadata: Metadata = {
@@ -31,6 +31,13 @@ const HEADLINE_PHOTOS = [
   "/img/collections/wardrobe-sliding-ivory.jpg",
   "/img/collections/tv-unit-walnut-display.jpg",
 ]
+
+// Short teasers (no numbers) shown under each category name in the hero
+const CATEGORY_TEASERS: Record<string, string> = {
+  kitchens: "Warm to bold",
+  wardrobes: "Sliding to walk-in",
+  "tv-bar": "Made to show off",
+}
 
 export default function CollectionsPage() {
   return (
@@ -73,9 +80,7 @@ export default function CollectionsPage() {
               {COLLECTION_CATEGORIES.map((c) => (
                 <div key={c.id}>
                   <dt className="text-[13px] font-semibold uppercase tracking-[0.14em] text-slate-500">{c.label}</dt>
-                  <dd className="font-serif text-4xl text-slate-950 mt-1">
-                    {COLLECTION_ITEMS.filter((item) => item.category === c.id).length}
-                  </dd>
+                  <dd className="font-serif text-xl sm:text-2xl text-slate-950 mt-1">{CATEGORY_TEASERS[c.id]}</dd>
                 </div>
               ))}
             </dl>
@@ -86,7 +91,7 @@ export default function CollectionsPage() {
         <CollectionsBrowser />
 
         {/* Real Completed Residences Showcase (Merged with Collections) */}
-        <ProjectsShowcaseSection />
+        <HomesShowcaseSection />
 
         {/* Plan it your way */}
         <section className="py-16 sm:py-24 bg-[#0B0F19] text-white">
@@ -154,7 +159,7 @@ export default function CollectionsPage() {
                       Raipur studio
                     </span>
                     <span className="block font-serif text-2xl mt-2">See and touch real finishes</span>
-                    <span className="block text-[15px] text-white/70 mt-2">Visit us, or book a home design visit.</span>
+                    <span className="block text-[15px] text-white/70 mt-2">Visit us, or invite a designer home.</span>
                   </span>
                   <span className="shrink-0 w-12 h-12 rounded-full bg-white text-slate-950 flex items-center justify-center transition-colors group-hover:bg-[#C5A572]">
                     <ArrowUpRight className="w-5 h-5" />

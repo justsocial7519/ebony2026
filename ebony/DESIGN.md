@@ -21,17 +21,17 @@ A warm, gallery-airy showroom: big real-home photography, generous cream space, 
 - **Studio Linen** (#F7F6F3): Kitchen Studio page background.
 - **Hairline** (#E6E1D8): 1px borders and dividers.
 - **Brand Gold** (#B8923A): the single accent. Primary buttons, active states, kickers, focus rings.
-- **Gold Text** (#9A7637): italic accent words in headings on light backgrounds.
-- **Soft Gold** (#C5A572 / #D8B97F): accents and italic words on dark backgrounds.
+- **Gold Text** (#9A7637): accent words in headings on light backgrounds (upright, never italic).
+- **Soft Gold** (#C5A572 / #D8B97F): accents and accent words in headings on dark backgrounds (upright, never italic).
 
 Only one accent family (gold). No purple, no neon, no gradient text. Never pure black (#000000).
 
 ## 3. Typography Rules
 
-- **Display:** Playfair Display (`font-serif`), regular weight, tight tracking. Headlines pair a plain phrase with one gold italic accent: "Find the one *you love*". Scale with `clamp` or responsive steps, `2.1rem` on phones to `3.5rem` on desktop for section titles.
+- **Display:** Playfair Display (`font-serif`), regular weight, tight tracking. Headlines pair a plain phrase with one gold accent in the same upright style: "Find the one you love". No italic or cursive type in any title. Scale with `clamp` or responsive steps, `2.1rem` on phones to `3.5rem` on desktop for section titles.
 - **Body:** Poppins (`font-sans`), 15 to 18px, relaxed leading, lines kept under 65 characters.
 - **Kicker:** the `.kicker` class. Small uppercase Poppins in gold with a short gold rule before it.
-- **Numbers:** Playfair Display for big counts. `tabular-nums` for progress and counters.
+- **Numbers:** No statistics, years in business, counts or numeric promises in copy. `tabular-nums` only for UI progress and step numbers.
 - **Banned:** Inter, Times New Roman, Georgia as a visible face, and serif type inside dense tool panels apart from headings.
 
 ## 4. Component Stylings

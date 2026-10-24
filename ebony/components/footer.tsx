@@ -15,7 +15,7 @@ const EXPLORE = [
   { label: "3D Kitchen Studio", href: "/kitchen-studio" },
   { label: "Colours & Finishes", href: "/finishes" },
   { label: "Fittings", href: "/hardware" },
-  { label: "About Us", href: "/about" },
+  { label: "Why Ebony", href: "/why-ebony" },
   { label: "Contact", href: "/contact" },
 ]
 
@@ -25,7 +25,7 @@ const MAKE = [
   { label: "L-Shaped Kitchens", href: "/kitchens#l-shape" },
   { label: "Wardrobes", href: "/wardrobes" },
   { label: "Walk-in Closets", href: "/walk-in-closets" },
-  { label: "Bar & TV Units", href: "/collections" },
+  { label: "Bar & TV Units", href: "/collections#tv-bar" },
   { label: "Commercial Kitchens", href: "/chefs-favourite-corner" },
 ]
 

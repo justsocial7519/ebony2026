@@ -20,7 +20,7 @@ export function InternalFittingsSection() {
               <div className="shine relative aspect-[4/3] w-full rounded-2xl overflow-hidden bg-slate-100">
                 <Image
                   src={item.image}
-                  alt={item.title}
+                  alt={item.alt ?? item.title}
                   fill
                   className="object-cover transition-transform duration-[1.2s] ease-out group-hover:scale-[1.06]"
                   sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 25vw"

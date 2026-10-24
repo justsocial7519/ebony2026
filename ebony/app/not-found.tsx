@@ -1,6 +1,7 @@
 import Link from "next/link"
 import { Navbar } from "@/components/navbar"
 import { Footer } from "@/components/footer"
+import { EnquiryModal } from "@/components/enquiry-modal"
 import { ArrowLeft, ArrowUpRight } from "lucide-react"
 
 export const metadata = {
@@ -20,7 +21,7 @@ export default function NotFound() {
           </span>
           <h1 className="font-serif text-4xl sm:text-6xl lg:text-7xl text-slate-950 font-normal leading-[1.1] tracking-tight mb-6">
             Even the best blueprints <br />
-            <span className="italic">sometimes shift.</span>
+            <span>sometimes shift.</span>
           </h1>
           <p className="font-sans text-sm sm:text-base text-slate-600 font-normal leading-relaxed mb-10 max-w-lg mx-auto">
             The page you are looking for has been relocated or does not exist. Allow us to guide you back to our bespoke architectural collections.
@@ -44,6 +45,8 @@ export default function NotFound() {
           </div>
         </div>
       </main>
+
+      <EnquiryModal />
 
       <Footer />
     </div>

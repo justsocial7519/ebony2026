@@ -8,21 +8,21 @@ import { Factory, ShieldCheck, Maximize2, Eye, Sparkles, HeartHandshake, CheckCi
 export const metadata: Metadata = {
   title: "Why EBONY — Bespoke Modular Kitchens & Wardrobes in Raipur",
   description:
-    "Discover why homeowners choose EBONY: German machine precision, 100% BWP Marine Plywood & SS 304 substrates, millimeter-custom sizing, and spotless factory-finished installation.",
+    "Discover why homeowners choose EBONY: German machine precision, BWP Marine Plywood & SS 304 substrates, made-to-measure sizing, and spotless factory-finished installation.",
 }
 
 const WHY_POINTS = [
   {
     icon: Factory,
     title: "Direct Factory Precision",
-    desc: "Every carcass, groove, and edge is cut on automated German CNC machines in our Raipur manufacturing facility — guaranteeing 0.1mm joinery tolerances without on-site carpentry chaos.",
+    desc: "Every carcass, groove, and edge is cut on automated German CNC machines in our Raipur manufacturing facility — so every joint fits tightly, without on-site carpentry mess.",
     badge: "German CNC",
   },
   {
     icon: ShieldCheck,
     title: "True BWP Marine Plywood & SS 304",
     desc: "We refuse to compromise with particleboard. We build exclusively with certified IS 710 Boiling Water Proof marine plywood and surgical SS 304 stainless steel in all wet sink zones.",
-    badge: "100% Water-Resistant",
+    badge: "Water-Resistant Core",
   },
   {
     icon: Maximize2,
@@ -38,9 +38,9 @@ const WHY_POINTS = [
   },
   {
     icon: Sparkles,
-    title: "Clean, Dust-Free Installation",
+    title: "Clean, Tidy Installation",
     desc: "All routing, edging, and hardware boring take place inside our sterile workshop. When our fitting team arrives at your home, assembly is quiet, seamless, and spotless.",
-    badge: "Mess-Free Home",
+    badge: "Tidy Home",
   },
   {
     icon: HeartHandshake,

@@ -24,14 +24,14 @@ export function ProcessTimelineSection() {
             <span>{kicker}</span>
           </div>
           <h2 className="font-serif text-3xl sm:text-5xl lg:text-6xl text-white font-normal tracking-tight">
-            Your Dream Kitchen in <span className="italic text-[#C5A572]">3 Steps</span>
+            Your Dream Kitchen, <span className="text-[#C5A572]">Step by Step</span>
           </h2>
           <p className="text-white/75 text-base sm:text-lg mt-3 font-normal leading-relaxed">
             {subtitle}
           </p>
         </div>
 
-        {/* Connected Process Track (Desktop & Tablet — 3 Steps Horizontal) */}
+        {/* Connected Process Track (Desktop & Tablet — Steps Horizontal) */}
         <div className="hidden md:block relative mb-16">
           {/* Horizontal Connecting Stem Line */}
           <div className="absolute top-9 left-24 right-24 h-0.5 bg-gradient-to-r from-[#C5A572]/30 via-[#C5A572] to-[#C5A572]/30 -z-0" />
@@ -98,7 +98,7 @@ export function ProcessTimelineSection() {
 
                     <div className="mt-5 pt-3 border-t border-white/10 flex items-center gap-2 text-xs font-mono text-[#C5A572]/90">
                       <CheckCircle2 className="w-4 h-4 text-[#C5A572]" />
-                      <span>Zero hassle guaranteed</span>
+                      <span>Clean, careful and calm</span>
                     </div>
                   </div>
                 </div>

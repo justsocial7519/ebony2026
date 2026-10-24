@@ -244,7 +244,7 @@ export function KitchenStudio() {
           <div>
             <span className="kicker">Kitchen Studio</span>
             <h1 className="font-serif font-normal text-[clamp(30px,3.2vw,42px)] leading-[1.08] text-[#0B1020] mt-3 mb-1.5 text-balance">
-              Design your <em className="text-[#8A6A2F]">dream kitchen</em>
+              Design your <span className="text-[#8A6A2F]">dream kitchen</span>
             </h1>
             <p className="text-[15px] text-[#5A5F6D] max-w-[44ch]">
               Tap a dot on the kitchen or a part below, then choose its finish. Drag the picture to look around.

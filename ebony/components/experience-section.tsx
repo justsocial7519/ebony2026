@@ -22,9 +22,9 @@ export function ExperienceSection() {
                 <span className="font-mono text-[13px] uppercase tracking-[0.12em] text-[#B8923A] font-semibold block mb-3">
                   THE EBONY EXPERIENCE
                 </span>
-                <h2 className="font-serif italic text-3xl sm:text-5xl md:text-6xl text-slate-950 font-normal tracking-tight leading-[1.1] mb-6">
+                <h2 className="font-serif text-3xl sm:text-5xl md:text-6xl text-slate-950 font-normal tracking-tight leading-[1.1] mb-6">
                   Not just furniture. <br />
-                  <span className="text-[#855E15] not-italic font-medium">A way of living.</span>
+                  <span className="text-[#855E15]">A way of living.</span>
                 </h2>
                 <p className="text-slate-600 text-sm sm:text-base font-normal leading-relaxed max-w-lg mb-8">
                   We make the design-to-installation process simple, personal and transparent
@@ -35,12 +35,12 @@ export function ExperienceSection() {
                   href="/process"
                   className="inline-flex items-center gap-2 px-6 py-3.5 rounded-full bg-[#B8923A] hover:bg-[#C99E4B] text-slate-950 font-mono text-xs uppercase tracking-wider font-bold transition-all duration-300 shadow-md hover:shadow-amber-500/20 active:scale-95 mb-12"
                 >
-                  <span>OUR THREE STEPS</span>
+                  <span>SEE IT STEP BY STEP</span>
                   <ArrowUpRight className="w-4 h-4" />
                 </Link>
               </div>
 
-              {/* 3 Numbered Steps matching reference */}
+              {/* Numbered Steps matching reference */}
               <div className="grid grid-cols-1 sm:grid-cols-3 gap-6 pt-8 border-t border-slate-100">
                 {EXPERIENCE_STEPS.map((step) => (
                   <div key={step.number} className="flex flex-col">

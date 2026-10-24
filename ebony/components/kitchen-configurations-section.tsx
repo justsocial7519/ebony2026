@@ -24,7 +24,7 @@ export function KitchenConfigurationsSection() {
               <div className="shine relative aspect-[4/3] w-full overflow-hidden bg-stone-100">
                 <Image
                   src={layout.image}
-                  alt={`${layout.name} kitchen`}
+                  alt={layout.alt ?? `${layout.name} kitchen`}
                   fill
                   className="object-cover transition-transform duration-[1.2s] ease-out group-hover:scale-[1.06]"
                   sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 33vw"

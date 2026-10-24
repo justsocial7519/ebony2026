@@ -27,11 +27,11 @@ export function WalkInClosetsSection() {
             </h2>
           </div>
           <p className="font-sans text-sm sm:text-base text-white/70 max-w-md font-normal leading-relaxed">
-            Haute dressing suites featuring smoked bronze vitrines, 3000K vertical LED channels, anti-tarnish velvet jewelry organizers, and full-height shoe displays.
+            Haute dressing suites featuring smoked bronze vitrines, vertical LED channels, anti-tarnish velvet jewelry organizers, and full-height shoe displays.
           </p>
         </div>
 
-        {/* 3 Configurations Showcase */}
+        {/* Configurations Showcase */}
         <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
           {WALK_IN_CLOSETS.map((closet, idx) => (
             <div
@@ -41,7 +41,7 @@ export function WalkInClosetsSection() {
               <div className="relative h-80 sm:h-96 w-full overflow-hidden">
                 <Image
                   src={closet.image}
-                  alt={closet.name}
+                  alt={closet.alt}
                   fill
                   className="object-cover transition-transform duration-700 ease-out group-hover:scale-105 brightness-95"
                   sizes="(max-width: 768px) 100vw, 33vw"
@@ -88,14 +88,14 @@ export function WalkInClosetsSection() {
               Design Your Private Dressing Room
             </h4>
             <p className="font-sans text-xs sm:text-sm text-white/70 font-normal">
-              Schedule a 3D architectural consultation at our Raipur flagship studio.
+              Visit our Raipur flagship studio and see your dressing room in 3D.
             </p>
           </div>
           <Link
             href="/walk-in-closets"
             className="px-6 py-3 rounded-full bg-[#B8923A] hover:bg-[#C99E4B] text-slate-950 font-mono text-xs uppercase tracking-wider font-bold transition-all duration-300 shadow-md shrink-0"
           >
-            Explore Closets Suite
+            Explore the Closets
           </Link>
         </div>
       </div>

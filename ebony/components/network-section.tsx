@@ -34,7 +34,7 @@ const CITIES_DATA: CityNode[] = [
     role: "Regional Distribution & Franchise",
     x: 42,
     y: 28,
-    dealers: "45+ Dealers & Distributors",
+    dealers: "Dealers & Distributors",
     address: "Partner Showrooms across Delhi, Noida & Gurgaon",
     phone: "+91 79742 09352",
   },
@@ -44,7 +44,7 @@ const CITIES_DATA: CityNode[] = [
     role: "Western Metropolitan Experience",
     x: 32,
     y: 62,
-    dealers: "60+ Partner Showrooms",
+    dealers: "Partner Showrooms",
     address: "Architectural Network across Mumbai & Thane",
     phone: "+91 79742 09352",
   },
@@ -54,7 +54,7 @@ const CITIES_DATA: CityNode[] = [
     role: "Regional Franchise Partner",
     x: 36,
     y: 66,
-    dealers: "35+ Active Dealer Points",
+    dealers: "Active Dealer Points",
     address: "Modular Studio Network, Pune",
     phone: "+91 79742 09352",
   },
@@ -64,7 +64,7 @@ const CITIES_DATA: CityNode[] = [
     role: "Gujarat Distribution Hub",
     x: 28,
     y: 48,
-    dealers: "40+ Dealers & Stockists",
+    dealers: "Dealers & Stockists",
     address: "Authorized EBONY Distributor Points, Gujarat",
     phone: "+91 79742 09352",
   },
@@ -74,7 +74,7 @@ const CITIES_DATA: CityNode[] = [
     role: "Southern Tech & Design Hub",
     x: 44,
     y: 80,
-    dealers: "55+ Certified Dealers",
+    dealers: "Certified Dealers",
     address: "Architect Partner Studios across Bangalore Urban",
     phone: "+91 79742 09352",
   },
@@ -101,18 +101,18 @@ export function NetworkSection() {
           </div>
           <div className="max-w-md">
             <p className="text-body mb-4">
-              With 300+ dealers & distributors and 10+ franchise hubs, EBONY brings seamless luxury modular manufacturing, delivery, and lifetime after-sales care to premier residences nationwide.
+              With dealers, distributors and franchise hubs across the country, EBONY brings careful luxury modular manufacturing, delivery, and lifetime after-sales care to premier residences nationwide.
             </p>
             <div className="flex items-center gap-6">
               <div>
-                <span className="font-serif italic text-2xl text-ebony">300+</span>
+                <span className="font-serif text-2xl text-ebony">Nationwide</span>
                 <span className="font-mono text-xs uppercase tracking-wider text-graphite block">
                   Dealers & Distributors
                 </span>
               </div>
               <div className="w-px h-8 bg-hair" />
               <div>
-                <span className="font-serif italic text-2xl text-gold-deep">10+</span>
+                <span className="font-serif text-2xl text-gold-deep">Growing</span>
                 <span className="font-mono text-xs uppercase tracking-wider text-graphite block">
                   Franchise Hubs
                 </span>
@@ -212,7 +212,7 @@ export function NetworkSection() {
 
               {/* Ambient India Background Contour / Watermark */}
               <div className="absolute inset-0 flex items-center justify-center pointer-events-none opacity-5">
-                <span className="font-serif italic text-[10rem] text-ebony select-none">
+                <span className="font-serif text-[10rem] text-ebony select-none">
                   INDIA
                 </span>
               </div>
@@ -236,7 +236,7 @@ export function NetworkSection() {
               </div>
 
               <div>
-                <h3 className="font-serif italic text-3xl text-ebony">
+                <h3 className="font-serif text-3xl text-ebony">
                   {selectedCity.name}
                 </h3>
                 <p className="font-mono text-xs uppercase tracking-wider text-gold-deep mt-1 font-medium">
@@ -275,7 +275,7 @@ export function NetworkSection() {
                   href="/contact"
                   className="btn-primary w-full justify-center text-xs py-3.5"
                 >
-                  <span>Book Consultation in {selectedCity.name}</span>
+                  <span>Reserve My Design Visit</span>
                   <ArrowUpRight className="w-3.5 h-3.5 relative z-10" />
                 </Link>
 
@@ -292,17 +292,17 @@ export function NetworkSection() {
             <div className="p-6 rounded-md bg-white border border-hair flex items-start gap-4">
               <ShieldCheck className="w-6 h-6 text-gold-deep shrink-0 mt-1" />
               <div>
-                <h4 className="font-serif italic text-lg text-ebony">
+                <h4 className="font-serif text-lg text-ebony">
                   Franchise & Dealer Enquiries
                 </h4>
                 <p className="font-sans text-xs text-graphite mt-1 mb-3">
-                  Partner with India&apos;s leading German-engineered modular luxury brand. Comprehensive showroom design, ERP, and zero-defect manufacturing support.
+                  Partner with India&apos;s leading German-engineered modular luxury brand. Comprehensive showroom design, ERP, and careful manufacturing support.
                 </p>
                 <Link
                   href="/contact"
                   className="font-mono text-xs uppercase tracking-wider text-gold-deep font-semibold inline-flex items-center gap-1 hover:underline"
                 >
-                  Apply for Franchise Opportunity →
+                  Partner With Ebony →
                 </Link>
               </div>
             </div>

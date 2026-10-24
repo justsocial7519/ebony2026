@@ -31,9 +31,9 @@ export function CraftsmanshipSection() {
               <span className="font-mono text-[13px] uppercase tracking-[0.12em] text-[#C99E4B] font-semibold block mb-3">
                 CRAFTED WITH PURPOSE
               </span>
-              <h2 className="font-serif italic text-3xl sm:text-5xl md:text-6xl text-white font-normal tracking-tight leading-[1.1] mb-6">
+              <h2 className="font-serif text-3xl sm:text-5xl md:text-6xl text-white font-normal tracking-tight leading-[1.1] mb-6">
                 Details that <br />
-                <span className="text-white not-italic font-medium">make the difference.</span>
+                <span className="text-white">make the difference.</span>
               </h2>
               <p className="text-white/70 text-sm sm:text-base font-normal leading-relaxed max-w-xl mb-8">
                 Every edge, every finish and every element is crafted with precision —
@@ -63,7 +63,7 @@ export function CraftsmanshipSection() {
                       : ""
                   }`}
                 >
-                  <div className="font-serif italic text-3xl sm:text-4xl lg:text-5xl text-white font-normal mb-2">
+                  <div className="font-serif text-3xl sm:text-4xl lg:text-5xl text-white font-normal mb-2">
                     {stat.value}
                   </div>
                   <div className="font-mono text-xs sm:text-xs uppercase tracking-[0.12em] text-[#C99E4B] font-semibold">

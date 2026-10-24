@@ -11,12 +11,12 @@ const PILLARS = [
   {
     icon: Clock,
     title: "CLEAN INSTALLATION",
-    desc: "Pre-assembled in factory with zero on-site dust.",
+    desc: "Pre-assembled in factory with almost no on-site dust.",
   },
   {
     icon: Heart,
-    title: "10,000+ HAPPY HOMES",
-    desc: "Trusted by families across Central India.",
+    title: "FAMILY TRUSTED",
+    desc: "Homes across Central India made with care.",
   },
   {
     icon: Wrench,

@@ -80,7 +80,6 @@
   font-family: var(--font-serif), "Playfair Display", Georgia, serif;
   font-size: clamp(2.25rem, 4.5vw, 3.75rem);
   font-weight: 500;
-  font-style: italic;
   letter-spacing: -0.02em;
   line-height: 1.15;
 }
@@ -89,7 +88,6 @@
   font-family: var(--font-serif), "Playfair Display", Georgia, serif;
   font-size: clamp(1.85rem, 3.5vw, 2.75rem);
   font-weight: 500;
-  font-style: italic;
   letter-spacing: -0.015em;
   line-height: 1.2;
 }
@@ -98,7 +96,6 @@
   font-family: var(--font-serif), "Playfair Display", Georgia, serif;
   font-size: clamp(1.45rem, 2.5vw, 2.15rem);
   font-weight: 500;
-  font-style: italic;
   letter-spacing: -0.01em;
   line-height: 1.25;
 }
@@ -107,7 +104,6 @@
   font-family: var(--font-serif), "Playfair Display", Georgia, serif;
   font-size: clamp(1.2rem, 1.8vw, 1.5rem);
   font-weight: 500;
-  font-style: italic;
   letter-spacing: -0.005em;
   line-height: 1.3;
 }
@@ -522,6 +518,8 @@ img {
 @media (prefers-reduced-motion: reduce) {
   html { scroll-behavior: auto; }
   .rise-word { opacity: 1; animation: none; }
+  .hero-sheen::after { display: none; }
+  .hero-underline { animation: none; transform: scaleX(1); }
   .animate-float, .animate-slow-zoom, .animate-marquee-smooth, .text-foil { animation: none !important; }
   .shine::after { display: none; }
   .hotspot-pulse { animation: none; opacity: 0; }
@@ -535,6 +533,8 @@ img {
 .ebony-loader {
   animation: loaderFailsafe 0.5s ease 4.5s forwards;
 }
-html[data-loading] #hero .rise-word {
+html[data-loading] #hero .rise-word,
+html[data-loading] #hero .hero-sheen::after,
+html[data-loading] #hero .hero-underline {
   animation-play-state: paused;
 }

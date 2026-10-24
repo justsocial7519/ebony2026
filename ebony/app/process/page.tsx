@@ -2,14 +2,14 @@ import type { Metadata } from "next"
 import Image from "next/image"
 import { Navbar } from "@/components/navbar"
 import { Footer } from "@/components/footer"
-import { StudioCtaSection } from "@/components/studio-cta-section"
 import { EnquiryModal } from "@/components/enquiry-modal"
+import { StudioCtaSection } from "@/components/studio-cta-section"
 import { MobileStickyBar } from "@/components/mobile-sticky-bar"
 
 export const metadata: Metadata = {
   title: "Three Steps to a Finished Home | EBONY Modern Engineering",
   description:
-    "Discover how EBONY delivers bespoke modular kitchens and interiors in 3 seamless steps with precision engineering and zero on-site carpenter chaos.",
+    "Discover how EBONY delivers bespoke modular kitchens and interiors in a few clear steps, with precision engineering and no on-site carpentry mess.",
 }
 
 const STAGES = [
@@ -17,21 +17,22 @@ const STAGES = [
     day: "01",
     subtitle: "Step 01 · Space Audit & Laser Shell",
     title: "Laser Shell & Modular Carcass",
-    desc: "Precision technicians anchor base modules with 0.1mm tolerance using 3D laser levels. Damp-proof neoprene mounts isolate moisture and floor variations.",
+    desc: "Precision technicians anchor base modules dead level using laser levels. Damp-proof neoprene mounts isolate moisture and floor variations.",
     image: "/img/process-engineering.jpg",
   },
   {
     day: "02",
     subtitle: "Step 02 · Fronts & Hardware Calibration",
     title: "Fronts & Motion Synchronization",
-    desc: "Shutters and fluted doors are aligned with an exact 2mm hairline reveal. Blum Aventos and Hettich concealed channels are dynamically calibrated to load.",
-    image: "/img/kitchen-card.jpg",
+    desc: "Shutters and fluted doors are aligned with an exact, even hairline reveal. Blum Aventos and Hettich concealed channels are dynamically calibrated to load.",
+    image: "/img/why-after-sales.jpg",
+    alt: "Technician adjusting the hinge of a kitchen wall cabinet door",
   },
   {
     day: "03",
     subtitle: "Step 03 · Ambient Illumination & Handover",
     title: "Integrated Illumination & Handover",
-    desc: "Recessed 3000K warm LED channels are powered on. The 48-point zero-defect audit is signed off, and your comprehensive warranty certificate is handed over.",
+    desc: "Recessed warm LED channels are switched on. A detailed quality check is signed off, and your comprehensive warranty certificate is handed over.",
     image: "/img/hero-kitchen.jpg",
   },
 ]
@@ -59,7 +60,7 @@ export default function ProcessPage() {
           </div>
         </section>
 
-        {/* 3 Day Visual Stories (Large Editorial Layout) */}
+        {/* Step-by-step visual stories (Large Editorial Layout) */}
         <section className="max-w-7xl mx-auto px-5 md:px-10 lg:px-16 py-16 space-y-20">
           {STAGES.map((s, idx) => (
             <div
@@ -72,7 +73,7 @@ export default function ProcessPage() {
                 <div className="relative aspect-[16/10] rounded-3xl overflow-hidden border border-slate-200 shadow-xl group">
                   <Image
                     src={s.image}
-                    alt={s.title}
+                    alt={s.alt ?? s.title}
                     fill
                     className="object-cover transition-transform duration-700 ease-fluid group-hover:scale-105"
                   />
@@ -93,7 +94,7 @@ export default function ProcessPage() {
                   {s.desc}
                 </p>
                 <div className="pt-4 border-t border-slate-100 flex items-center gap-6 font-mono text-xs text-slate-500">
-                  <span className="text-[#855E15] font-semibold">±0.1 mm CNC Tolerance</span>
+                  <span className="text-[#855E15] font-semibold">Precision CNC Tolerance</span>
                   <span>·</span>
                   <span>Comprehensive Warranty</span>
                 </div>
