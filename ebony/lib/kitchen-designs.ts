@@ -1,4 +1,4 @@
-// 12 Original Kitchen Designs for EBONY
+// Original Kitchen Designs for EBONY
 // Simple, warm, human copy (max 15 words per line) with real photos and palette dots
 
 export type KitchenDesign = {
@@ -20,8 +20,8 @@ export const KITCHEN_DESIGNS: KitchenDesign[] = [
     colours: ["#2B2B2B", "#F5F5F2", "#C9C5BC"],
     bestFor: "Modern flats & open rooms",
     tags: ["all", "light"],
-    image: "/img/kitchen-contemporary-real.jpg",
-    alt: "Clean and Modern modular kitchen with seamless handleless cabinetry",
+    image: "/img/kitchen-detail-real.jpg",
+    alt: "Handleless kitchen with smooth greige cabinets, a black quartz island and soft under-cabinet lights",
   },
   {
     id: "timeless-classic",
@@ -41,7 +41,7 @@ export const KITCHEN_DESIGNS: KitchenDesign[] = [
     bestFor: "Big, open kitchens",
     tags: ["all", "dark"],
     image: "/img/kitchen-style-bold.jpg",
-    alt: "Dark and Dramatic modular kitchen with dark bronze accents",
+    alt: "Black kitchen with a black marble island and lit glass wall cabinets",
   },
   {
     id: "wood-calm",

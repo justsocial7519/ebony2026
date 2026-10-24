@@ -106,7 +106,7 @@ export function PhilosophySection() {
     >
       {/* Decorative letter */}
       <div
-        className="absolute -top-8 right-6 font-serif italic pointer-events-none select-none"
+        className="absolute -top-8 right-6 font-serif pointer-events-none select-none"
         style={{
           fontSize: "clamp(8rem, 22vw, 22rem)",
           color: "rgba(184, 146, 58, 0.04)",
@@ -182,7 +182,7 @@ export function PhilosophySection() {
                   {pillar.number}
                 </div>
                 <div>
-                  <h3 className="font-serif italic text-xl mb-2 text-ebony transition-colors duration-300 group-hover:text-gold-deep">
+                  <h3 className="font-serif text-xl mb-2 text-ebony transition-colors duration-300 group-hover:text-gold-deep">
                     {pillar.title}
                   </h3>
                   <p className="text-body text-sm leading-relaxed">

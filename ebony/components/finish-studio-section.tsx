@@ -23,7 +23,7 @@ export const FINISHES: FinishOption[] = [
     category: "Laminate & Lacquer",
     hex: "#EFECE6",
     gradient: "linear-gradient(135deg, #F5F3EE 0%, #E3DED4 100%)",
-    reflection: "0.2 Diffused Anti-Fingerprint",
+    reflection: "Diffused, Anti-Fingerprint",
     texture: "Micro-etched thermal velvet",
   },
   {
@@ -33,7 +33,7 @@ export const FINISHES: FinishOption[] = [
     category: "Smoked Veneer",
     hex: "#1A1918",
     gradient: "linear-gradient(135deg, #242220 0%, #151413 50%, #3A3530 100%)",
-    reflection: "0.15 Natural Sheen",
+    reflection: "Natural Sheen",
     texture: "Deep brushed open-pore timber",
   },
   {
@@ -43,7 +43,7 @@ export const FINISHES: FinishOption[] = [
     category: "Real Metal Foil",
     hex: "#D6C7A1",
     gradient: "linear-gradient(120deg, #EAD08A 0%, #B8923A 40%, #EAD08A 70%, #7C5F16 100%)",
-    reflection: "0.80 Directional Sheen",
+    reflection: "Directional Sheen",
     texture: "Directional hairline brushed",
   },
   {
@@ -53,8 +53,8 @@ export const FINISHES: FinishOption[] = [
     category: "Profiled Slat",
     hex: "#5C4632",
     gradient: "linear-gradient(135deg, #6B523B 0%, #4A3727 60%, #30241A 100%)",
-    reflection: "0.25 Rhythmic Shadow",
-    texture: "12mm rhythmic vertical fluting",
+    reflection: "Rhythmic Shadow",
+    texture: "Rhythmic vertical fluting",
   },
   {
     id: "crystal-glass",
@@ -63,7 +63,7 @@ export const FINISHES: FinishOption[] = [
     category: "Toughened Glass",
     hex: "#EDF2F7",
     gradient: "linear-gradient(135deg, #F8FAFC 0%, #DCE5ED 50%, #B8923A33 100%)",
-    reflection: "0.95 High Specular",
+    reflection: "High Specular",
     texture: "Low-iron float safety glass",
   },
   {
@@ -73,7 +73,7 @@ export const FINISHES: FinishOption[] = [
     category: "Co-Extruded Acrylic",
     hex: "#FAF9F6",
     gradient: "linear-gradient(135deg, #FFFFFF 0%, #F5F1E9 60%, #E2D9C5 100%)",
-    reflection: "0.98 Mirror Depth",
+    reflection: "Mirror Depth",
     texture: "High-density UV cured acrylic",
   },
 ]
@@ -90,8 +90,8 @@ export function FinishStudioSection() {
             <div className="inline-flex items-center gap-2 rounded-full px-3 py-1 text-xs uppercase tracking-[0.12em] font-mono font-semibold bg-amber-50 text-amber-900 border border-amber-200/80 mb-3">
               Surface Tactility
             </div>
-            <h2 className="font-serif italic text-3xl sm:text-4xl md:text-5xl text-slate-950 font-normal">
-              500+ Finishes, <span className="text-amber-800 not-italic font-medium">Bespoke Tactility</span>
+            <h2 className="font-serif text-3xl sm:text-4xl md:text-5xl text-slate-950 font-normal">
+              Finishes to Touch, <span className="text-amber-800">Bespoke Tactility</span>
             </h2>
           </div>
 
@@ -99,7 +99,7 @@ export function FinishStudioSection() {
             href="/collections"
             className="inline-flex items-center gap-2 font-mono text-xs uppercase tracking-widest text-slate-900 font-bold hover:text-amber-800 transition-colors group"
           >
-            <span>Explore 500+ Palette</span>
+            <span>Explore the Palette</span>
             <span className="w-6 h-6 rounded-full bg-slate-100 flex items-center justify-center transition-transform group-hover:translate-x-1 group-hover:-translate-y-1">
               <ArrowUpRight className="w-3.5 h-3.5" />
             </span>
@@ -127,7 +127,7 @@ export function FinishStudioSection() {
                     style={{ background: f.gradient || f.hex }}
                   />
                   <div>
-                    <h4 className="font-serif italic text-base text-slate-950 font-normal">
+                    <h4 className="font-serif text-base text-slate-950 font-normal">
                       {f.name}
                     </h4>
                     <span className="font-mono text-xs uppercase tracking-wider text-slate-500 block mt-0.5">
@@ -159,7 +159,7 @@ export function FinishStudioSection() {
                   <span className="font-mono text-xs uppercase tracking-wider text-amber-700 font-semibold block mb-1">
                     {active.category}
                   </span>
-                  <h3 className="font-serif italic text-2xl text-slate-950 font-normal">
+                  <h3 className="font-serif text-2xl text-slate-950 font-normal">
                     {active.name}
                   </h3>
                   <div className="mt-3 pt-3 border-t border-slate-200/60 flex items-center justify-between text-xs font-mono text-slate-600">

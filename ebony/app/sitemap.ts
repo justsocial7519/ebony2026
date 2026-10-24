@@ -42,12 +42,6 @@ export default function sitemap(): MetadataRoute.Sitemap {
       priority: 0.85,
     },
     {
-      url: `${baseUrl}/projects`,
-      lastModified: now,
-      changeFrequency: "weekly",
-      priority: 0.9,
-    },
-    {
       url: `${baseUrl}/collections`,
       lastModified: now,
       changeFrequency: "monthly",
@@ -72,7 +66,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
       priority: 0.8,
     },
     {
-      url: `${baseUrl}/about`,
+      url: `${baseUrl}/why-ebony`,
       lastModified: now,
       changeFrequency: "monthly",
       priority: 0.8,

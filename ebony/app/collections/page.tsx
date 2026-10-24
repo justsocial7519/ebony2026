@@ -8,7 +8,7 @@ import { StudioCtaSection } from "@/components/studio-cta-section"
 import { EnquiryModal } from "@/components/enquiry-modal"
 import { MobileStickyBar } from "@/components/mobile-sticky-bar"
 import { CollectionsBrowser } from "@/components/collections/collections-browser"
-import { COLLECTION_CATEGORIES, COLLECTION_ITEMS } from "@/lib/collections"
+import { COLLECTION_CATEGORIES } from "@/lib/collections"
 
 export const metadata: Metadata = {
   title: "Collections — Kitchen, Wardrobe, TV & Bar Unit Design Ideas | EBONY",
@@ -30,6 +30,13 @@ const HEADLINE_PHOTOS = [
   "/img/collections/wardrobe-sliding-ivory.jpg",
   "/img/collections/tv-unit-walnut-display.jpg",
 ]
+
+// Short teasers (no numbers) shown under each category name in the hero
+const CATEGORY_TEASERS: Record<string, string> = {
+  kitchens: "Warm to bold",
+  wardrobes: "Sliding to walk-in",
+  "tv-bar": "Made to show off",
+}
 
 export default function CollectionsPage() {
   return (
@@ -53,7 +60,7 @@ export default function CollectionsPage() {
               units<InlinePhoto src={HEADLINE_PHOTOS[2]} />
             </span>{" "}
             made for{" "}
-            <span className="italic text-[#9A7637]">your home.</span>
+            <span className="text-[#9A7637]">your home.</span>
           </h1>
 
           <div className="sm:hidden mt-8 grid grid-cols-3 gap-3">
@@ -72,9 +79,7 @@ export default function CollectionsPage() {
               {COLLECTION_CATEGORIES.map((c) => (
                 <div key={c.id}>
                   <dt className="text-[13px] font-semibold uppercase tracking-[0.14em] text-slate-500">{c.label}</dt>
-                  <dd className="font-serif text-4xl text-slate-950 mt-1">
-                    {COLLECTION_ITEMS.filter((item) => item.category === c.id).length}
-                  </dd>
+                  <dd className="font-serif text-xl sm:text-2xl text-slate-950 mt-1">{CATEGORY_TEASERS[c.id]}</dd>
                 </div>
               ))}
             </dl>
@@ -88,7 +93,7 @@ export default function CollectionsPage() {
           <div className="max-w-7xl mx-auto px-5 sm:px-8 lg:px-12">
             <span className="kicker kicker-dark">Plan it your way</span>
             <h2 className="font-serif text-[2.1rem] leading-[1.12] sm:text-5xl font-normal tracking-tight mt-4 max-w-2xl">
-              Found a look? <span className="italic text-[#D8B97F]">Make it yours.</span>
+              Found a look? <span className="text-[#D8B97F]">Make it yours.</span>
             </h2>
 
             <div className="mt-12 grid grid-cols-1 lg:grid-cols-12 gap-5 sm:gap-6">
@@ -149,7 +154,7 @@ export default function CollectionsPage() {
                       Raipur studio
                     </span>
                     <span className="block font-serif text-2xl mt-2">See and touch real finishes</span>
-                    <span className="block text-[15px] text-white/70 mt-2">Visit us, or book a home design visit.</span>
+                    <span className="block text-[15px] text-white/70 mt-2">Visit us, or invite a designer home.</span>
                   </span>
                   <span className="shrink-0 w-12 h-12 rounded-full bg-white text-slate-950 flex items-center justify-center transition-colors group-hover:bg-[#C5A572]">
                     <ArrowUpRight className="w-5 h-5" />

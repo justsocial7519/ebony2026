@@ -1,7 +1,7 @@
 "use client"
 
 import { useState, useEffect } from "react"
-import { X, CheckCircle2, Phone, Calendar, Send, Sparkles } from "lucide-react"
+import { X, CheckCircle2, ArrowRight, Sparkles } from "lucide-react"
 
 export interface EnquiryEventDetail {
   design?: string
@@ -78,10 +78,10 @@ export function EnquiryModal() {
     e.preventDefault()
     setError("")
 
-    // Phone validation: Indian 10 digits
+    // Phone validation: a full Indian mobile number
     const cleanedPhone = form.phone.replace(/\D/g, "")
     if (cleanedPhone.length < 10) {
-      setError("Please enter a valid 10-digit phone number.")
+      setError("Please enter a valid phone number so we can reach you.")
       return
     }
 
@@ -105,10 +105,10 @@ export function EnquiryModal() {
       if (res.ok && data.success) {
         setSuccess(true)
       } else {
-        setError(data.error || "Unable to send your request. Please try again.")
+        setError(data.error || "We could not save your details just now. Please try again.")
       }
     } catch {
-      setError("Network error. Please try again or call us at +91 79742 09352.")
+      setError("Something went wrong with the connection. Please try again or call us at +91 79742 09352.")
     } finally {
       setLoading(false)
     }
@@ -146,12 +146,12 @@ export function EnquiryModal() {
               <CheckCircle2 className="w-8 h-8" />
             </div>
             <h3 className="font-serif text-2xl sm:text-3xl text-white font-normal">
-              We&apos;ve Got Your Request!
+              Thank You, We&apos;ll Be in Touch
             </h3>
             <p className="text-white/75 text-sm sm:text-base leading-relaxed max-w-md mx-auto">
               Thank you, <span className="text-white font-medium">{form.name}</span>. Our design expert
-              from the Raipur studio will call you on{" "}
-              <span className="text-amber-400 font-mono font-medium">{form.phone}</span> shortly to discuss{" "}
+              from the Raipur studio will ring you on{" "}
+              <span className="text-amber-400 font-mono font-medium">{form.phone}</span> soon to talk about{" "}
               {designName ? <span className="text-white">your {designName} kitchen</span> : "your project"}.
             </p>
             <div className="pt-4">
@@ -172,10 +172,10 @@ export function EnquiryModal() {
                 <span>Plan Your Dream Space</span>
               </div>
               <h3 id="modal-title" className="font-serif text-2xl sm:text-3xl text-white font-normal">
-                {designName ? `Get the "${designName}" Look` : "Book a Studio Visit"}
+                Start My Design Journey
               </h3>
               <p className="text-white/70 text-xs sm:text-sm mt-1 leading-relaxed">
-                Tell us a little about your home. We&apos;ll help you choose the right layout, materials,
+                {designName ? <>You liked &ldquo;{designName}&rdquo;. </> : null}Tell us a little about your home. We&apos;ll help you choose the right layout, materials,
                 and 3D plan.
               </p>
             </div>
@@ -275,11 +275,11 @@ export function EnquiryModal() {
                   className="w-full py-3.5 rounded-full bg-[#B8923A] hover:bg-[#C99E4B] disabled:opacity-50 text-slate-950 font-mono text-xs uppercase tracking-wider font-bold transition-all duration-200 flex items-center justify-center gap-2 cursor-pointer shadow-lg shadow-amber-500/20 active:scale-[0.99]"
                 >
                   {loading ? (
-                    <span>Sending...</span>
+                    <span>One moment...</span>
                   ) : (
                     <>
-                      <span>Book a Visit</span>
-                      <Send className="w-3.5 h-3.5" />
+                      <span>Start My Design Journey</span>
+                      <ArrowRight className="w-3.5 h-3.5" />
                     </>
                   )}
                 </button>

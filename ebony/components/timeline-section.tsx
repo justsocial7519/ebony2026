@@ -8,23 +8,23 @@ import { ArrowUpRight } from "lucide-react"
 const STAGES = [
   {
     day: "01",
-    phase: "Day 01 · Alignment",
+    phase: "Step 01 · Alignment",
     title: "Laser Shell & Carcass",
-    desc: "Modular units anchored with 0.1mm tolerance. Neoprene damp mounts and concealed plumbing passes.",
+    desc: "Modular units anchored to a precise tolerance. Neoprene damp mounts and concealed plumbing passes.",
     image: "/img/process-engineering.jpg",
   },
   {
     day: "02",
-    phase: "Day 02 · Mechanics",
+    phase: "Step 02 · Mechanics",
     title: "Fronts & Motion Systems",
-    desc: "Blum and Hettich concealed hinges synchronized for an exact 2mm reveal. 50kg load-tested drawer slides.",
+    desc: "Blum and Hettich concealed hinges synchronized for an exact, even reveal. Load-tested drawer slides.",
     image: "/img/kitchen-card.jpg",
   },
   {
     day: "03",
-    phase: "Day 03 · Handover",
+    phase: "Step 03 · Handover",
     title: "Warm Illumination & Audit",
-    desc: "3000K LED channels activated, 48-point zero-defect audit signed off, and 10-year warranty handed over.",
+    desc: "Warm LED channels activated, the final audit signed off, and your warranty certificate handed over.",
     image: "/img/hero-kitchen.jpg",
   },
 ]
@@ -39,10 +39,10 @@ export function TimelineSection() {
         <div className="flex flex-col md:flex-row md:items-end justify-between gap-6 mb-16 pb-8 border-b border-slate-100">
           <div>
             <span className="font-mono text-[13px] uppercase tracking-[0.12em] text-amber-700 font-semibold block mb-3">
-              The 72-Hour Standard
+              The Careful Way
             </span>
-            <h2 className="font-serif italic text-3xl sm:text-4xl md:text-5xl text-slate-900 font-normal">
-              Three Steps to a <span className="text-amber-800 not-italic font-medium">Finished Home</span>
+            <h2 className="font-serif text-3xl sm:text-4xl md:text-5xl text-slate-900 font-normal">
+              A Finished Home, <span className="text-amber-800">Step by Step</span>
             </h2>
           </div>
 
@@ -50,14 +50,14 @@ export function TimelineSection() {
             href="/process"
             className="btn-island group self-start md:self-auto"
           >
-            <span>Read 72-Hour Story</span>
+            <span>See How We Fit</span>
             <span className="btn-island-icon">
               <ArrowUpRight className="w-3.5 h-3.5" />
             </span>
           </Link>
         </div>
 
-        {/* 3 Interactive Double-Bezel Day Cards */}
+        {/* Interactive Double-Bezel Step Cards */}
         <div className="grid md:grid-cols-3 gap-6 lg:gap-8">
           {STAGES.map((stage, idx) => (
             <div
@@ -77,14 +77,14 @@ export function TimelineSection() {
                       className="object-cover transition-transform duration-700 hover:scale-105"
                     />
                     <div className="absolute top-3 left-3 px-3 py-1 rounded-full bg-slate-950/80 backdrop-blur-md text-white font-mono text-xs font-bold tracking-widest border border-white/10">
-                      DAY {stage.day}
+                      STEP {stage.day}
                     </div>
                   </div>
 
                   <span className="font-mono text-xs uppercase tracking-wider text-amber-700 font-semibold block mb-1">
                     {stage.phase}
                   </span>
-                  <h3 className="font-serif italic text-xl text-slate-900 font-normal mb-2">
+                  <h3 className="font-serif text-xl text-slate-900 font-normal mb-2">
                     {stage.title}
                   </h3>
                   <p className="text-slate-600 text-xs font-normal leading-relaxed">
@@ -94,7 +94,7 @@ export function TimelineSection() {
 
                 <div className="mt-5 pt-3 border-t border-slate-100 flex items-center justify-between text-[13px] font-mono text-slate-500">
                   <span>PHASE 0{idx + 1}</span>
-                  <span className="text-amber-700 font-medium">Verified · 0% Defect</span>
+                  <span className="text-amber-700 font-medium">Checked by hand</span>
                 </div>
               </div>
             </div>

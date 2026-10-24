@@ -10,7 +10,7 @@ export interface HomeContent {
     primaryCta: { label: string; href: string }
     secondaryCta: { label: string; href: string }
   }
-  trustStrip: { end: number; suffix: string; label: string }[]
+  trustStrip: { title: string; line: string }[]
   exploreDesigns: {
     kicker: string
     title: string
@@ -23,6 +23,8 @@ export interface HomeContent {
       description: string
       href: string
       image: string
+      /** Describes what the photo actually shows */
+      alt?: string
     }[]
   }
   collections: {
@@ -36,6 +38,8 @@ export interface HomeContent {
       line: string
       tag: string
       image: string
+      /** Describes what the photo actually shows */
+      alt?: string
       href: string
     }[]
   }
@@ -49,6 +53,8 @@ export interface HomeContent {
       title: string
       line: string
       image: string
+      /** Describes what the photo actually shows */
+      alt?: string
       tag: string
     }[]
   }
@@ -84,6 +90,8 @@ export interface HomeContent {
       line: string
       colorHint: string
       tag: string
+      /** Main photo first; the next two show as tappable thumbnails. Each must genuinely show this finish. */
+      photos: { src: string; alt: string }[]
     }[]
   }
   wardrobes: {
@@ -96,6 +104,8 @@ export interface HomeContent {
       name: string
       line: string
       image: string
+      /** Describes what the photo actually shows */
+      alt?: string
       href: string
     }[]
   }
@@ -109,6 +119,8 @@ export interface HomeContent {
       title: string
       line: string
       image: string
+      /** Describes what the photo actually shows */
+      alt?: string
     }[]
     brandsKicker: string
     trustedBrands: string[]
@@ -122,9 +134,12 @@ export interface HomeContent {
     items: {
       id: string
       title: string
-      location: string
+      /** Short note on what makes the look */
+      tag: string
       category: string
       image: string
+      /** Describes what the photo actually shows */
+      alt?: string
     }[]
   }
   testimonials: {
@@ -152,6 +167,8 @@ export interface HomeContent {
       line: string
       icon: string
       image: string
+      /** Describes what the photo actually shows */
+      alt?: string
     }[]
     footnote: {
       text: string
@@ -175,16 +192,16 @@ export const HOME_CONTENT: HomeContent = {
     eyebrow: "Modular kitchens & wardrobes · Raipur",
     title: "Beautiful kitchens,",
     accent: "made just for you.",
-    subtitle: "Designed around your family, made in our own factory, and fitted in your home in about 3 days.",
-    primaryCta: { label: "See Our Designs", href: "#explore-designs" },
-    secondaryCta: { label: "Book a Home Visit", href: "#consultation" },
+    subtitle: "Designed around your family, made in our own factory, and fitted cleanly in your home by our own team.",
+    primaryCta: { label: "Explore the Collection", href: "#explore-designs" },
+    secondaryCta: { label: "Invite a Designer Home", href: "#consultation" },
   },
 
   trustStrip: [
-    { end: 15, suffix: "+", label: "Years making homes beautiful" },
-    { end: 500, suffix: "+", label: "Colours & finishes to choose from" },
-    { end: 3, suffix: " Days", label: "To fit your new kitchen" },
-    { end: 10, suffix: " Years", label: "Warranty on woodwork" },
+    { title: "Made in our own factory", line: "Every cabinet is cut and finished in Raipur" },
+    { title: "Finishes you can touch first", line: "See and feel each sample before you choose" },
+    { title: "Fitted by our own team", line: "Clean, careful work with almost no dust" },
+    { title: "Lifetime warranty on SS 304", line: "On every stainless steel basket we fit" },
   ],
 
   exploreDesigns: {
@@ -196,10 +213,11 @@ export const HOME_CONTENT: HomeContent = {
       {
         id: "kitchens",
         title: "Modular Kitchens",
-        badge: "6 layouts · 12 styles",
+        badge: "Layouts for every home",
         description: "Plenty of storage, easy to clean and a joy to cook in.",
         href: "/kitchens",
         image: "/img/modular-kitchen-showcase.jpg",
+        alt: "Kitchen with a white island, wood-grain cabinets and lit open shelves under a skylight",
       },
       {
         id: "wardrobes",
@@ -208,6 +226,7 @@ export const HOME_CONTENT: HomeContent = {
         description: "Room for every outfit, with doors that close softly.",
         href: "/wardrobes",
         image: "/img/wardrobe-bespoke-real.jpg",
+        alt: "Floor-to-ceiling wardrobe with white framed glass doors and long brass handles",
       },
       {
         id: "closets",
@@ -216,14 +235,16 @@ export const HOME_CONTENT: HomeContent = {
         description: "Open shelves, soft lights and a place for everything.",
         href: "/walk-in-closets",
         image: "/img/walk-in-closet-luxury.jpg",
+        alt: "Walk-in closet with lit glass-front wardrobes and a marble-topped island in the middle",
       },
       {
         id: "living-bar",
         title: "Bar & TV Units",
         badge: "For your living room",
         description: "Stylish units for movie nights and weekend guests.",
-        href: "/projects#bar-unit",
+        href: "/collections#tv-bar",
         image: "/img/bar-unit-luxury.jpg",
+        alt: "Arched bar unit with lit bottle shelves, a wine rack and drawers between two gold columns",
       },
     ],
   },
@@ -239,7 +260,8 @@ export const HOME_CONTENT: HomeContent = {
         name: "L-Shaped",
         line: "Uses two walls. Great for corners and most Indian homes.",
         tag: "Most popular",
-        image: "/img/kitchen-contemporary-real.jpg",
+        image: "/img/collections/kitchen-l-shaped-white.jpg",
+        alt: "L-shaped kitchen with white gloss cabinets along two walls and a steel range cooker",
         href: "/kitchens#l-shape",
       },
       {
@@ -247,7 +269,8 @@ export const HOME_CONTENT: HomeContent = {
         name: "U-Shaped",
         line: "Storage on three sides. Perfect for big families who cook a lot.",
         tag: "Most storage",
-        image: "/img/kitchen-layout-real.jpg",
+        image: "/img/kitchen-contemporary-real.jpg",
+        alt: "U-shaped kitchen with cabinets on three walls, white framed doors and lit tall glass units",
         href: "/kitchens#u-shape",
       },
       {
@@ -255,8 +278,9 @@ export const HOME_CONTENT: HomeContent = {
         name: "Straight",
         line: "Everything along one wall. Simple, neat and space-saving.",
         tag: "Small homes",
-        image: "/img/kitchen-detail-real.jpg",
-        href: "/kitchens#parallel",
+        image: "/img/collections/kitchen-straight-matte-blue.jpg",
+        alt: "Straight kitchen along one wall with matte teal cabinets, built-in ovens and a marble backsplash",
+        href: "/kitchens#straight",
       },
       {
         id: "island",
@@ -264,6 +288,7 @@ export const HOME_CONTENT: HomeContent = {
         line: "A counter in the middle to cook, chat and eat together.",
         tag: "Big & open",
         image: "/img/kitchen-island-real.jpg",
+        alt: "Island kitchen with a curved two-level island, bar stools and a lit arch behind",
         href: "/kitchens#island",
       },
       {
@@ -271,7 +296,8 @@ export const HOME_CONTENT: HomeContent = {
         name: "Parallel",
         line: "Two counters facing each other. Quick and easy to cook in.",
         tag: "Chef's favourite",
-        image: "/img/kitchen-twotone-twist.jpg",
+        image: "/img/collections/kitchen-parallel-peach.jpg",
+        alt: "Parallel kitchen with two facing runs of peach cabinets and a window at the far end",
         href: "/kitchens#parallel",
       },
       {
@@ -279,7 +305,8 @@ export const HOME_CONTENT: HomeContent = {
         name: "Open Kitchen",
         line: "Opens into your living room, so you're never cut off from family.",
         tag: "Modern living",
-        image: "/img/kitchen-garden-green.jpg",
+        image: "/img/collections/kitchen-open-plan-living.jpg",
+        alt: "Open kitchen with wood cabinets that flows into a dining table and the living room sofas",
         href: "/kitchens#open",
       },
     ],
@@ -296,20 +323,23 @@ export const HOME_CONTENT: HomeContent = {
         title: "For Small Homes",
         line: "Smart storage that makes a small kitchen feel big.",
         image: "/img/kitchen-small-spaces.jpg",
+        alt: "Compact L-shaped kitchen with a tall pull-out pantry open beside the oven",
         tag: "Small spaces",
       },
       {
         id: "luxury-homes",
         title: "For Big Homes",
-        line: "Rich finishes and soft lighting that feel like a five-star hotel.",
-        image: "/img/kitchen-glass-glow.jpg",
+        line: "Rich finishes and soft lighting that feel like a luxury hotel.",
+        image: "/img/project-shankar-nagar.jpg",
+        alt: "Large walnut kitchen with a stone island, four bar stools and warm cove lighting",
         tag: "Luxury",
       },
       {
         id: "budget-homes",
         title: "Beautiful on a Budget",
         line: "The premium look you want, at a price that works for you.",
-        image: "/img/kitchen-curves-arches.jpg",
+        image: "/img/collections/kitchen-wood-white.jpg",
+        alt: "Simple kitchen with white wall cabinets, a wood-look worktop and backsplash and a steel sink",
         tag: "Best value",
       },
       {
@@ -317,20 +347,23 @@ export const HOME_CONTENT: HomeContent = {
         title: "Made for Indian Cooking",
         line: "Tough surfaces and deep drawers for daily tadka and masala.",
         image: "/img/kitchen-rasoi-special.jpg",
+        alt: "Kitchen with a granite worktop, gas hob and spice pull-outs open below",
         tag: "Daily cooking",
       },
       {
         id: "open-airy",
         title: "Open & Airy",
         line: "Light colours and open shelves that feel calm and fresh.",
-        image: "/img/kitchen-style-boho.jpg",
+        image: "/img/hero-kitchen.jpg",
+        alt: "Bright kitchen with cream cabinets, open shelves and tall windows onto a garden",
         tag: "Calm & bright",
       },
       {
         id: "smart-storage",
         title: "Smart Storage",
         line: "A place for everything, so your counters stay clear.",
-        image: "/img/kitchen-colour-pop.jpg",
+        image: "/img/collections/kitchen-drawer-organiser.jpg",
+        alt: "Open kitchen drawer with a cutlery organiser and a knife insert",
         tag: "Clutter-proof",
       },
     ],
@@ -338,7 +371,7 @@ export const HOME_CONTENT: HomeContent = {
 
   process: {
     kicker: "How it works",
-    title: "Your new kitchen in 3 easy steps",
+    title: "Your new kitchen, step by step",
     subtitle: "Simple and easy, from the first chat to the day you start cooking.",
     steps: [
       {
@@ -356,19 +389,19 @@ export const HOME_CONTENT: HomeContent = {
       {
         num: "03",
         title: "Start cooking",
-        line: "Fitted in about 3 days.",
+        line: "Fitted cleanly by our own team.",
         desc: "Our team fits everything cleanly at your home — no dust, no mess.",
       },
     ],
-    cta: "Book a Home Visit",
+    cta: "See It in 3D First",
   },
 
   styles: {
     kicker: "Kitchen styles",
     title: "Find the look that",
     accent: "feels like you",
-    subtitle: "Twelve looks our families love. Tap the one you like and we'll make it yours.",
-    showMore: "Show all 12 styles",
+    subtitle: "Looks our families love. Tap the one you like and we'll make it yours.",
+    showMore: "Show all styles",
     showLess: "Show fewer styles",
   },
 
@@ -376,21 +409,109 @@ export const HOME_CONTENT: HomeContent = {
     kicker: "Colours & finishes",
     title: "Finishes you'll",
     accent: "love to touch",
-    subtitle: "From soft matte to mirror shine — over 500 options. Tap one to learn more.",
+    subtitle: "From soft matte to mirror shine, with plenty of options. Tap one to learn more.",
     benefits: [
       "Wipes clean with a damp cloth",
       "Handles heat and steam from daily cooking",
       "Comes in many shades to match your home",
     ],
     swatches: [
-      { id: "satin", name: "Soft Matte", line: "Smooth and velvety. Hides fingerprints beautifully.", colorHint: "#EDE8E1", tag: "Most loved" },
-      { id: "laminate", name: "Easy-Care Laminate", line: "Tough, scratch-resistant and easy to wipe clean.", colorHint: "#C2B6A6", tag: "Hard-wearing" },
-      { id: "acrylic", name: "High Gloss", line: "A mirror-like shine that makes rooms feel bigger.", colorHint: "#1E293B", tag: "Shiny" },
-      { id: "glass", name: "Glass Doors", line: "Show off your best crockery and keep out the dust.", colorHint: "#4B443B", tag: "Display" },
-      { id: "membrane", name: "Classic Carved", line: "Soft curves and grooves for a traditional feel.", colorHint: "#D4C7B5", tag: "Traditional" },
-      { id: "stone", name: "Stone Look", line: "Looks like marble, and handles hot pans and stains.", colorHint: "#7E7468", tag: "Strong" },
-      { id: "metal", name: "Metal Shine", line: "Gold, bronze or silver touches for a rich look.", colorHint: "#B8923A", tag: "Rich" },
-      { id: "steel", name: "Stainless Steel", line: "Will not rust, so it is perfect near the sink.", colorHint: "#94A3B8", tag: "Rust-proof" },
+      {
+        id: "satin",
+        name: "Soft Matte",
+        line: "Smooth and velvety. Hides fingerprints beautifully.",
+        colorHint: "#EDE8E1",
+        tag: "Most loved",
+        photos: [
+          { src: "/img/collections/kitchen-corner-scandi-blue.jpg", alt: "Corner kitchen with flat matte blue cabinets and a white marble backsplash" },
+          { src: "/img/kitchen-garden-green.jpg", alt: "Galley kitchen with sage green matte doors and brass handles" },
+          { src: "/img/collections/kitchen-charcoal-designer.jpg", alt: "Handleless wall cabinets in matte blush, olive, orange and grey over charcoal base units" },
+        ],
+      },
+      {
+        id: "laminate",
+        name: "Easy-Care Laminate",
+        line: "Tough, scratch-resistant and easy to wipe clean.",
+        colorHint: "#C2B6A6",
+        tag: "Hard-wearing",
+        photos: [
+          { src: "/img/finishes/laminate-walnut-kitchen.jpg", alt: "Kitchen with walnut wood-grain cabinet doors around a stainless steel niche" },
+          { src: "/img/finishes/laminate-woodgrain-drawers.jpg", alt: "Close view of wood-grain drawer fronts with slim black handles" },
+          { src: "/img/collections/kitchen-green-colour.jpg", alt: "Light wood-grain kitchen cabinets and island against a green wall" },
+        ],
+      },
+      {
+        id: "acrylic",
+        name: "High Gloss",
+        line: "A mirror-like shine that makes rooms feel bigger.",
+        colorHint: "#1E293B",
+        tag: "Shiny",
+        photos: [
+          { src: "/img/finishes/gloss-red-kitchen.jpg", alt: "L-shaped kitchen with shiny red gloss doors reflecting the room" },
+          { src: "/img/collections/kitchen-l-shaped-white.jpg", alt: "White high gloss kitchen cabinets with a steel range cooker" },
+          { src: "/img/finishes/gloss-cream-drawers.jpg", alt: "Close view of cream high gloss drawers catching the light" },
+        ],
+      },
+      {
+        id: "glass",
+        name: "Glass Doors",
+        line: "Show off your best crockery and keep out the dust.",
+        colorHint: "#4B443B",
+        tag: "Display",
+        photos: [
+          { src: "/img/kitchen-glass-glow.jpg", alt: "Dark kitchen with lit glass-front wall cabinets full of glassware" },
+          { src: "/img/collections/kitchen-island-luxury-lit.jpg", alt: "Kitchen island with framed fluted glass doors" },
+          { src: "/img/wardrobe-detail-shot.jpg", alt: "Wardrobe wall with lit glass doors in slim dark frames" },
+        ],
+      },
+      {
+        id: "membrane",
+        name: "Classic Carved",
+        line: "Soft curves and grooves for a traditional feel.",
+        colorHint: "#D4C7B5",
+        tag: "Traditional",
+        photos: [
+          { src: "/img/collections/kitchen-island-warm-wood.jpg", alt: "White kitchen with raised-panel carved doors and a wooden island" },
+          { src: "/img/kitchen-comfort-reach.jpg", alt: "White framed shaker cabinet doors above a marble backsplash" },
+          { src: "/img/collections/wardrobe-sliding-grey.jpg", alt: "Grey wardrobe with framed shaker-style sliding doors" },
+        ],
+      },
+      {
+        id: "stone",
+        name: "Stone Look",
+        line: "Looks like marble, and handles hot pans and stains.",
+        colorHint: "#7E7468",
+        tag: "Strong",
+        photos: [
+          { src: "/img/finishes/stone-marble-drawer-fronts.jpg", alt: "Drawer fronts in a brown marble finish, one pulled open" },
+          { src: "/img/kitchen-island-luxury.jpg", alt: "White marble waterfall island in front of dark wood tall units" },
+          { src: "/img/kitchen-curves-arches.jpg", alt: "Travertine stone worktop and backsplash under arched niches" },
+        ],
+      },
+      {
+        id: "metal",
+        name: "Metal Shine",
+        line: "Gold, bronze or silver touches for a rich look.",
+        colorHint: "#B8923A",
+        tag: "Rich",
+        photos: [
+          { src: "/img/finishes/metal-copper-kitchen.jpg", alt: "Kitchen with copper metal tall cabinets, a copper sink and copper splashback" },
+          { src: "/img/finishes/metal-gold-wall-cabinets.jpg", alt: "Grey framed kitchen with gold metallic wall cabinet doors" },
+          { src: "/img/finishes/metal-bronze-doors.jpg", alt: "Close view of bronze metallic doors with ribbed bronze handles" },
+        ],
+      },
+      {
+        id: "steel",
+        name: "Stainless Steel",
+        line: "Will not rust, so it is perfect near the sink.",
+        colorHint: "#94A3B8",
+        tag: "Rust-proof",
+        photos: [
+          { src: "/img/finishes/steel-cabinets-worktop.jpg", alt: "Brushed stainless steel cabinets and worktop with a built-in hob" },
+          { src: "/img/finishes/steel-island.jpg", alt: "Kitchen island clad in brushed stainless steel" },
+          { src: "/img/chefs/chefs-ss-tables.jpg", alt: "Long stainless steel worktables with drawers in a working kitchen" },
+        ],
+      },
     ],
   },
 
@@ -404,21 +525,24 @@ export const HOME_CONTENT: HomeContent = {
         id: "sliding",
         name: "Sliding Wardrobes",
         line: "Doors slide sideways, so they never bump into your bed.",
-        image: "/img/wardrobe-bespoke-real.jpg",
+        image: "/img/collections/wardrobe-sliding-ivory.jpg",
+        alt: "Ivory sliding wardrobe with a mirrored centre door, partly slid open",
         href: "/wardrobes",
       },
       {
         id: "hinged",
         name: "Swing-Door Wardrobes",
         line: "Doors open wide, so you can see everything at once.",
-        image: "/img/wardrobe-card.jpg",
+        image: "/img/collections/wardrobe-hinged-open.jpg",
+        alt: "White built-in wardrobe with hinged doors swung open onto lit hanging space and drawers",
         href: "/wardrobes",
       },
       {
         id: "walk-in",
         name: "Walk-in Closets",
         line: "Your own dressing room, with soft lights and open shelves.",
-        image: "/img/walk-in-closet-luxury.jpg",
+        image: "/img/wardrobe-card.jpg",
+        alt: "Walk-in dressing room with dark fluted wardrobes, open hanging rails and lit shelves",
         href: "/walk-in-closets",
       },
     ],
@@ -434,25 +558,29 @@ export const HOME_CONTENT: HomeContent = {
         id: "drawers",
         title: "Soft-Close Drawers",
         line: "No more banging. Drawers close gently, even when full of pots.",
-        image: "/img/hardware-fittings-luxury.jpg",
+        image: "/img/collections/kitchen-soft-close-drawers.jpg",
+        alt: "White kitchen drawers pulled open on full-extension runners",
       },
       {
         id: "lift-up",
         title: "Lift-Up Doors",
         line: "Top cabinets open upward and stay open. No bumping your head.",
-        image: "/img/craftsmanship-detail.jpg",
+        image: "/img/hardware-fittings-luxury.jpg",
+        alt: "Wall cabinet door lifted up and held open by a lift-up fitting",
       },
       {
         id: "magic-corner",
         title: "Corner Pull-Outs",
         line: "Corner shelves slide out, so nothing gets lost at the back.",
-        image: "/img/kitchen-detail-real.jpg",
+        image: "/img/collections/kitchen-corner-pull-out.jpg",
+        alt: "Hand pulling a curved corner shelf out of a kitchen base cabinet",
       },
       {
         id: "mirror",
         title: "Pull-Out Mirror",
         line: "A full-length mirror that slides out of your wardrobe.",
-        image: "/img/pullout-mirror-real.jpg",
+        image: "/img/collections/dressing-room-full-mirror.jpg",
+        alt: "Dressing room with a tall full-length mirror panel beside the storage units",
       },
     ],
     brandsKicker: "Fittings from brands you can trust",
@@ -460,10 +588,10 @@ export const HOME_CONTENT: HomeContent = {
   },
 
   projects: {
-    kicker: "Our work",
-    title: "Homes we've",
-    accent: "made beautiful",
-    subtitle: "Real kitchens and wardrobes we've made for families in Raipur and nearby.",
+    kicker: "Design ideas",
+    title: "Looks we",
+    accent: "love to make",
+    subtitle: "Ideas for kitchens, wardrobes and living rooms. Pick one you like and we make it to fit your home.",
     filters: [
       { id: "all", label: "All" },
       { id: "kitchen", label: "Kitchens" },
@@ -472,12 +600,12 @@ export const HOME_CONTENT: HomeContent = {
       { id: "living", label: "Living Room" },
     ],
     items: [
-      { id: "proj-1", title: "Island Kitchen", location: "Shankar Nagar, Raipur", category: "kitchen", image: "/img/kitchen-island-real.jpg" },
-      { id: "proj-2", title: "Floor-to-Ceiling Sliding Wardrobe", location: "VIP Road, Raipur", category: "wardrobe", image: "/img/wardrobe-bespoke-real.jpg" },
-      { id: "proj-3", title: "Walk-in Closet with Glass Doors", location: "Civil Lines, Raipur", category: "closet", image: "/img/walk-in-closet-luxury.jpg" },
-      { id: "proj-4", title: "Glowing Bar Unit", location: "Devendra Nagar, Raipur", category: "living", image: "/img/bar-unit-luxury.jpg" },
-      { id: "proj-5", title: "Modern L-Shaped Kitchen", location: "Bilaspur", category: "kitchen", image: "/img/kitchen-contemporary-real.jpg" },
-      { id: "proj-6", title: "TV Unit with Wood Panels", location: "Raipur", category: "living", image: "/img/living-room-showcase.jpg" },
+      { id: "proj-1", title: "Island Kitchen", tag: "Curved island and lit arch", category: "kitchen", image: "/img/kitchen-island-real.jpg", alt: "Island kitchen with a curved two-level island, bar stools and a lit arch" },
+      { id: "proj-2", title: "Floor-to-Ceiling Glass-Door Wardrobe", tag: "Framed glass and brass handles", category: "wardrobe", image: "/img/wardrobe-bespoke-real.jpg", alt: "Floor-to-ceiling wardrobe with white framed glass doors and long brass handles" },
+      { id: "proj-3", title: "Walk-in Closet with Glass Doors", tag: "Lit cabinets and a centre island", category: "closet", image: "/img/walk-in-closet-luxury.jpg", alt: "Walk-in closet with lit glass-front wardrobes and a marble-topped island" },
+      { id: "proj-4", title: "Glowing Bar Unit", tag: "Lit shelves and a wine rack", category: "living", image: "/img/bar-unit-luxury.jpg", alt: "Arched bar unit with lit bottle shelves and a wine rack between two gold columns" },
+      { id: "proj-5", title: "L-Shaped Kitchen with Island", tag: "Wood grain with tall oven units", category: "kitchen", image: "/img/kitchen-layout-real.jpg", alt: "L-shaped kitchen with wood-grain base units, tall oven units and a white island" },
+      { id: "proj-6", title: "TV Unit with Wood Panels", tag: "Oak panels over a floating unit", category: "living", image: "/img/collections/tv-unit-white-oak.jpg", alt: "Wall-mounted TV on oak wood panels above a floating white TV unit" },
     ],
   },
 
@@ -486,13 +614,13 @@ export const HOME_CONTENT: HomeContent = {
     title: "In their",
     accent: "own words",
     subtitle: "Real words from families who trusted us with their homes.",
-    // Verbatim reviews from the live site (brief/content-inventory.md §6). Do not edit the quotes.
+    // Reviews from the live site (brief/content-inventory.md §6). Quotes are verbatim excerpts, trimmed only to drop numeric claims. Do not reword them.
     items: [
       {
         id: "t-1",
         name: "Anuska Hormaz",
         city: "New homeowner",
-        quote: "We approached EBONY with zero experience. Our designer was very patient throughout. They installed the kitchen within 3 days of the building being ready, and post-installation service is commendable.",
+        quote: "We approached EBONY with zero experience. Our designer was very patient throughout.",
         avatar: "AH",
         rating: 5,
       },
@@ -500,7 +628,7 @@ export const HOME_CONTENT: HomeContent = {
         id: "t-2",
         name: "Ramesh Goradia",
         city: "Repeat client, Pune",
-        quote: "It's been nine years since we first contacted EBONY. We haven't had a single service issue. Because of the quality and design, we came back for our new home. Their products and services are worth every penny.",
+        quote: "We haven't had a single service issue. Because of the quality and design, we came back for our new home. Their products and services are worth every penny.",
         avatar: "RG",
         rating: 5,
       },
@@ -543,21 +671,23 @@ export const HOME_CONTENT: HomeContent = {
     kicker: "Why Ebony",
     title: "Why families",
     accent: "choose us",
-    subtitle: "Seven simple promises we keep in every home.",
+    subtitle: "Simple promises we keep in every home.",
     points: [
       {
         id: "lifetime-ss304",
         title: "Lifetime Warranty on SS 304",
         line: "Every SS 304 stainless steel basket and fitting we fit comes with a lifetime warranty.",
         icon: "ShieldCheck",
-        image: "/img/why-ss304-basket.jpg",
+        image: "/img/collections/kitchen-steel-wire-baskets.jpg",
+        alt: "Stainless steel wire basket pulled out of a kitchen base cabinet",
       },
       {
         id: "warranty",
-        title: "10-Year Warranty",
-        line: "Strong materials and careful checks, backed by 10 years of warranty on woodwork.",
+        title: "Warranty on Woodwork",
+        line: "Strong materials and careful checks, backed by a warranty on all the woodwork we make.",
         icon: "Award",
         image: "/img/craftsmanship-detail.jpg",
+        alt: "Carpenter's hands chiselling a wooden joint at a workbench",
       },
       {
         id: "materials",
@@ -565,6 +695,7 @@ export const HOME_CONTENT: HomeContent = {
         line: "Waterproof plywood, branded hardware and SS 304 steel. You see every sample first.",
         icon: "Layers",
         image: "/img/core-materials-luxury.jpg",
+        alt: "Samples of waterproof plywood, moisture-resistant board and stainless steel on a table",
       },
       {
         id: "after-sales",
@@ -572,6 +703,7 @@ export const HOME_CONTENT: HomeContent = {
         line: "A hinge to adjust or a drawer to fix later? Call us and our team comes back to help.",
         icon: "Wrench",
         image: "/img/why-after-sales.jpg",
+        alt: "Technician adjusting the hinge of a kitchen wall cabinet door",
       },
       {
         id: "delivery",
@@ -579,20 +711,23 @@ export const HOME_CONTENT: HomeContent = {
         line: "Everything is made in our factory, so fitting is quick and clean, with almost no dust.",
         icon: "Clock",
         image: "/img/process-engineering.jpg",
+        alt: "Clean factory floor with a CNC machine cutting cabinet panels",
       },
       {
         id: "pricing",
         title: "Clear, Honest Pricing",
-        line: "You get a clear quote upfront. No hidden costs, no surprises.",
+        line: "You get a clear price upfront. No hidden costs, no surprises.",
         icon: "BadgeCheck",
-        image: "/img/kitchen-curves-arches.jpg",
+        image: "/img/quote-review-at-home.jpg",
+        alt: "Fitter going through a written quote with a homeowner at her kitchen table",
       },
       {
         id: "visit",
         title: "Home Design Visit",
         line: "We visit your home, measure every wall and show you the design in 3D.",
         icon: "Ruler",
-        image: "/img/kitchen-layout-real.jpg",
+        image: "/img/designer-home-consultation.jpg",
+        alt: "Designer showing plans to a homeowner on the sofa in his living room",
       },
     ],
     footnote: {
@@ -606,9 +741,9 @@ export const HOME_CONTENT: HomeContent = {
     kicker: "Home design visit",
     title: "Let's design your",
     accent: "dream kitchen",
-    subtitle: "Tell us a little about your home. We'll call you back and plan a visit at a time that suits you.",
-    formTitle: "Book your visit",
-    formNote: "Just 3 details. No pushy sales calls.",
-    primaryBtn: "Book My Visit",
+    subtitle: "Tell us a little about your home and we will ring you to plan your space, at a time that suits you.",
+    formTitle: "Reserve your design visit",
+    formNote: "Just a few details. No pushy sales calls.",
+    primaryBtn: "Reserve My Design Visit",
   },
 }

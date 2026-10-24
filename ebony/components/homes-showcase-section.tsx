@@ -3,12 +3,20 @@
 import { useState } from "react"
 import Image from "next/image"
 import Link from "next/link"
-import { ArrowRight, MapPin } from "lucide-react"
+import { ArrowRight, Sparkles } from "lucide-react"
 import { HOME_CONTENT } from "@/lib/home-content"
 import { SectionHeader } from "@/components/ui/section-header"
 import { cn } from "@/lib/utils"
 
-export function ProjectsShowcaseSection() {
+// Each card opens the matching category on the Collections page
+const CATEGORY_LINKS: Record<string, string> = {
+  kitchen: "/collections#kitchens",
+  wardrobe: "/collections#wardrobes",
+  closet: "/collections#wardrobes",
+  living: "/collections#tv-bar",
+}
+
+export function HomesShowcaseSection() {
   const { kicker, title, accent, subtitle, filters, items } = HOME_CONTENT.projects
   const [activeFilter, setActiveFilter] = useState("all")
 
@@ -44,12 +52,12 @@ export function ProjectsShowcaseSection() {
           {filteredProjects.map((project) => (
             <Link
               key={project.id}
-              href="/projects"
+              href={CATEGORY_LINKS[project.category] ?? "/collections"}
               className="group relative rounded-[1.75rem] overflow-hidden aspect-[4/5] sm:aspect-[4/5] bg-slate-900 animate-in fade-in zoom-in-95 duration-500"
             >
               <Image
                 src={project.image}
-                alt={project.title}
+                alt={project.alt ?? project.title}
                 fill
                 className="object-cover transition-transform duration-[1.2s] ease-out group-hover:scale-[1.06]"
                 sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 33vw"
@@ -58,8 +66,8 @@ export function ProjectsShowcaseSection() {
               <div className="absolute inset-x-0 bottom-0 p-6 sm:p-7">
                 <h3 className="font-serif text-2xl text-white font-normal leading-tight">{project.title}</h3>
                 <p className="flex items-center gap-1.5 text-[15px] text-white/85 mt-1.5">
-                  <MapPin className="w-4 h-4 text-[#D8B97F]" />
-                  {project.location}
+                  <Sparkles className="w-4 h-4 text-[#D8B97F]" />
+                  {project.tag}
                 </p>
               </div>
             </Link>
@@ -68,10 +76,10 @@ export function ProjectsShowcaseSection() {
 
         <div className="text-center">
           <Link
-            href="/projects"
+            href="/collections"
             className="group inline-flex items-center gap-2 px-8 py-4 rounded-full bg-slate-950 hover:bg-[#8E6D38] text-white text-[15px] font-semibold transition-colors duration-300"
           >
-            See all our work
+            Browse all design ideas
             <ArrowRight className="w-4 h-4 transition-transform duration-300 group-hover:translate-x-1" />
           </Link>
         </div>

@@ -2,14 +2,15 @@ import Image from "next/image"
 import Link from "next/link"
 import { Navbar } from "@/components/navbar"
 import { Footer } from "@/components/footer"
+import { EnquiryModal } from "@/components/enquiry-modal"
 import { SurfaceFinishesSection } from "@/components/surface-finishes-section"
 import { CoreMaterialsSection } from "@/components/core-materials-section"
 import { ArrowUpRight, Palette, Layers, Sparkles } from "lucide-react"
 
 export const metadata = {
-  title: "500+ Surface Finishes & Core Materials — EBONY Modular Interiors",
+  title: "Surface Finishes & Core Materials — EBONY Modular Interiors",
   description:
-    "Explore 500+ bespoke finishes: Italian PU lacquers, anti-fingerprint laminates, optical acrylics, smoked glass, Terulam stone, and certified BWP Marine Plywood & SS304 substrates.",
+    "Explore bespoke finishes: Italian PU lacquers, anti-fingerprint laminates, optical acrylics, smoked glass, Terulam stone, and certified BWP Marine Plywood & SS 304 substrates.",
 }
 
 export default function FinishesPage() {
@@ -37,11 +38,11 @@ export default function FinishesPage() {
                 MATERIAL LIBRARY &amp; SUBSTRATES
               </span>
               <h1 className="font-serif text-4xl sm:text-6xl lg:text-7xl text-white font-normal leading-[1.1] tracking-tight mb-6">
-                500+ Finishes, <br />
-                <span className="italic">Enduring Tactile Luxury.</span>
+                Finishes to Touch and Love, <br />
+                <span>Enduring Tactile Luxury.</span>
               </h1>
               <p className="font-sans text-sm sm:text-base text-white/80 font-normal leading-relaxed mb-8 max-w-2xl">
-                From 6-sided seamless Italian PU lacquers and optical acrylics to indestructible SS 304 surgical stainless steel and BWP Marine Plywood. Explore materials engineered for a lifetime.
+                From seamless all-round Italian PU lacquers and optical acrylics to indestructible SS 304 surgical stainless steel and BWP Marine Plywood. Explore materials engineered for a lifetime.
               </p>
 
               <div className="flex flex-wrap items-center gap-4">
@@ -49,20 +50,20 @@ export default function FinishesPage() {
                   href="#finishes-section"
                   className="px-6 py-3.5 rounded-full bg-[#B8923A] hover:bg-[#C99E4B] text-slate-950 font-mono text-xs uppercase tracking-wider font-bold transition-all duration-300 shadow-lg"
                 >
-                  Explore Finishes Matrix
+                  Browse the Finishes
                 </Link>
                 <Link
                   href="/contact"
                   className="px-6 py-3.5 rounded-full bg-white/10 hover:bg-white/20 border border-white/20 text-white font-mono text-xs uppercase tracking-wider font-semibold transition-all duration-300 backdrop-blur-md"
                 >
-                  Touch Swatches at Studio
+                  Come Touch the Swatches
                 </Link>
               </div>
             </div>
           </div>
         </section>
 
-        {/* 3 Pillars */}
+        {/* Pillars */}
         <section className="py-16 bg-[#FAFAFA] border-b border-slate-200">
           <div className="max-w-7xl mx-auto px-5 sm:px-8 lg:px-12">
             <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
@@ -72,7 +73,7 @@ export default function FinishesPage() {
                 </div>
                 <div>
                   <h3 className="font-serif text-lg text-slate-950 font-normal mb-1">
-                    500+ Custom Color Codes
+                    Custom Colour Matching
                   </h3>
                   <p className="font-sans text-xs text-slate-600 font-normal leading-relaxed">
                     Custom RAL and Pantone color matching in seamless Italian PU spray lacquer applied in sterile cleanroom environments.
@@ -86,7 +87,7 @@ export default function FinishesPage() {
                 </div>
                 <div>
                   <h3 className="font-serif text-lg text-slate-950 font-normal mb-1">
-                    Zero-Joint Laser Edging
+                    Invisible Laser Edging
                   </h3>
                   <p className="font-sans text-xs text-slate-600 font-normal leading-relaxed">
                     German laser edge-banding seals panel borders invisibly with waterproof polymer fusion, eliminating dirt lines and water ingress.
@@ -111,10 +112,10 @@ export default function FinishesPage() {
           </div>
         </section>
 
-        {/* 8 Finishes Interactive Swatch Matrix */}
+        {/* Interactive Swatch Matrix */}
         <SurfaceFinishesSection />
 
-        {/* 3 Core Materials Substrate Section */}
+        {/* Core Materials Substrate Section */}
         <CoreMaterialsSection />
 
         {/* Studio Swatch Invitation CTA */}
@@ -124,7 +125,7 @@ export default function FinishesPage() {
               FEEL THE TACTILE QUALITY
             </span>
             <h2 className="font-serif text-3xl sm:text-5xl text-white font-normal mb-6">
-              Touch 500+ Finishes in Our Studio.
+              Touch Every Finish in Our Studio.
             </h2>
             <p className="font-sans text-sm sm:text-base text-white/70 font-normal leading-relaxed mb-8 max-w-xl mx-auto">
               Screen renders cannot convey the velvety touch of Italian super-matte lacquer or the weighty glide of an anodised bronze shutter. Visit our Raipur flagship studio.
@@ -133,12 +134,14 @@ export default function FinishesPage() {
               href="/contact"
               className="inline-flex items-center gap-2 px-8 py-4 rounded-full bg-[#B8923A] hover:bg-[#C99E4B] text-slate-950 font-mono text-xs uppercase tracking-wider font-bold transition-all duration-300 shadow-xl"
             >
-              <span>Schedule Studio Visit</span>
+              <span>Reserve My Studio Visit</span>
               <ArrowUpRight className="w-4 h-4" />
             </Link>
           </div>
         </section>
       </main>
+
+      <EnquiryModal />
 
       <Footer />
     </div>

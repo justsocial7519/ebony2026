@@ -25,7 +25,7 @@ export function CustomKitchensSection() {
               <div className="shine relative aspect-[4/3] w-full overflow-hidden bg-stone-100">
                 <Image
                   src={card.image}
-                  alt={card.title}
+                  alt={card.alt ?? card.title}
                   fill
                   className="object-cover transition-transform duration-[1.2s] ease-out group-hover:scale-[1.06]"
                   sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 33vw"
@@ -39,7 +39,7 @@ export function CustomKitchensSection() {
                 <h3 className="font-serif text-2xl text-slate-950 font-normal mb-1.5">{card.title}</h3>
                 <p className="text-[15px] text-slate-600 leading-relaxed flex-1">{card.line}</p>
                 <span className="mt-5 inline-flex items-center gap-2 text-[15px] font-semibold text-[#8E6D38]">
-                  Ask about this
+                  Plan My Kitchen
                   <ArrowRight className="w-4 h-4 transition-transform duration-300 group-hover:translate-x-1.5" />
                 </span>
               </div>

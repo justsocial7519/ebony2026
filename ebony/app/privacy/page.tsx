@@ -1,5 +1,6 @@
 import { Navbar } from "@/components/navbar"
 import { Footer } from "@/components/footer"
+import { EnquiryModal } from "@/components/enquiry-modal"
 import { BRAND } from "@/lib/content"
 
 export const metadata = {
@@ -30,7 +31,7 @@ export default function PrivacyPage() {
               1. Information We Collect
             </h2>
             <p>
-              When booking a design consultation or requesting a quote, we may collect your full name, email address, phone number, city, architectural drawings, and interior preferences. We do not sell, rent, or monetize your contact information with any third-party marketing brokers.
+              When booking a design consultation or asking for a design plan, we may collect your full name, email address, phone number, city, architectural drawings, and interior preferences. We do not sell, rent, or monetize your contact information with any third-party marketing brokers.
             </p>
 
             <h2 className="font-serif text-2xl text-slate-950 font-normal pt-4">
@@ -56,6 +57,8 @@ export default function PrivacyPage() {
           </div>
         </div>
       </main>
+
+      <EnquiryModal />
 
       <Footer />
     </div>

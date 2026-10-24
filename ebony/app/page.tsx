@@ -7,7 +7,7 @@ import { KitchenStylesSection } from "@/components/kitchen-styles-section"
 import { SurfaceFinishesSection } from "@/components/surface-finishes-section"
 import { WardrobesSection } from "@/components/wardrobes-section"
 import { InternalFittingsSection } from "@/components/internal-fittings-section"
-import { ProjectsShowcaseSection } from "@/components/projects-showcase-section"
+import { HomesShowcaseSection } from "@/components/homes-showcase-section"
 import { TestimonialsSection } from "@/components/testimonials-section"
 import { WhyEbonySection } from "@/components/why-ebony-section"
 import { StudioCtaSection } from "@/components/studio-cta-section"
@@ -20,7 +20,7 @@ import { MobileStickyBar } from "@/components/mobile-sticky-bar"
 export const metadata = {
   title: "Ebony — Modular Kitchens & Home Interiors in Raipur",
   description:
-    "Beautiful modular kitchens, wardrobes and walk-in closets made just for you. Designed around your family, made in our own Raipur factory and fitted in about 3 days.",
+    "Beautiful modular kitchens, wardrobes and walk-in closets made just for you. Designed around your family, made in our own Raipur factory and fitted cleanly by our own team.",
 }
 
 export default function Page() {
@@ -30,7 +30,7 @@ export default function Page() {
       <Navbar />
 
       <main>
-        {/* Section 1: Cinematic Hero with Video & 4-Stat Animated Trust Strip */}
+        {/* Section 1: Cinematic Hero with Video & Trust Promises Strip */}
         <HeroSection />
 
         {/* Section 2: Explore Modular Designs (4 Collections Bento Grid) */}
@@ -69,9 +69,9 @@ export default function Page() {
           <InternalFittingsSection />
         </FadeReveal>
 
-        {/* Section 10: Homes We've Made Beautiful (6 Real Work Cards from Raipur & Nearby) */}
+        {/* Section 10: Design ideas we love to make (kitchens, wardrobes, closets, living) */}
         <FadeReveal>
-          <ProjectsShowcaseSection />
+          <HomesShowcaseSection />
         </FadeReveal>
 
         {/* Section 11: Happy Homes / Real Stories (Customer Reviews) */}

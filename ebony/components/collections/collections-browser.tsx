@@ -1,6 +1,6 @@
 "use client"
 
-import { useMemo, useRef, useState } from "react"
+import { useEffect, useMemo, useRef, useState } from "react"
 import Image from "next/image"
 import * as DialogPrimitive from "@radix-ui/react-dialog"
 import { ArrowLeft, ArrowRight, ArrowUpRight, MessageCircle, X } from "lucide-react"
@@ -23,7 +23,6 @@ const TRENDING = TRENDING_IDS.map((id) => COLLECTION_ITEMS.find((item) => item.i
 )
 
 const categoryLabel = (id: CollectionCategory) => COLLECTION_CATEGORIES.find((c) => c.id === id)?.label ?? ""
-const countOf = (id: CollectionCategory) => COLLECTION_ITEMS.filter((item) => item.category === id).length
 
 function prefersReducedMotion() {
   return typeof window !== "undefined" && window.matchMedia("(prefers-reduced-motion: reduce)").matches
@@ -44,6 +43,18 @@ export function CollectionsBrowser() {
     [category, type]
   )
   const activeCategory = COLLECTION_CATEGORIES.find((c) => c.id === category)
+
+  // A link such as /collections#tv-bar opens the ideas for that category
+  useEffect(() => {
+    const match = COLLECTION_CATEGORIES.find((c) => c.id === window.location.hash.slice(1))
+    if (!match) return
+    const timer = window.setTimeout(() => {
+      setCategory(match.id)
+      setType(null)
+      galleryRef.current?.scrollIntoView({ behavior: "auto" })
+    }, 0)
+    return () => window.clearTimeout(timer)
+  }, [])
 
   const chooseCategory = (next: Filter, scroll = false) => {
     setCategory(next)
@@ -76,10 +87,11 @@ export function CollectionsBrowser() {
             {COLLECTION_CATEGORIES.map((c, index) => (
               <button
                 key={c.id}
+                id={c.id}
                 type="button"
                 onClick={() => chooseCategory(c.id, true)}
                 className={cn(
-                  "group relative overflow-hidden rounded-[1.75rem] text-left min-h-[260px] bg-stone-200 transition-transform duration-300 active:scale-[0.99]",
+                  "group relative overflow-hidden rounded-[1.75rem] text-left min-h-[260px] bg-stone-200 transition-transform duration-300 active:scale-[0.99] scroll-mt-24",
                   index === 0 ? "lg:col-span-7 lg:row-span-2" : "lg:col-span-5"
                 )}
               >
@@ -94,7 +106,7 @@ export function CollectionsBrowser() {
                 <span className="absolute inset-x-0 bottom-0 p-6 sm:p-8 flex items-end justify-between gap-5">
                   <span>
                     <span className="block text-[13px] font-semibold uppercase tracking-[0.16em] text-[#E8CF9C]">
-                      {countOf(c.id)} ideas
+                      Design ideas
                     </span>
                     <span className="block font-serif text-3xl sm:text-4xl text-white mt-1">{c.label}</span>
                     <span className="block text-[15px] text-white/80 mt-2 max-w-sm leading-relaxed">{c.line}</span>
@@ -116,7 +128,7 @@ export function CollectionsBrowser() {
             <div>
               <span className="kicker">Trending now</span>
               <h2 className="font-serif text-[2.1rem] leading-[1.12] sm:text-5xl font-normal tracking-tight mt-4 text-slate-950">
-                Ideas families <span className="italic text-[#9A7637]">ask for most</span>
+                Ideas families <span className="text-[#9A7637]">ask for most</span>
               </h2>
             </div>
             <div className="hidden sm:flex gap-3 shrink-0">
@@ -186,7 +198,6 @@ export function CollectionsBrowser() {
             <div className="flex gap-2 overflow-x-auto no-scrollbar" role="group" aria-label="Category">
               {(["all", ...COLLECTION_CATEGORIES.map((c) => c.id)] as Filter[]).map((id) => {
                 const label = id === "all" ? "All ideas" : categoryLabel(id)
-                const count = id === "all" ? COLLECTION_ITEMS.length : countOf(id)
                 return (
                   <button
                     key={id}
@@ -200,7 +211,7 @@ export function CollectionsBrowser() {
                         : "bg-stone-100 text-slate-700 hover:bg-stone-200"
                     )}
                   >
-                    {label} <span className={cn("ml-1", category === id ? "text-white/60" : "text-slate-400")}>{count}</span>
+                    {label}
                   </button>
                 )
               })}
@@ -327,7 +338,7 @@ export function CollectionsBrowser() {
                       }}
                       className="min-h-[52px] rounded-full bg-slate-950 hover:bg-[#B8923A] text-white font-semibold transition-colors active:scale-[0.99]"
                     >
-                      Get this design
+                      Make This Mine
                     </button>
                     <a
                       href={`https://wa.me/${WHATSAPP_NUMBER}?text=${encodeURIComponent(

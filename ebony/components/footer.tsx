@@ -11,10 +11,9 @@ const EXPLORE = [
   { label: "Home", href: "/" },
   { label: "Collections", href: "/collections" },
   { label: "3D Kitchen Studio", href: "/kitchen-studio" },
-  { label: "Our Work", href: "/projects" },
   { label: "Colours & Finishes", href: "/finishes" },
   { label: "Fittings", href: "/hardware" },
-  { label: "About Us", href: "/about" },
+  { label: "Why Ebony", href: "/why-ebony" },
   { label: "Contact", href: "/contact" },
 ]
 
@@ -24,7 +23,7 @@ const MAKE = [
   { label: "L-Shaped Kitchens", href: "/kitchens#l-shape" },
   { label: "Wardrobes", href: "/wardrobes" },
   { label: "Walk-in Closets", href: "/walk-in-closets" },
-  { label: "Bar & TV Units", href: "/collections" },
+  { label: "Bar & TV Units", href: "/collections#tv-bar" },
   { label: "Commercial Kitchens", href: "/chefs-favourite-corner" },
 ]
 
@@ -37,16 +36,18 @@ export function Footer() {
         {/* Closing line + quick actions */}
         <div className="flex flex-col lg:flex-row lg:items-end justify-between gap-10 pb-14 border-b border-white/10">
           <div className="max-w-2xl">
-            <Image
-              src="/logo.png"
-              alt={BRAND.name}
-              width={140}
-              height={40}
-              className="object-contain brightness-125 mb-8"
-              style={{ width: "auto", height: "auto" }}
-            />
+            <Link href="/" aria-label="Ebony home" className="block w-fit mb-8">
+              <Image
+                src="/logo.png"
+                alt={BRAND.name}
+                width={140}
+                height={40}
+                className="object-contain brightness-125"
+                style={{ width: "auto", height: "auto" }}
+              />
+            </Link>
             <p className="font-serif text-[2rem] sm:text-5xl leading-[1.15] tracking-tight">
-              Kitchens you&apos;ll love <span className="italic text-[#D8B97F]">coming home to.</span>
+              Kitchens you&apos;ll love <span className="text-[#D8B97F]">coming home to.</span>
             </p>
           </div>
           <div className="flex flex-col sm:flex-row gap-3 shrink-0">

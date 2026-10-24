@@ -38,7 +38,7 @@ export function WhyEbonySection() {
                 >
                   <Image
                     src={point.image}
-                    alt={point.title}
+                    alt={point.alt ?? point.title}
                     fill
                     className="object-cover transition-transform duration-1000 ease-out group-hover:scale-[1.06]"
                     sizes={lead ? "(max-width: 640px) 100vw, 50vw" : "(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 25vw"}

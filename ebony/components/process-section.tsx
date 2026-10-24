@@ -131,7 +131,7 @@ export function ProcessSection() {
               >
                 {/* Step number */}
                 <div className="shrink-0 flex flex-col items-center">
-                  <span className="font-serif italic text-3xl text-gold/30 group-hover:text-gold-deep transition-colors duration-300">
+                  <span className="font-serif text-3xl text-gold/30 group-hover:text-gold-deep transition-colors duration-300">
                     {step.number}
                   </span>
                   {i < PROCESS_STEPS.length - 1 && (
@@ -142,7 +142,7 @@ export function ProcessSection() {
                 {/* Content */}
                 <div className="flex-1">
                   <div className="flex items-center justify-between gap-4 mb-3">
-                    <h3 className="font-serif italic text-xl text-ebony group-hover:text-gold-deep transition-colors duration-300">
+                    <h3 className="font-serif text-xl text-ebony group-hover:text-gold-deep transition-colors duration-300">
                       {step.title}
                     </h3>
                     <span className="font-mono text-xs tracking-[0.15em] uppercase px-3 py-1 rounded-full bg-gold/8 text-gold-deep opacity-0 group-hover:opacity-100 transition-opacity duration-300 whitespace-nowrap">
@@ -161,12 +161,12 @@ export function ProcessSection() {
         {/* Bottom stats */}
         <div className="process-stats flex flex-wrap justify-center gap-12 md:gap-20 mt-16 pt-12 border-t border-hair">
           {[
-            { value: "3 Days", label: "Average Installation" },
-            { value: "500+", label: "Design Finishes" },
-            { value: "0%", label: "Defect Rate" },
+            { value: "Own factory", label: "Made in Raipur" },
+            { value: "Finishes", label: "To touch first" },
+            { value: "Clean fitting", label: "By our own team" },
           ].map((stat) => (
             <div key={stat.label} className="process-stat text-center">
-              <p className="font-serif italic text-3xl md:text-4xl text-gold-deep mb-1">
+              <p className="font-serif text-3xl md:text-4xl text-gold-deep mb-1">
                 {stat.value}
               </p>
               <p className="font-mono text-xs tracking-[0.15em] uppercase text-graphite">

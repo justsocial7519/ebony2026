@@ -1,5 +1,5 @@
 // Collections gallery: design ideas for the three things Ebony makes.
-// Photos are a mix of Ebony's own library and licensed Freepik Premium stock (public/img/collections).
+// Photos are a mix of Ebony's own library and licensed premium stock photos (public/img/collections).
 
 export type CollectionCategory = "kitchens" | "wardrobes" | "tv-bar"
 

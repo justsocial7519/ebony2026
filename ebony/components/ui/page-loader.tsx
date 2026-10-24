@@ -104,7 +104,7 @@ export function PageLoader() {
           />
         </div>
 
-        <p className="mt-7 font-serif italic text-lg sm:text-2xl text-white/90" aria-hidden="true">
+        <p className="mt-7 font-serif text-lg sm:text-2xl text-white/90" aria-hidden="true">
           {TAGLINE.split(" ").map((word, i) => (
             <span key={i} className="rise-word" style={{ animationDelay: `${350 + i * 110}ms` }}>
               {word}
@@ -118,7 +118,7 @@ export function PageLoader() {
         className="relative flex items-end justify-between px-6 sm:px-10 pb-8 sm:pb-10 transition-opacity duration-500"
         style={{ opacity: phase === "leaving" ? 0 : 1 }}
       >
-        <span className="text-sm text-white/60">Raipur · Since 2009</span>
+        <span className="text-sm text-white/60">Raipur · Kitchens &amp; wardrobes</span>
         <span className="font-serif text-5xl sm:text-7xl text-[#D8B97F] tabular-nums leading-none">
           {progress}
           <span className="text-2xl sm:text-3xl text-white/50">%</span>

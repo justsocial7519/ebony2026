@@ -9,9 +9,9 @@ const FRAME_PAD = (num: number) => String(num).padStart(3, "0")
 
 const CHAPTERS = [
   { range: [0, 0.25], num: "01", title: "The Architectural Thought", tag: "Raipur Studio Design" },
-  { range: [0.25, 0.5], num: "02", title: "German CNC Precision", tag: "0.1mm Tolerances" },
-  { range: [0.5, 0.75], num: "03", title: "500+ Bespoke Finishes", tag: "Italian PU & Veneer" },
-  { range: [0.75, 1.0], num: "04", title: "Clean Home Handover", tag: "Zero Dust Handover" },
+  { range: [0.25, 0.5], num: "02", title: "German CNC Precision", tag: "Precision Tolerances" },
+  { range: [0.5, 0.75], num: "03", title: "Bespoke Finishes", tag: "Italian PU & Veneer" },
+  { range: [0.75, 1.0], num: "04", title: "Clean Home Handover", tag: "Low-Dust Handover" },
 ]
 
 export function ScrollStoryCanvas() {
@@ -202,7 +202,7 @@ export function ScrollStoryCanvas() {
                   <span>·</span>
                   <span>{activeChapter.tag}</span>
                 </div>
-                <h3 className="font-serif italic text-2xl text-slate-900 font-normal">
+                <h3 className="font-serif text-2xl text-slate-900 font-normal">
                   {activeChapter.title}
                 </h3>
               </motion.div>

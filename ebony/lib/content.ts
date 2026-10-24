@@ -7,8 +7,6 @@ export const BRAND = {
   legalName: "EBONY Modular Kulture",
   tagline: "Every space begins with a thought.",
   subtitle: "German Engineering. Bespoke Indian Living.",
-  established: 2009,
-  experience: "15+",
   location: "Raipur Flagship Studio, Chhattisgarh",
   address: "EBONY Modular Interiors, VIP Road / Shankar Nagar Corridor, Raipur, Chhattisgarh 492001",
   phone: "+91 79742 09352",
@@ -28,13 +26,12 @@ export const NAV_LINKS = [
       { label: "Modular Kitchens", href: "/kitchens", desc: "L, U, Island, Parallel & Straight layouts" },
       { label: "Bespoke Wardrobes", href: "/wardrobes", desc: "Sliding & hinged systems, custom built for your home" },
       { label: "Walk-in Closets", href: "/walk-in-closets", desc: "Floor-to-ceiling glass & aluminium suites" },
-      { label: "Bar Units & Lounges", href: "/projects#bar-unit", desc: "Luxury entertainment & backlit display units" },
+      { label: "Bar Units & Lounges", href: "/collections#tv-bar", desc: "Luxury entertainment & backlit display units" },
     ],
   },
   { label: "Finishes", href: "/finishes" },
   { label: "Hardware", href: "/hardware" },
-  { label: "Projects", href: "/projects" },
-  { label: "About", href: "/about" },
+  { label: "Why Ebony", href: "/why-ebony" },
   { label: "Contact", href: "/contact" },
 ] as const
 
@@ -43,14 +40,14 @@ export const HERO = {
   headingLine1: "German Engineering.",
   headingLine2: "Bespoke Indian Living.",
   subtitle:
-    "India's benchmark for modular luxury, creating high-end kitchens and wardrobes with meticulous German precision for over 15 years.",
-  primaryCta: { label: "Explore Our Designs", href: "#what-we-make" },
-  secondaryCta: { label: "Book a Consultation", href: "/contact" },
+    "India's benchmark for modular luxury, creating high-end kitchens and wardrobes with meticulous German precision.",
+  primaryCta: { label: "Explore the Collection", href: "#explore-designs" },
+  secondaryCta: { label: "Invite a Designer Home", href: "/contact" },
   lines: [
     { text: "Every space begins", color: "ebony" as const },
     { text: "with a thought.", color: "gold" as const },
   ],
-  cta: "Book a Consultation",
+  cta: "Invite a Designer Home",
 } as const
 
 export const CITIES = [
@@ -64,7 +61,7 @@ export const CITIES = [
   "Pune",
 ] as const
 
-// 4 Core Collections for "What We Make"
+// Core collections for "What We Make"
 export const WHAT_WE_MAKE = [
   {
     id: "modular-kitchen",
@@ -72,11 +69,11 @@ export const WHAT_WE_MAKE = [
     subtitle: "Culinary Architecture",
     tag: "CULINARY SUITES",
     description:
-      "Where culinary ergonomics meets understated luxury. Tailored islands, motorized lift-ups, moisture-proof BWP carcasses, and 500+ finishes.",
+      "Where culinary ergonomics meets understated luxury. Tailored islands, motorized lift-ups, moisture-proof BWP carcasses, and a wide choice of finishes.",
     image: "/img/kitchen-island-real.jpg",
     alt: "EBONY bespoke island kitchen with fluted detailing and quartz countertop",
     href: "/kitchens",
-    stats: "5 Configurations · 4 Design Styles",
+    stats: "Layouts & Styles for Every Home",
   },
   {
     id: "wardrobe",
@@ -111,7 +108,7 @@ export const WHAT_WE_MAKE = [
       "Signature bar units, acoustic fluted timber TV backdrops, wine display alcoves, and floating consoles engineered for modern luxury homes.",
     image: "/img/bar-unit-luxury.jpg",
     alt: "EBONY luxury bar unit with illuminated fluted paneling and glassware display",
-    href: "/projects#bar-unit",
+    href: "/collections#tv-bar",
     stats: "Acoustic Millwork · Integrated Bars",
   },
 ] as const
@@ -119,7 +116,7 @@ export const WHAT_WE_MAKE = [
 // For backwards compatibility
 export const COLLECTIONS = WHAT_WE_MAKE
 
-// 5 Kitchen Configurations
+// Kitchen Configurations
 export const KITCHEN_CONFIGURATIONS = [
   {
     id: "island",
@@ -128,10 +125,10 @@ export const KITCHEN_CONFIGURATIONS = [
     summary:
       "The definitive layout for open-concept architecture. Combines a central social workstation with expansive perimeter cabinetry.",
     bestFor: "Expansive villas, penthouses, and open-plan living-dining residences.",
-    workTriangle: "Optimized 360° circulation with independent prep sink or induction hob.",
-    storageCapacity: "Maximum — deep tandem pull-outs on all 4 faces of the island.",
+    workTriangle: "Optimised all-round circulation with independent prep sink or induction hob.",
+    storageCapacity: "Maximum — deep tandem pull-outs on every face of the island.",
     image: "/img/kitchen-island-real.jpg",
-    alt: "Luxury island kitchen with waterfall stone counter and designer barstools",
+    alt: "Island kitchen with a curved two-level island, bar stools and a lit arch behind",
     specs: ["Open-plan friendly", "Full surround access", "Integrated breakfast overhang"],
   },
   {
@@ -143,9 +140,9 @@ export const KITCHEN_CONFIGURATIONS = [
     bestFor: "Small to medium floorplans, apartments, and open-corner architectural rooms.",
     workTriangle: "Natural unbroken triangle between refrigerator, sink, and cooking zone.",
     storageCapacity: "High — incorporates Magic Corner pull-out swivel trays.",
-    image: "/img/kitchen-contemporary-real.jpg",
-    alt: "Contemporary L-shaped modular kitchen with concealed handle profiles",
-    specs: ["Zero dead corners with magic swivel trays", "Direct daylight integration", "Seamless dining connection"],
+    image: "/img/collections/kitchen-l-shaped-white.jpg",
+    alt: "L-shaped kitchen with white gloss cabinets along two walls and a steel range cooker",
+    specs: ["No dead corners with magic swivel trays", "Direct daylight integration", "Seamless dining connection"],
   },
   {
     id: "u-shape",
@@ -155,9 +152,9 @@ export const KITCHEN_CONFIGURATIONS = [
       "Three continuous walls of cabinetry and countertop creating the most comprehensive workspace for serious culinary passion.",
     bestFor: "Dedicated kitchen enclosures requiring maximum counter space and storage.",
     workTriangle: "Tightest and most efficient work triangle with minimal steps between zones.",
-    storageCapacity: "Unrivaled — 3 full runs of lower and upper cabinetry with tall larder.",
-    image: "/img/kitchen-layout-real.jpg",
-    alt: "U-shaped modular kitchen layout with floor-to-ceiling storage towers",
+    storageCapacity: "Unrivaled — full runs of lower and upper cabinetry with tall larder.",
+    image: "/img/kitchen-contemporary-real.jpg",
+    alt: "U-shaped kitchen with cabinets on three walls, white framed doors and lit tall glass units",
     specs: ["Dual corner optimization", "Generous counter space", "Dedicated appliance garage"],
   },
   {
@@ -169,8 +166,8 @@ export const KITCHEN_CONFIGURATIONS = [
     bestFor: "Longer rectangular rooms, urban residences, and high-efficiency workflow.",
     workTriangle: "Linear separation: cooking/hob on one wall, washing/cleaning on opposite wall.",
     storageCapacity: "Exceptional linear capacity without complex corner mechanisms.",
-    image: "/img/kitchen-detail-real.jpg",
-    alt: "Parallel kitchen layout with soft-close deep cutlery and pot drawers",
+    image: "/img/collections/kitchen-parallel-peach.jpg",
+    alt: "Parallel kitchen with two facing runs of peach cabinets and a window at the far end",
     specs: ["Comfortable corridor layout", "Clean wet & dry zoning", "High-volume prep zones"],
   },
   {
@@ -182,13 +179,13 @@ export const KITCHEN_CONFIGURATIONS = [
     bestFor: "Studio penthouses, loft apartments, and secondary pantry kitchens.",
     workTriangle: "Linear sequential flow: Refrigerator → Prep counter → Sink → Hob.",
     storageCapacity: "Compact vertical efficiency using full-height overhead cabinets.",
-    image: "/img/kitchen-card.jpg",
-    alt: "Straight line minimal modular kitchen with integrated built-in appliances",
+    image: "/img/collections/kitchen-straight-matte-blue.jpg",
+    alt: "Straight kitchen along one wall with matte teal cabinets, built-in ovens and a marble backsplash",
     specs: ["Minimalist footprint", "Concealed built-in appliances", "Perfect for long wall expanses"],
   },
 ] as const
 
-// 4 Kitchen Styles
+// Kitchen Styles
 export const KITCHEN_STYLES = [
   {
     id: "contemporary",
@@ -215,7 +212,7 @@ export const KITCHEN_STYLES = [
     title: "Bold Architectural",
     subtitle: "Moody Contrast & Dark Luxury",
     description:
-      "Deep ebony hues, honed dark quartzite waterfall counters, smoked bronze vitrines, and dramatic 2700K ambient illumination for dramatic living.",
+      "Deep ebony hues, honed dark quartzite waterfall counters, smoked bronze vitrines, and warm ambient illumination for dramatic living.",
     image: "/img/kitchen-style-bold.jpg",
     palette: "Deep Obsidian, Smoked Bronze, Calacatta Gold veining",
     features: ["Matte black nano-surfaces", "Bronze anodised frame vitrines", "Accent backlit textured stone"],
@@ -232,7 +229,7 @@ export const KITCHEN_STYLES = [
   },
 ] as const
 
-// 8 Surface Finishes
+// Surface Finishes
 export const SURFACE_FINISHES = [
   {
     id: "pu-lacquer",
@@ -240,8 +237,8 @@ export const SURFACE_FINISHES = [
     category: "Lacquered Finishes",
     finishType: "Gloss & Deep Satin Matte",
     description:
-      "Multi-coat Italian polyurethane spray lacquer applied in cleanrooms. A seamless face with no visible edges, silky tactile warmth and zero yellowing.",
-    features: ["Seamless 6-sided finish", "Zero edge-band lines", "Custom RAL/Pantone color matching"],
+      "Multi-coat Italian polyurethane spray lacquer applied in cleanrooms. A seamless face with no visible edges, silky tactile warmth and no yellowing.",
+    features: ["Seamless all-round finish", "No edge-band lines", "Custom RAL/Pantone color matching"],
     durability: "High scratch & UV resistance",
     badge: "Signature Finish",
   },
@@ -251,8 +248,8 @@ export const SURFACE_FINISHES = [
     category: "Engineered Surfaces",
     finishType: "Matte, Woodgrain & Textured",
     description:
-      "1.0mm anti-fingerprint and thermal-healing laminates bonded with PUR waterproof adhesives for extreme resilience against heat and moisture.",
-    features: ["Thermal scratch healing", "Anti-fingerprint technology", "200+ authentic wood & stone decors"],
+      "Anti-fingerprint and thermal-healing laminates bonded with PUR waterproof adhesives for extreme resilience against heat and moisture.",
+    features: ["Thermal scratch healing", "Anti-fingerprint technology", "Authentic wood & stone decors"],
     durability: "Maximum impact & abrasion resistance",
     badge: "High Durability",
   },
@@ -262,7 +259,7 @@ export const SURFACE_FINISHES = [
     category: "High-Gloss & Super-Matte",
     finishType: "Ultra-Gloss & Velvet Matte",
     description:
-      "Optical-grade 2.0mm acrylic sheets with glass-like 95+ gloss reflection or velvety soft-touch matte finish. Zero orange peel effect.",
+      "Optical-grade acrylic sheets with glass-like gloss reflection or velvety soft-touch matte finish. No orange peel effect.",
     features: ["Glass-like mirror depth", "UV colorfast guarantee", "Laser edge-banded seamless joint"],
     durability: "High moisture & heat resistance",
     badge: "Contemporary Favorite",
@@ -273,9 +270,9 @@ export const SURFACE_FINISHES = [
     category: "Architectural Vitrines",
     finishType: "Smoked Bronze, Fluted, Lacquered Back",
     description:
-      "4mm safety tempered glass mounted in ultra-slim anodised aluminium profiles. Creates dramatic transparency and displays lighted glassware.",
-    features: ["Slim 20mm anodised profile", "Concealed 180° pivot hinges", "Backlit reed and fluted patterns"],
-    durability: "100% moisture-proof & stain-proof",
+      "Safety tempered glass mounted in ultra-slim anodised aluminium profiles. Creates dramatic transparency and displays lighted glassware.",
+    features: ["Slim anodised profile", "Concealed pivot hinges", "Backlit reed and fluted patterns"],
+    durability: "Moisture-proof & stain-proof",
     badge: "Display Luxury",
   },
   {
@@ -284,7 +281,7 @@ export const SURFACE_FINISHES = [
     category: "3D Formed Profiles",
     finishType: "Matte & Woodgrain",
     description:
-      "Vacuum-pressed PVC foil wrapped seamlessly around 3D routed CNC door faces. Ideal for intricate classical grooves with zero visible edge joints.",
+      "Vacuum-pressed PVC foil wrapped seamlessly around 3D routed CNC door faces. Ideal for intricate classical grooves with no visible edge joints.",
     features: ["Continuous 3D contour wrap", "No separate edge bands", "Moisture-sealed face"],
     durability: "Easy to clean & maintain",
     badge: "Classical Detail",
@@ -295,8 +292,8 @@ export const SURFACE_FINISHES = [
     category: "Ultra-Compact Minerals",
     finishType: "Natural Textured Stone",
     description:
-      "Ultra-thin 3mm to 5mm sintered porcelain and mineral slabs bonded to lightweight honeycomb cores. Impervious to flames, blades, and stains.",
-    features: ["Zero porosity stain immunity", "Direct heat tolerance up to 300°C", "Authentic Italian marble patterns"],
+      "Ultra-thin sintered porcelain and mineral slabs bonded to lightweight honeycomb cores. Impervious to flames, blades, and stains.",
+    features: ["Non-porous, stain-proof surface", "High direct heat tolerance", "Authentic Italian marble patterns"],
     durability: "Indestructible surface resilience",
     badge: "Ultra-Luxury",
   },
@@ -317,14 +314,14 @@ export const SURFACE_FINISHES = [
     category: "Commercial Hygiene Grade",
     finishType: "Hairline Brushed Stainless",
     description:
-      "Food-grade 304 surgical stainless steel base carcasses and sink modules. Zero moisture absorption, 100% termite-proof, built for a lifetime.",
-    features: ["Anti-drumming acoustic dampers", "Zero termite / water decay", "Hospital-grade cleanability"],
+      "Food-grade 304 surgical stainless steel base carcasses and sink modules. No moisture absorption, termite-proof, built for a lifetime.",
+    features: ["Anti-drumming acoustic dampers", "No termite or water decay", "Hospital-grade cleanability"],
     durability: "Lifetime structural integrity",
     badge: "Ultimate Wet-Zone Core",
   },
 ] as const
 
-// 2 Wardrobe Opening Systems
+// Wardrobe Opening Systems
 export const WARDROBE_SYSTEMS = [
   {
     id: "sliding",
@@ -334,29 +331,29 @@ export const WARDROBE_SYSTEMS = [
     description:
       "Engineered with Italian top-hung or bottom-guided motion gear. Damped soft-close dampers gently catch and cushion each door on both open and close cycles.",
     benefits: [
-      "Zero door swing encroachment — ideal for master suites with tighter bed clearance",
+      "No door swing encroachment — ideal for master suites with tighter bed clearance",
       "Custom-sized door leaves for grand panoramic visuals",
       "Integrated dust-barrier brush seals along all vertical overlap channels",
       "Available with smoked bronze glass, fluted acoustic timber, or lacquer finishes",
     ],
-    image: "/img/wardrobe-bespoke-real.jpg",
-    alt: "Full-height sliding wardrobe with integrated lighting and fluted acoustic profile",
+    image: "/img/collections/wardrobe-sliding-ivory.jpg",
+    alt: "Ivory sliding wardrobe with a mirrored centre door, partly slid open",
   },
   {
     id: "hinged",
     name: "Openable Hinged Systems",
     tag: "Full Unobstructed View",
-    headline: "165° Wide-Angle Access to Entire Wardrobe",
+    headline: "Wide-Angle Access to the Entire Wardrobe",
     description:
-      "Equipped with Blum Clip-top Blumotion hinges tested for 200,000 cycles. Opens wide to reveal your entire wardrobe collection at a single glance.",
+      "Equipped with Blum Clip-top Blumotion hinges built for years of daily use. Opens wide to reveal your entire wardrobe collection at a single glance.",
     benefits: [
-      "100% simultaneous visibility across all wardrobe bays and accessory sections",
+      "Simultaneous visibility across all wardrobe bays and accessory sections",
       "Interior door back mounts for vanity mirrors, tie holders, and belt hooks",
       "Ultra-slim anodised aluminium profiles or classic bevelled shaker shutters",
       "Seamless integration with corner walk-in modules and drawer stacks",
     ],
-    image: "/img/wardrobe-card.jpg",
-    alt: "Openable hinged wardrobe with luxury glass vitrine and internal shelves",
+    image: "/img/collections/wardrobe-hinged-open.jpg",
+    alt: "White built-in wardrobe with hinged doors swung open onto lit hanging space and drawers",
   },
 ] as const
 
@@ -366,35 +363,38 @@ export const WALK_IN_CLOSETS = [
     id: "aluminium-frame",
     name: "Aluminium-Frame Vitrine System",
     description:
-      "Architectural dark bronze or matte black anodised frames housing safety glass leaves. Vertical 3000K warm LED channels embedded flush into aluminum uprights.",
-    image: "/img/walk-in-closet-luxury.jpg",
+      "Architectural dark bronze or matte black anodised frames housing safety glass leaves. Vertical warm LED channels embedded flush into aluminum uprights.",
+    image: "/img/wardrobe-detail-shot.jpg",
+    alt: "Dressing room wall of glass-door wardrobes in slim dark aluminium frames with lit uprights",
   },
   {
     id: "floor-to-ceiling",
     name: "Floor-to-Ceiling Dressing Suite",
     description:
-      "Continuous custom joinery spanning from floor to ceiling with zero dead space. Includes motorized drop-down wardrobe lifts and integrated ventilation channels.",
-    image: "/img/master-suite-luxury.jpg",
+      "Continuous custom joinery spanning from floor to ceiling with no dead space. Includes motorized drop-down wardrobe lifts and integrated ventilation channels.",
+    image: "/img/collections/walk-in-wood-dresser.jpg",
+    alt: "Walk-in closet with floor-to-ceiling open hanging, shelves and drawers on three sides",
   },
   {
     id: "curtain-flow",
     name: "Curtain & Fabric Enclosed Sanctuary",
     description:
       "Motorized ceiling track drapery combined with open joinery for a soft, acoustic dressing atmosphere that bridges textile warmth with precision carpentry.",
-    image: "/img/bedroom-card.jpg",
+    image: "/img/collections/walk-in-curtain-closet.jpg",
+    alt: "Corner of a walk-in closet with open hanging and drawers, closed off by a floor-length sheer curtain",
   },
 ] as const
 
-// 3 Core Materials
+// Core Materials
 export const CORE_MATERIALS = [
   {
     id: "marine-ply",
     name: "Marine Plywood (IS 710 BWP)",
-    badge: "100% Waterproof Standard",
+    badge: "Waterproof Standard",
     description:
-      "Boiling Water Proof grade plywood composed of selected hardwood veneers bonded with unextended phenol formaldehyde synthetic resin. Engineered to withstand 72 hours in boiling water without delamination.",
+      "Boiling Water Proof grade plywood composed of selected hardwood veneers bonded with unextended phenol formaldehyde synthetic resin. Engineered to withstand prolonged boiling water without delamination.",
     idealZones: "Kitchen sink modules, base cabinets, and bathroom vanity carcass joinery.",
-    density: "750 – 800 kg/m³",
+    density: "Dense hardwood veneers",
     warranty: "Termite & Borer Proof",
   },
   {
@@ -404,7 +404,7 @@ export const CORE_MATERIALS = [
     description:
       "High Density High Moisture Resistance board engineered with eucalyptus hardwood fibers and special moisture-resistant bonding matrix. Its homogeneous core enables high-precision German CNC routing without fiber chipping.",
     idealZones: "Wardrobe shutters, routed classical profiles, dry overhead kitchen modules, and wall paneling.",
-    density: "> 850 kg/m³",
+    density: "High-density fibre core",
     warranty: "Superior Screw Holding & Moisture Resistance",
   },
   {
@@ -412,9 +412,9 @@ export const CORE_MATERIALS = [
     name: "SS 304 Surgical Stainless Steel",
     badge: "Lifetime Indestructible Core",
     description:
-      "Non-magnetic Grade 304 stainless steel fabricated with anti-drumming dampeners. Zero wood, zero organic glue, completely immune to moisture, rot, pests, and fire.",
+      "Non-magnetic Grade 304 stainless steel fabricated with anti-drumming dampeners. No wood, no organic glue, completely immune to moisture, rot, pests, and fire.",
     idealZones: "High-moisture coastal homes, wet dishwashing zones, and under-sink hygiene areas.",
-    density: "7,930 kg/m³",
+    density: "Solid stainless steel",
     warranty: "Lifetime Rust & Decay Guarantee",
   },
 ] as const
@@ -428,14 +428,14 @@ export const INTERNAL_FITTINGS = [
   },
   {
     name: "Overhead Lift-Up Systems",
-    description: "Aventos bi-fold and up-and-over mechanisms that stay in any desired position with zero head obstruction.",
+    description: "Aventos bi-fold and up-and-over mechanisms that stay in any desired position with no head obstruction.",
     brand: "Blum Aventos",
   },
   {
     name: "Pull-Out Rotating Mirrors",
-    description: "Full-length 360° swiveling dressing mirror that tucks away seamlessly into a 150mm wardrobe slot.",
+    description: "Full-length swiveling dressing mirror that tucks away neatly into a slim wardrobe slot.",
     brand: "EBONY Bespoke",
-    image: "/img/pullout-mirror-real.jpg",
+    image: "/img/collections/dressing-room-full-mirror.jpg",
   },
   {
     name: "Blind Corner Carousels",
@@ -483,38 +483,38 @@ export const HARDWARE_BRANDS = [
   },
 ] as const
 
-// 4 Proof Points for "Why EBONY"
+// Proof points for "Why EBONY"
 export const WHY_EBONY = [
   {
     number: "01",
     title: "Factory & German CNC Precision",
-    subtitle: "0.1mm Tolerances",
+    subtitle: "Precision Tolerances",
     description:
-      "All cabinetry is cut, grooved, and edge-banded on automated German CNC machines in our dedicated manufacturing plant. Zero manual site sawing, zero jagged edges, and flawless laser joinery.",
+      "All cabinetry is cut, grooved, and edge-banded on automated German CNC machines in our dedicated manufacturing plant. No manual site sawing, no jagged edges, and flawless laser joinery.",
     image: "/img/craftsmanship-detail.jpg",
   },
   {
     number: "02",
     title: "Bespoke Customization Flexibility",
-    subtitle: "500+ Finishes & Unlimited Dimensions",
+    subtitle: "Many Finishes & Custom Dimensions",
     description:
-      "Unlike rigid modular brands with fixed box sizes, EBONY adapts every millimeter to your architectural floor plan. Choose from 500+ finishes, custom ceiling-height joinery, and tailored internal organization.",
+      "Unlike rigid modular brands with fixed box sizes, EBONY adapts every millimeter to your architectural floor plan. Choose from a wide range of finishes, custom ceiling-height joinery, and tailored internal organization.",
     image: "/img/core-materials-luxury.jpg",
   },
   {
     number: "03",
     title: "Clean Assembly & Precision Handover",
-    subtitle: "Pre-Assembled & Zero-Dust Handover",
+    subtitle: "Pre-Assembled & Low-Dust Handover",
     description:
-      "Cabinets arrive pre-assembled and 100% pre-fitted from the factory. Our certified installation crew completes on-site assembly cleanly with precision laser leveling and zero carpentry dust.",
+      "Cabinets arrive pre-assembled and fully pre-fitted from the factory. Our certified installation crew completes on-site assembly cleanly with precision laser leveling and almost no carpentry dust.",
     image: "/img/process-engineering.jpg",
   },
   {
     number: "04",
-    title: "Finish Quality & 48-Point Audit",
-    subtitle: "10-Year Comprehensive Warranty",
+    title: "Finish Quality & Final Audit",
+    subtitle: "Warranty on Woodwork",
     description:
-      "Every project undergoes an exhaustive 48-point quality sign-off before handover — inspecting drawer alignment, door gaps, seal integrity, and motion damping. Backed by 15+ years of verified client trust.",
+      "Every project undergoes an exhaustive quality sign-off before handover — inspecting drawer alignment, door gaps, seal integrity, and motion damping.",
     image: "/img/hardware-fittings-luxury.jpg",
   },
 ] as const
@@ -544,7 +544,7 @@ export const HOMEOWNER_TESTIMONIALS = [
     location: "Shankar Nagar, Raipur",
     project: "Penthouse Walk-In Suite & Living Unit",
     quote:
-      "The smoked glass walk-in wardrobe transformed our bedroom into a 5-star suite. Ebony's finish quality is on par with European luxury imports.",
+      "The smoked glass walk-in wardrobe transformed our bedroom into a hotel-style suite. Ebony's finish quality is on par with European luxury imports.",
     rating: 5,
     avatar: "NK",
   },
@@ -569,7 +569,7 @@ export const PROJECTS_GALLERY = [
     title: "Full-Height Sliding Wardrobe Suite",
     location: "VIP Road Villa, Raipur",
     image: "/img/wardrobe-bespoke-real.jpg",
-    description: "Floor-to-ceiling 2.8m sliding system with acoustic fluted profile and 3000K warm LED reveals.",
+    description: "Floor-to-ceiling sliding system with acoustic fluted profile and warm LED reveals.",
     specs: ["Sliding System", "Fluted Oak & Bronze", "Italian Soft-Damp"],
   },
   {
@@ -615,10 +615,10 @@ export const PROJECTS_GALLERY = [
 ] as const
 
 export const STATS = [
-  { value: 15, suffix: "+", label: "Years of Excellence" },
-  { value: 10000, suffix: "+", label: "Happy Homes Across India" },
-  { value: 500, suffix: "+", label: "Bespoke Finishes" },
-  { value: 3, suffix: " Days", label: "Average Assembly Time" },
+  { title: "Made in our own factory", line: "Every cabinet is cut and finished in Raipur" },
+  { title: "Finishes you can touch first", line: "See and feel each sample before you choose" },
+  { title: "Fitted by our own team", line: "Clean, careful work with almost no dust" },
+  { title: "Lifetime warranty on SS 304", line: "On every stainless steel basket we fit" },
 ] as const
 
 export const PROCESS_STEPS = [
@@ -629,33 +629,33 @@ export const PROCESS_STEPS = [
     description:
       "Our architects conduct millimeter-accurate laser surveys of your space. We build photorealistic 3D renders showing materials, lighting, and ergonomics before anything is manufactured.",
     tag: "Raipur Design Studio",
-    stat: "500+ Finishes",
+    stat: "Finishes to Touch",
   },
   {
     number: "02",
     title: "German CNC Machining & Pre-Assembly",
-    subtitle: "Factory Built to 0.1mm Tolerances",
+    subtitle: "Factory Built to Precise Tolerances",
     description:
-      "Engineered on German automated CNC cutting and laser edge-banding machines. Cabinets are fully pre-assembled, aligned, and calibrated in the factory with zero manual site cutting.",
-    tag: "Zero On-Site Dust",
-    stat: "Zero Defect Policy",
+      "Engineered on German automated CNC cutting and laser edge-banding machines. Cabinets are fully pre-assembled, aligned, and calibrated in the factory with no manual site cutting.",
+    tag: "Almost No On-Site Dust",
+    stat: "Careful Quality Checks",
   },
   {
     number: "03",
-    title: "Clean Installation & 48-Point Handover",
+    title: "Clean Installation & Careful Handover",
     subtitle: "Laser Leveling & White Glove Service",
     description:
-      "Factory-certified installers assemble the pre-engineered components with utmost care. We calibrate all motion dampers, connect plumbing/electrical lines, and perform a rigorous 48-point audit before sign-off.",
-    tag: "10-Year Warranty",
-    stat: "Zero-Dust Assembly",
+      "Factory-certified installers assemble the pre-engineered components with utmost care. We calibrate all motion dampers, connect plumbing/electrical lines, and perform a rigorous final audit before sign-off.",
+    tag: "Warranty on Woodwork",
+    stat: "Clean Assembly",
   },
 ] as const
 
 // Legacy constants for older components
 export const CRAFTSMANSHIP_STATS = [
-  { value: "2009", label: "ESTABLISHED" },
-  { value: "10,000+", label: "HAPPY HOMES" },
-  { value: "35+", label: "DESIGN PROFESSIONALS" },
+  { value: "Made", label: "IN OUR OWN FACTORY" },
+  { value: "Fitted", label: "BY OUR OWN TEAM" },
+  { value: "Backed", label: "BY LIFETIME CARE" },
 ] as const
 
 export const EXPERIENCE_STEPS = [
@@ -667,12 +667,12 @@ export const EXPERIENCE_STEPS = [
   {
     number: "02",
     title: "DESIGN & VISUALISE",
-    description: "Get immersive 3D photorealistic renders & tactile material swatches.",
+    description: "Immersive 3D photorealistic renders & tactile material swatches.",
   },
   {
     number: "03",
     title: "CLEAN INSTALLATION",
-    description: "Precision laser leveling, zero dust, and sign-off on 48-point audit.",
+    description: "Precision laser leveling, almost no dust, and sign-off on the final audit.",
   },
 ] as const
 
@@ -699,7 +699,7 @@ export const FEATURES = [
     icon: "globe",
     title: "Pan-India Network",
     description:
-      "300+ dealers and distributors, 10+ franchise locations — Mumbai, Delhi, Bangalore, Pune, Ahmedabad, and Raipur.",
+      "Dealers, distributors and franchise partners in Mumbai, Delhi, Bangalore, Pune, Ahmedabad, and Raipur.",
   },
 ] as const
 
@@ -724,7 +724,7 @@ export const PHILOSOPHY = {
       number: "03",
       title: "Enduring Craft",
       description:
-        "Over 15 years, EBONY has quietly become India's benchmark for modular luxury — trusted by families who value excellence.",
+        "EBONY is building a name for modular luxury, trusted by families who value excellence.",
     },
   ],
 } as const
@@ -742,7 +742,7 @@ export const REFERENCE_COLLECTIONS = [
     id: "wardrobe",
     title: "Wardrobes",
     tagline: "Organised beautifully.",
-    description: "Bespoke walk-ins with smoked bronze fluted glass, 3000K vertical LED reveals, and Italian hardware.",
+    description: "Bespoke walk-ins with smoked bronze fluted glass, vertical LED reveals, and Italian hardware.",
     image: "/img/wardrobe-bespoke-real.jpg",
     href: "/wardrobes",
   },
@@ -752,7 +752,7 @@ export const REFERENCE_COLLECTIONS = [
     tagline: "Designed for togetherness.",
     description: "Acoustic fluted walnut paneling, floating media consoles, and seamless concealed cable integration.",
     image: "/img/living-room-showcase.jpg",
-    href: "/projects",
+    href: "/collections#tv-bar",
   },
   {
     id: "interiors",
@@ -760,6 +760,6 @@ export const REFERENCE_COLLECTIONS = [
     tagline: "A unified design language.",
     description: "Holistic architectural spaces synchronized across living, culinary, and master suite sanctuaries.",
     image: "/img/master-suite-luxury.jpg",
-    href: "/projects",
+    href: "/collections",
   },
 ] as const

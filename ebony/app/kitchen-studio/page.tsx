@@ -1,12 +1,13 @@
 import type { Metadata } from "next"
 import { Navbar } from "@/components/navbar"
 import { Footer } from "@/components/footer"
+import { EnquiryModal } from "@/components/enquiry-modal"
 import { KitchenStudio } from "@/components/kitchen-studio/kitchen-studio"
 
 export const metadata: Metadata = {
   title: "Kitchen Studio — Design Your Kitchen in 3D | EBONY",
   description:
-    "Try cabinet finishes, countertops and backsplashes on a 3D kitchen, then send your design to EBONY on WhatsApp.",
+    "Try cabinet finishes, countertops and backsplashes on a 3D kitchen, then share your design with EBONY on WhatsApp.",
 }
 
 export default function KitchenStudioPage() {
@@ -16,6 +17,7 @@ export default function KitchenStudioPage() {
       <main className="pt-[69px]">
         <KitchenStudio />
       </main>
+      <EnquiryModal />
       <Footer />
     </div>
   )

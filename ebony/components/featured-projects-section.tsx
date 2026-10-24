@@ -12,7 +12,7 @@ const PROJECTS = [
     title: "Penthouse Waterfall Island in Calacatta & Fluted Walnut",
     description:
       "A custom-engineered culinary sanctuary featuring dual-slab Calacatta marble waterfall edges, motorized Aventos lift-up cabinets, and warm champagne brass highlights.",
-    specs: ["Marine Grade Core", "Motorized Blum Aventos", "0.1mm Laser Alignment"],
+    specs: ["Marine Grade Core", "Motorized Blum Aventos", "Precise Laser Alignment"],
     image: "/img/project-shankar-nagar.jpg",
     imageSide: "left" as const,
   },
@@ -22,8 +22,8 @@ const PROJECTS = [
     location: "VIP Road Villa, Raipur",
     title: "Walk-In Sanctuary with Smoked Bronze Glass & Illumination",
     description:
-      "Full-height smoked bronze aluminum profiles with concealed 3000K vertical LED reveals, motorized accessory trays, and Italian soft-close sliding mechanics.",
-    specs: ["Italian Bronze Glass", "3000K Sensor Illumination", "Velvet Dividers"],
+      "Full-height smoked bronze aluminum profiles with concealed vertical LED reveals, motorized accessory trays, and Italian soft-close sliding mechanics.",
+    specs: ["Italian Bronze Glass", "Sensor Illumination", "Velvet Dividers"],
     image: "/img/wardrobe-detail-shot.jpg",
     imageSide: "right" as const,
   },
@@ -49,9 +49,9 @@ export function FeaturedProjectsSection() {
           <span className="font-mono text-xs sm:text-[13px] uppercase tracking-[0.12em] text-[#B8923A] font-semibold block mb-3">
             FEATURED PROJECTS · CENTRAL INDIA
           </span>
-          <h2 className="font-serif italic text-3xl sm:text-5xl md:text-6xl text-slate-950 font-normal tracking-tight leading-[1.1] mb-4">
+          <h2 className="font-serif text-3xl sm:text-5xl md:text-6xl text-slate-950 font-normal tracking-tight leading-[1.1] mb-4">
             Real homes. <br />
-            <span className="text-[#855E15] not-italic font-medium">Real stories.</span>
+            <span className="text-[#855E15]">Real stories.</span>
           </h2>
           <p className="text-slate-600 text-xs sm:text-sm font-normal leading-relaxed">
             A selection of our latest bespoke modular kitchens, wardrobes and complete
@@ -110,7 +110,7 @@ export function FeaturedProjectsSection() {
                     {item.category}
                   </span>
 
-                  <h3 className="font-serif italic text-2xl sm:text-3xl lg:text-4xl text-slate-950 font-normal leading-[1.2] mb-4">
+                  <h3 className="font-serif text-2xl sm:text-3xl lg:text-4xl text-slate-950 font-normal leading-[1.2] mb-4">
                     {item.title}
                   </h3>
 

@@ -2,6 +2,7 @@ import Image from "next/image"
 import Link from "next/link"
 import { Navbar } from "@/components/navbar"
 import { Footer } from "@/components/footer"
+import { EnquiryModal } from "@/components/enquiry-modal"
 import { HardwareBrandsSection } from "@/components/hardware-brands-section"
 import { InternalFittingsSection } from "@/components/internal-fittings-section"
 import { ArrowUpRight, Cpu, ShieldCheck, Cog } from "lucide-react"
@@ -9,7 +10,7 @@ import { ArrowUpRight, Cpu, ShieldCheck, Cog } from "lucide-react"
 export const metadata = {
   title: "Hardware Partners & Internal Fittings — EBONY Modular Interiors",
   description:
-    "Explore world-class motion engineering by Blum, Häfele, Hettich, Salice, and Ebco. Tested for 200,000 cycles with whisper-quiet soft-close damping and Aventos lift systems.",
+    "Explore world-class motion engineering by Blum, Häfele, Hettich, Salice, and Ebco. Built for smooth, everyday use with whisper-quiet soft-close damping and Aventos lift systems.",
 }
 
 export default function HardwarePage() {
@@ -38,10 +39,10 @@ export default function HardwarePage() {
               </span>
               <h1 className="font-serif text-4xl sm:text-6xl lg:text-7xl text-white font-normal leading-[1.1] tracking-tight mb-6">
                 Hardware Partners, <br />
-                <span className="italic">200,000 Cycles of Perfection.</span>
+                <span>Made to Move Beautifully.</span>
               </h1>
               <p className="font-sans text-sm sm:text-base text-white/80 font-normal leading-relaxed mb-8 max-w-2xl">
-                We equip every drawer, lift, and hinge with certified components from Blum, Häfele, Hettich, Salice, and Ebco. Tested for 20 years of daily use without sag or misalignment.
+                We equip every drawer, lift, and hinge with certified components from Blum, Häfele, Hettich, Salice, and Ebco. Chosen for smooth, quiet use every day, without sag or misalignment.
               </p>
 
               <div className="flex flex-wrap items-center gap-4">
@@ -49,20 +50,20 @@ export default function HardwarePage() {
                   href="#brands"
                   className="px-6 py-3.5 rounded-full bg-[#B8923A] hover:bg-[#C99E4B] text-slate-950 font-mono text-xs uppercase tracking-wider font-bold transition-all duration-300 shadow-lg"
                 >
-                  View Hardware Brands
+                  Meet the Brands
                 </Link>
                 <Link
                   href="/contact"
                   className="px-6 py-3.5 rounded-full bg-white/10 hover:bg-white/20 border border-white/20 text-white font-mono text-xs uppercase tracking-wider font-semibold transition-all duration-300 backdrop-blur-md"
                 >
-                  Experience Live in Studio
+                  Try Them in Studio
                 </Link>
               </div>
             </div>
           </div>
         </section>
 
-        {/* 3 Engineering Standards */}
+        {/* Engineering Standards */}
         <section className="py-16 bg-[#FAFAFA] border-b border-slate-200">
           <div className="max-w-7xl mx-auto px-5 sm:px-8 lg:px-12">
             <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
@@ -72,10 +73,10 @@ export default function HardwarePage() {
                 </div>
                 <div>
                   <h3 className="font-serif text-lg text-slate-950 font-normal mb-1">
-                    200,000 Cycle Testing
+                    Tested for Daily Use
                   </h3>
                   <p className="font-sans text-xs text-slate-600 font-normal leading-relaxed">
-                    Certified to withstand 200,000 opening and closing cycles under full load without loss of soft-close damping or hinge alignment.
+                    Made by brands that test every drawer and hinge through countless openings and closings under full load, without losing soft-close damping or hinge alignment.
                   </p>
                 </div>
               </div>
@@ -100,10 +101,10 @@ export default function HardwarePage() {
                 </div>
                 <div>
                   <h3 className="font-serif text-lg text-slate-950 font-normal mb-1">
-                    10-Year Comprehensive Warranty
+                    A Warranty You Can Rely On
                   </h3>
                   <p className="font-sans text-xs text-slate-600 font-normal leading-relaxed">
-                    All genuine motion hardware is protected by EBONY&apos;s 10-year warranty and backed by lifetime after-sales technical support.
+                    All genuine motion hardware is covered by EBONY&apos;s warranty and backed by lifetime after-sales technical support.
                   </p>
                 </div>
               </div>
@@ -135,12 +136,14 @@ export default function HardwarePage() {
               href="/contact"
               className="inline-flex items-center gap-2 px-8 py-4 rounded-full bg-[#B8923A] hover:bg-[#C99E4B] text-slate-950 font-mono text-xs uppercase tracking-wider font-bold transition-all duration-300 shadow-xl"
             >
-              <span>Schedule Hardware Experience</span>
+              <span>Come Try the Hardware</span>
               <ArrowUpRight className="w-4 h-4" />
             </Link>
           </div>
         </section>
       </main>
+
+      <EnquiryModal />
 
       <Footer />
     </div>

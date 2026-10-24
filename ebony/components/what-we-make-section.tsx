@@ -30,7 +30,7 @@ export function WhatWeMakeSection() {
             >
               <Image
                 src={card.image}
-                alt={card.title}
+                alt={card.alt ?? card.title}
                 fill
                 className="object-cover transition-transform duration-[1.2s] ease-out group-hover:scale-[1.06]"
                 sizes={i === 0 || i === 3 ? "(max-width: 1024px) 100vw, 60vw" : "(max-width: 1024px) 100vw, 40vw"}

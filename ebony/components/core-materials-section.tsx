@@ -19,7 +19,7 @@ export function CoreMaterialsSection() {
               </span>
             </div>
             <h2 className="font-serif text-3xl sm:text-5xl lg:text-6xl text-slate-950 font-normal leading-[1.1] tracking-tight">
-              Three Certified Core Materials.
+              Certified Core Materials.
             </h2>
           </div>
           <p className="font-sans text-sm sm:text-base text-slate-600 max-w-md font-normal leading-relaxed">
@@ -31,7 +31,7 @@ export function CoreMaterialsSection() {
         <div className="relative h-64 sm:h-80 md:h-96 rounded-3xl overflow-hidden mb-12 shadow-md">
           <Image
             src="/img/core-materials-luxury.jpg"
-            alt="EBONY core materials engineering: Marine Ply, HDHMR, SS304"
+            alt="EBONY core materials engineering: Marine Ply, HDHMR, SS 304"
             fill
             className="object-cover"
             sizes="100vw"
@@ -39,15 +39,15 @@ export function CoreMaterialsSection() {
           <div className="absolute inset-0 bg-gradient-to-t from-slate-950/85 via-slate-950/30 to-transparent" />
           <div className="absolute bottom-6 left-6 sm:bottom-10 sm:left-10 text-white max-w-lg">
             <span className="font-mono text-xs sm:text-[13px] uppercase tracking-[0.12em] text-[#B8923A] font-bold block mb-2">
-              ZERO COMPROMISE ON CARCASS INTEGRITY
+              NO COMPROMISE ON CARCASS INTEGRITY
             </span>
             <p className="font-serif text-xl sm:text-2xl text-white font-normal">
-              100% Calibrated Hardwood Veneers, High-Density Resins, and Surgical Grade 304 Steel.
+              Calibrated Hardwood Veneers, High-Density Resins, and Surgical Grade SS 304 Steel.
             </p>
           </div>
         </div>
 
-        {/* 3 Core Materials Cards */}
+        {/* Core Materials Cards */}
         <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
           {CORE_MATERIALS.map((mat) => (
             <div
@@ -82,7 +82,7 @@ export function CoreMaterialsSection() {
 
                   <div className="flex items-center justify-between pt-2">
                     <span className="font-mono text-xs uppercase tracking-wider text-slate-500">
-                      Density
+                      Core
                     </span>
                     <span className="font-mono text-xs font-bold text-slate-900">
                       {mat.density}

@@ -38,7 +38,7 @@ export function ComfortSection() {
           <div className="lg:col-span-5 px-6 py-10 sm:px-10 sm:py-14 lg:py-16 flex flex-col justify-center">
             <span className="kicker">Comfort, built in</span>
             <h2 className="font-serif text-[2.1rem] leading-[1.12] sm:text-5xl font-normal tracking-tight mt-4 text-slate-950 text-balance">
-              Made for the way <span className="italic text-[#9A7637]">you move</span>
+              Made for the way <span className="text-[#9A7637]">you move</span>
             </h2>
             <p className="text-base sm:text-lg leading-relaxed mt-5 text-slate-600 max-w-md">
               We plan every height and reach around the person who cooks the most, so daily work is easy on your back.
@@ -53,6 +53,7 @@ export function ComfortSection() {
                     onMouseLeave={() => setActive(null)}
                     onFocus={() => setActive(index)}
                     onBlur={() => setActive(null)}
+                    onClick={() => setActive(index)}
                     className={cn(
                       "w-full text-left flex items-start gap-4 rounded-2xl p-3 -mx-3 transition-colors duration-300",
                       active === index ? "bg-white" : "hover:bg-white/60"

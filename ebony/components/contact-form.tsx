@@ -24,7 +24,7 @@ export function ContactForm() {
     setError("")
 
     if (form.phone.replace(/\D/g, "").length < 10) {
-      setError("Please enter your 10-digit mobile number so we can call you back.")
+      setError("Please enter a valid mobile number so we can ring you.")
       return
     }
 
@@ -42,7 +42,7 @@ export function ContactForm() {
         setError(data.error || "Something went wrong. Please try again, or message us on WhatsApp.")
       }
     } catch {
-      setError(`We couldn't send that. Please call us on ${BRAND.phone} or message us on WhatsApp.`)
+      setError(`That did not go through. Please call us on ${BRAND.phone} or message us on WhatsApp.`)
     } finally {
       setLoading(false)
     }
@@ -60,10 +60,10 @@ export function ContactForm() {
           <span className="font-semibold text-slate-950">{form.phone}</span> soon.
         </p>
         <Link
-          href="/projects"
+          href="/collections"
           className="group mt-8 inline-flex items-center gap-2 px-6 py-3.5 rounded-full bg-slate-950 hover:bg-[#8E6D38] text-white text-[15px] font-semibold transition-colors"
         >
-          See our work while you wait
+          Browse design ideas while you wait
           <ArrowRight className="w-4 h-4 transition-transform duration-300 group-hover:translate-x-1" />
         </Link>
       </div>
@@ -84,8 +84,8 @@ export function ContactForm() {
       />
 
       <div>
-        <h2 className="font-serif text-[1.75rem] sm:text-3xl text-slate-950">Ask for a call back</h2>
-        <p className="text-[15px] text-slate-600 mt-1">Takes less than a minute.</p>
+        <h2 className="font-serif text-[1.75rem] sm:text-3xl text-slate-950">Tell us about your space</h2>
+        <p className="text-[15px] text-slate-600 mt-1">A few quick details and we will ring you to plan it.</p>
       </div>
 
       <fieldset>
@@ -179,7 +179,7 @@ export function ContactForm() {
           value={form.message}
           onChange={(e) => setForm((s) => ({ ...s, message: e.target.value }))}
           className={cn(fieldClass, "resize-none")}
-          placeholder="For example: a 2BHK flat, moving in next month, we love light wood colours…"
+          placeholder="For example: a flat we are moving into soon, we love light wood colours…"
         />
       </div>
 
@@ -194,7 +194,7 @@ export function ContactForm() {
         disabled={loading}
         className="group w-full py-4 px-8 rounded-full bg-[#C5A572] hover:bg-[#D4B582] text-slate-950 text-base font-semibold transition-colors shadow-lg shadow-amber-500/20 flex items-center justify-center gap-2 disabled:opacity-60 cursor-pointer active:scale-[0.99]"
       >
-        {loading ? "Sending…" : "Call me back"}
+        {loading ? "Reserving…" : "Reserve My Design Visit"}
         {!loading && <ArrowRight className="w-4 h-4 transition-transform duration-300 group-hover:translate-x-1" />}
       </button>
 

@@ -18,14 +18,14 @@ export function FeaturesSection() {
         <div className="flex flex-col md:flex-row md:items-end justify-between gap-6 mb-16 pb-8 border-b border-slate-100">
           <div>
             <span className="font-mono text-[13px] uppercase tracking-[0.12em] text-amber-700 font-semibold block mb-3">
-              The EBONY Standard · 0% Defect Policy
+              The EBONY Standard · Careful Quality Checks
             </span>
-            <h2 className="font-serif italic text-3xl sm:text-4xl md:text-5xl text-slate-900 font-normal">
-              Excellence by Design, <span className="text-amber-800 not-italic font-medium">Engineered for Decades</span>
+            <h2 className="font-serif text-3xl sm:text-4xl md:text-5xl text-slate-900 font-normal">
+              Excellence by Design, <span className="text-amber-800">Built to Last</span>
             </h2>
           </div>
           <p className="text-slate-600 max-w-sm text-xs sm:text-sm font-normal leading-relaxed">
-            Four foundational pillars that guarantee seamless execution, uncompromising material standards, and lifelong peace of mind.
+            Foundational pillars that guarantee careful execution, uncompromising material standards, and lifelong peace of mind.
           </p>
         </div>
 
@@ -47,7 +47,7 @@ export function FeaturesSection() {
                     </span>
                   </div>
 
-                  <h3 className="font-serif italic text-xl text-slate-900 mb-2.5 group-hover:text-amber-800 transition-colors">
+                  <h3 className="font-serif text-xl text-slate-900 mb-2.5 group-hover:text-amber-800 transition-colors">
                     {feature.title}
                   </h3>
                   <p className="text-slate-600 text-xs font-normal leading-relaxed">

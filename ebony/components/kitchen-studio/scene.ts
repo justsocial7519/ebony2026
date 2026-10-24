@@ -1,4 +1,4 @@
-// Three.js scene for the Kitchen Studio. Framework-free: the React panel drives it through the returned handle.
+// Three.js scene for the Kitchen Studio. Plain TypeScript with no UI framework: the React panel drives it through the returned handle.
 import * as THREE from "three"
 import { OrbitControls } from "three/addons/controls/OrbitControls.js"
 import { GLTFLoader, type GLTF } from "three/addons/loaders/GLTFLoader.js"

@@ -2,12 +2,13 @@ import type { Metadata } from "next"
 import Image from "next/image"
 import { Navbar } from "@/components/navbar"
 import { Footer } from "@/components/footer"
+import { EnquiryModal } from "@/components/enquiry-modal"
 import { StudioCtaSection } from "@/components/studio-cta-section"
 
 export const metadata: Metadata = {
-  title: "Three Steps to a Finished Home | EBONY German Engineering",
+  title: "A Finished Home, Step by Step | EBONY German Engineering",
   description:
-    "Discover how EBONY delivers bespoke modular kitchens and interiors in just 3 steps with German CNC precision and zero on-site carpenter chaos.",
+    "Discover how EBONY delivers bespoke modular kitchens and interiors step by step with German CNC precision and zero on-site carpenter chaos.",
 }
 
 const STAGES = [
@@ -15,22 +16,25 @@ const STAGES = [
     day: "01",
     subtitle: "Step 01 · Space Audit & Laser Shell",
     title: "Laser Shell & Modular Carcass",
-    desc: "German-trained technicians anchor base modules with 0.1mm tolerance using 3D laser levels. Damp-proof neoprene mounts isolate moisture and floor variations.",
-    image: "/img/process-engineering.jpg",
+    desc: "German-trained technicians anchor base modules to a precise tolerance using 3D laser levels. Damp-proof neoprene mounts isolate moisture and floor variations.",
+    image: "/img/process-installer-level.jpg",
+    alt: "Fitter holding a spirit level against a kitchen wall cabinet while fixing it in place",
   },
   {
     day: "02",
     subtitle: "Step 02 · Fronts & Hardware Calibration",
     title: "Fronts & Motion Synchronization",
-    desc: "Shutters and fluted doors are aligned with an exact 2mm hairline reveal. Blum Aventos and Hettich concealed channels are dynamically calibrated to load.",
-    image: "/img/kitchen-card.jpg",
+    desc: "Shutters and fluted doors are aligned with an exact, even hairline reveal. Blum Aventos and Hettich concealed channels are dynamically calibrated to load.",
+    image: "/img/why-after-sales.jpg",
+    alt: "Technician adjusting the hinge of a kitchen wall cabinet door",
   },
   {
     day: "03",
     subtitle: "Step 03 · Ambient Illumination & Handover",
     title: "Integrated Illumination & Handover",
-    desc: "Recessed 3000K warm LED channels are powered on. The 48-point zero-defect audit is signed off, and your 10-year warranty certificate is handed over.",
-    image: "/img/hero-kitchen.jpg",
+    desc: "Recessed warm LED channels are powered on. The final quality check is signed off, and your warranty certificate is handed over.",
+    image: "/img/kitchen-detail-real.jpg",
+    alt: "Finished kitchen with warm LED strips glowing under the wall units and along the plinth",
   },
 ]
 
@@ -47,8 +51,8 @@ export default function ProcessPage() {
               <span className="font-mono text-[13px] uppercase tracking-[0.12em] text-[#B8923A] font-semibold block mb-3">
                 ENGINEERING STANDARD
               </span>
-              <h1 className="font-serif italic text-4xl sm:text-5xl md:text-6xl text-slate-950 font-normal leading-[1.1]">
-                Three Steps to a <span className="text-[#855E15] not-italic font-medium">Finished Home</span>
+              <h1 className="font-serif text-4xl sm:text-5xl md:text-6xl text-slate-950 font-normal leading-[1.1]">
+                A Finished Home, <span className="text-[#855E15]">Step by Step</span>
               </h1>
             </div>
             <p className="text-slate-600 max-w-sm text-xs sm:text-sm leading-relaxed font-normal">
@@ -57,7 +61,7 @@ export default function ProcessPage() {
           </div>
         </section>
 
-        {/* 3 Day Visual Stories (Large Editorial Layout) */}
+        {/* Step-by-step visual stories (Large Editorial Layout) */}
         <section className="max-w-7xl mx-auto px-5 md:px-10 lg:px-16 py-16 space-y-20">
           {STAGES.map((s, idx) => (
             <div
@@ -70,7 +74,7 @@ export default function ProcessPage() {
                 <div className="relative aspect-[16/10] rounded-3xl overflow-hidden border border-slate-200 shadow-xl group">
                   <Image
                     src={s.image}
-                    alt={s.title}
+                    alt={s.alt}
                     fill
                     className="object-cover transition-transform duration-700 ease-fluid group-hover:scale-105"
                   />
@@ -84,16 +88,16 @@ export default function ProcessPage() {
                 <span className="font-mono text-[13px] uppercase tracking-[0.12em] text-[#B8923A] font-semibold block mb-2">
                   {s.subtitle}
                 </span>
-                <h2 className="font-serif italic text-3xl sm:text-4xl text-slate-950 font-normal mb-4">
+                <h2 className="font-serif text-3xl sm:text-4xl text-slate-950 font-normal mb-4">
                   {s.title}
                 </h2>
                 <p className="text-slate-600 text-sm font-normal leading-relaxed mb-6">
                   {s.desc}
                 </p>
                 <div className="pt-4 border-t border-slate-100 flex items-center gap-6 font-mono text-xs text-slate-500">
-                  <span className="text-[#855E15] font-semibold">±0.1 mm CNC Tolerance</span>
+                  <span className="text-[#855E15] font-semibold">Precision CNC Tolerance</span>
                   <span>·</span>
-                  <span>10-Year Warranty</span>
+                  <span>Warranty on Woodwork</span>
                 </div>
               </div>
             </div>
@@ -103,6 +107,8 @@ export default function ProcessPage() {
         {/* Unified Studio Booking Section matching homepage */}
         <StudioCtaSection />
       </main>
+
+      <EnquiryModal />
 
       <Footer />
     </div>

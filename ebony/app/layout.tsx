@@ -20,7 +20,7 @@ const poppins = Poppins({
 export const metadata: Metadata = {
   title: "Ebony — Modular Kitchens & Wardrobes in Raipur",
   description:
-    "Beautiful modular kitchens, wardrobes and walk-in closets, made in our own factory in Raipur and fitted in about 3 days. 500+ finishes, a 10-year warranty and a home design visit.",
+    "Beautiful modular kitchens, wardrobes and walk-in closets, made in our own factory in Raipur and fitted cleanly by our own team. Finishes you can touch first, a warranty on our woodwork and a home design visit.",
   keywords: [
     "luxury modular interiors",
     "modular kitchen",
@@ -34,7 +34,7 @@ export const metadata: Metadata = {
   openGraph: {
     title: "EBONY — Luxury Modular Interiors",
     description:
-      "German-engineered modular kitchens, wardrobes, and bed sets. 500+ finishes, 0% defect policy, custom tailored to your home.",
+      "German-engineered modular kitchens, wardrobes, and bed sets. Finishes you can touch first, made in our own factory and tailored to your home.",
     type: "website",
     locale: "en_IN",
     url: "https://ebony.co.in",
@@ -44,7 +44,7 @@ export const metadata: Metadata = {
     card: "summary_large_image",
     title: "EBONY — Luxury Modular Interiors",
     description:
-      "German-engineered modular kitchens, wardrobes, and bed sets. 500+ finishes, 0% defect policy, custom tailored to your home.",
+      "German-engineered modular kitchens, wardrobes, and bed sets. Finishes you can touch first, made in our own factory and tailored to your home.",
   },
   robots: {
     index: true,
@@ -58,7 +58,7 @@ const jsonLd = {
   name: "EBONY Luxury Modular Interiors",
   alternateName: "EBONY Modular Kulture",
   description:
-    "German-engineered luxury modular kitchens, wardrobes, and bed sets finished in 500+ finishes with custom craftsmanship and zero-defect policy.",
+    "German-engineered luxury modular kitchens, wardrobes, and bed sets finished in a wide choice of finishes with custom craftsmanship and careful quality checks.",
   url: "https://ebony.co.in",
   logo: "https://ebony.co.in/logo.png",
   image: "https://ebony.co.in/img/hero-kitchen.jpg",

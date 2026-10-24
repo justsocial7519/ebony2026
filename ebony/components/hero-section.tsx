@@ -1,65 +1,62 @@
 "use client"
 
-import { useState, useRef, useEffect } from "react"
+import { Fragment, useState, useRef, useEffect } from "react"
+import type { CSSProperties } from "react"
 import Link from "next/link"
 import { ArrowRight, Volume2, VolumeX } from "lucide-react"
 import { openEnquiryModal } from "@/components/enquiry-modal"
 import { HOME_CONTENT } from "@/lib/home-content"
 
-function StatCounter({ end, suffix, label }: { end: number; suffix: string; label: string }) {
-  const [count, setCount] = useState(0)
-  const [started, setStarted] = useState(false)
-  const ref = useRef<HTMLDivElement>(null)
-
-  useEffect(() => {
-    const observer = new IntersectionObserver(
-      ([entry]) => {
-        if (entry.isIntersecting) {
-          setStarted(true)
-          observer.disconnect()
-        }
-      },
-      { threshold: 0.2 }
-    )
-    if (ref.current) observer.observe(ref.current)
-    return () => observer.disconnect()
-  }, [])
-
-  useEffect(() => {
-    if (!started) return
-    const duration = 1600
-    const start = performance.now()
-    const tick = (now: number) => {
-      const progress = Math.min((now - start) / duration, 1)
-      const eased = 1 - Math.pow(1 - progress, 3)
-      setCount(Math.round(eased * end))
-      if (progress < 1) requestAnimationFrame(tick)
-    }
-    requestAnimationFrame(tick)
-  }, [started, end])
-
+function TrustPromise({ title, line }: { title: string; line: string }) {
   return (
-    <div ref={ref} className="text-center px-3 py-6 sm:py-8">
-      <div className="font-serif text-[2rem] sm:text-4xl lg:text-5xl font-normal tracking-tight text-[#D8B97F] tabular-nums">
-        {count}
-        {suffix}
+    <div className="text-center px-3 py-6 sm:py-8">
+      <div className="font-serif text-[1.2rem] sm:text-2xl lg:text-[1.65rem] leading-snug font-normal tracking-tight text-[#D8B97F] text-balance">
+        {title}
       </div>
-      <div className="text-white/80 text-sm sm:text-[15px] mt-2 leading-snug">{label}</div>
+      <div className="text-white/80 text-sm sm:text-[15px] mt-2 leading-snug">{line}</div>
     </div>
   )
 }
 
-/** Splits a line into words that rise in one after another. */
-function RisingWords({ text, startDelay, className }: { text: string; startDelay: number; className?: string }) {
+// Hero title timing (ms). Words rise in one after another; once the last one settles, a soft sheen
+// sweeps across the gold line word by word and a thin gold rule draws in beneath it.
+const WORD_STEP = 110
+const TITLE_START = 300
+const WORD_RISE = 1000
+
+/** Splits a line into words that rise and unblur one after another. Spaces sit between the words so lines wrap normally. */
+function RisingWords({
+  text,
+  startDelay,
+  sheenDelay,
+}: {
+  text: string
+  startDelay: number
+  /** When set, each word also gets a light sheen that starts at this time and passes from word to word */
+  sheenDelay?: number
+}) {
+  const words = text.split(" ")
   return (
-    <span className={className}>
-      {text.split(" ").map((word, i) => (
-        <span key={`${word}-${i}`} className="rise-word" style={{ animationDelay: `${startDelay + i * 90}ms` }}>
-          {word}
-          {" "}
-        </span>
-      ))}
-    </span>
+    <>
+      {words.map((word, i) => {
+        const style: CSSProperties & { "--sheen-delay"?: string } = {
+          animationDelay: `${startDelay + i * WORD_STEP}ms`,
+        }
+        if (sheenDelay !== undefined) style["--sheen-delay"] = `${sheenDelay + i * 120}ms`
+        return (
+          <Fragment key={`${word}-${i}`}>
+            <span
+              className={sheenDelay === undefined ? "rise-word" : "rise-word hero-sheen"}
+              data-text={sheenDelay === undefined ? undefined : word}
+              style={style}
+            >
+              {word}
+            </span>
+            {i < words.length - 1 && " "}
+          </Fragment>
+        )
+      })}
+    </>
   )
 }
 
@@ -106,6 +103,9 @@ export function HeroSection() {
   }
 
   const titleWords = title.split(" ").length
+  const accentStart = TITLE_START + titleWords * WORD_STEP
+  // The sheen starts just after the last gold word has finished rising
+  const sheenStart = accentStart + (accent.split(" ").length - 1) * WORD_STEP + WORD_RISE + 150
 
   return (
     <div className="relative w-full overflow-hidden bg-[#0A0D14] text-white">
@@ -136,10 +136,17 @@ export function HeroSection() {
             {eyebrow}
           </span>
 
-          <h1 className="font-serif text-[2.6rem] leading-[1.08] sm:text-6xl md:text-7xl lg:text-[5.25rem] text-white font-normal tracking-tight mb-6 text-balance">
-            <RisingWords text={title} startDelay={300} />
+          <h1 className="font-serif text-[2.6rem] leading-[1.08] sm:text-6xl md:text-7xl lg:text-[5.25rem] text-white font-normal tracking-tight mb-9 sm:mb-10 text-balance">
+            <RisingWords text={title} startDelay={TITLE_START} />{" "}
             <br className="hidden sm:block" />
-            <RisingWords text={accent} startDelay={300 + titleWords * 90} className="italic text-[#D8B97F]" />
+            <span className="relative inline-block text-[#D8B97F]">
+              <RisingWords text={accent} startDelay={accentStart} sheenDelay={sheenStart} />
+              <span
+                aria-hidden="true"
+                className="hero-underline absolute inset-x-[6%] -bottom-[0.24em] h-[1.5px] sm:h-[2px] rounded-full bg-gradient-to-r from-transparent via-[#D8B97F] to-transparent"
+                style={{ animationDelay: `${sheenStart + 150}ms` }}
+              />
+            </span>
           </h1>
 
           <p
@@ -162,7 +169,7 @@ export function HeroSection() {
             </Link>
 
             <button
-              onClick={() => openEnquiryModal({ category: "Design Visit" })}
+              onClick={() => openEnquiryModal({ category: "Designer home visit" })}
               className="w-full sm:w-auto px-8 py-4 rounded-full bg-white/10 hover:bg-white/20 border border-white/30 backdrop-blur-md text-white text-[15px] font-semibold transition-all duration-300 active:scale-95 cursor-pointer"
             >
               {secondaryCta.label}
@@ -192,7 +199,7 @@ export function HeroSection() {
         <div className="max-w-7xl mx-auto px-5 sm:px-8 lg:px-12">
           <div className="grid grid-cols-2 md:grid-cols-4 divide-y md:divide-y-0 md:divide-x divide-white/10 [&>*:nth-child(2)]:border-l [&>*:nth-child(2)]:border-white/10 md:[&>*:nth-child(2)]:border-l-0">
             {HOME_CONTENT.trustStrip.map((s) => (
-              <StatCounter key={s.label} end={s.end} suffix={s.suffix} label={s.label} />
+              <TrustPromise key={s.title} title={s.title} line={s.line} />
             ))}
           </div>
         </div>

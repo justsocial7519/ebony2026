@@ -102,7 +102,7 @@ export default function ChefsFavouriteCornerPage() {
             <div className="px-5 sm:px-8 lg:px-12 xl:pl-[max(3rem,calc((100vw-80rem)/2+3rem))] py-16 sm:py-20 flex flex-col justify-center">
               <span className="kicker kicker-dark">Chef&apos;s Favourite Corner</span>
               <h1 className="font-serif font-normal tracking-tight leading-[1.08] text-[2.5rem] sm:text-6xl mt-5 max-w-xl text-balance">
-                Kitchens built for <span className="italic text-[#D8B97F]">the dinner rush.</span>
+                Kitchens built for <span className="text-[#D8B97F]">the dinner rush.</span>
               </h1>
               <p className="text-base sm:text-lg text-white/75 leading-relaxed mt-6 max-w-lg">
                 Stainless steel commercial kitchens for restaurants, hotels and cafés in Raipur and nearby, planned around the way your chefs work.
@@ -112,7 +112,7 @@ export default function ChefsFavouriteCornerPage() {
                   detail={ENQUIRY}
                   className="inline-flex items-center justify-center gap-2 min-h-[52px] px-7 rounded-full bg-[#B8923A] hover:bg-[#C99E4B] text-slate-950 font-semibold transition-colors active:scale-[0.98]"
                 >
-                  Plan my commercial kitchen <ArrowUpRight className="w-4 h-4" />
+                  Design My Chef&apos;s Kitchen <ArrowUpRight className="w-4 h-4" />
                 </EnquiryButton>
                 <a href={`tel:${BRAND.phoneRaw}`} className="inline-flex items-center gap-2 text-[15px] text-white/80 hover:text-white">
                   <Phone className="w-4 h-4" /> or call {BRAND.phone}
@@ -148,7 +148,7 @@ export default function ChefsFavouriteCornerPage() {
           <div className="max-w-7xl mx-auto px-5 sm:px-8 lg:px-12">
             <span className="kicker">Who we build for</span>
             <h2 className="font-serif text-[2.1rem] leading-[1.12] sm:text-5xl font-normal tracking-tight mt-4 text-slate-950 max-w-2xl">
-              From a small café to <span className="italic text-[#9A7637]">a hotel kitchen</span>
+              From a small café to <span className="text-[#9A7637]">a hotel kitchen</span>
             </h2>
             <div className="mt-12 grid grid-cols-1 lg:grid-cols-12 gap-5 lg:auto-rows-[270px]">
               {BUILT_FOR.map((item, index) => (
@@ -183,7 +183,7 @@ export default function ChefsFavouriteCornerPage() {
           <div className="max-w-7xl mx-auto px-5 sm:px-8 lg:px-12">
             <span className="kicker">What we make</span>
             <h2 className="font-serif text-[2.1rem] leading-[1.12] sm:text-5xl font-normal tracking-tight mt-4 text-slate-950 max-w-2xl">
-              Everything your kitchen <span className="italic text-[#9A7637]">runs on</span>
+              Everything your kitchen <span className="text-[#9A7637]">runs on</span>
             </h2>
 
             <div className="mt-14 space-y-16 sm:space-y-24">
@@ -223,7 +223,7 @@ export default function ChefsFavouriteCornerPage() {
             <div className="lg:col-span-5">
               <span className="kicker kicker-dark">Why SS 304</span>
               <h2 className="font-serif text-[2.1rem] leading-[1.12] sm:text-5xl font-normal tracking-tight mt-4">
-                The steel chefs <span className="italic text-[#D8B97F]">trust</span>
+                The steel chefs <span className="text-[#D8B97F]">trust</span>
               </h2>
               <p className="text-base sm:text-lg text-white/70 leading-relaxed mt-5 max-w-md">
                 SS 304 is the stainless steel used in professional kitchens because it is safe, strong and simple to keep clean.
@@ -257,7 +257,7 @@ export default function ChefsFavouriteCornerPage() {
           <div className="max-w-7xl mx-auto px-5 sm:px-8 lg:px-12">
             <span className="kicker">How it works</span>
             <h2 className="font-serif text-[2.1rem] leading-[1.12] sm:text-5xl font-normal tracking-tight mt-4 text-slate-950 max-w-2xl">
-              From first visit to <span className="italic text-[#9A7637]">first service</span>
+              From first visit to <span className="text-[#9A7637]">first service</span>
             </h2>
             <ol className="mt-12 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-x-8">
               {STEPS.map((stepItem, index) => (
@@ -285,16 +285,16 @@ export default function ChefsFavouriteCornerPage() {
             <span className="absolute inset-0 bg-gradient-to-r from-[#0B0F19]/95 via-[#0B0F19]/70 to-[#0B0F19]/10" />
             <div className="relative p-8 sm:p-12 lg:p-16 max-w-xl text-white">
               <h2 className="font-serif text-[2.1rem] leading-[1.12] sm:text-5xl font-normal tracking-tight">
-                Opening a new place or <span className="italic text-[#D8B97F]">redoing your kitchen?</span>
+                Opening a new place or <span className="text-[#D8B97F]">redoing your kitchen?</span>
               </h2>
               <p className="text-base sm:text-lg text-white/75 leading-relaxed mt-5">
-                Tell us about your menu, space and opening date. We will visit, plan and quote.
+                Tell us about your menu, space and opening date. We will visit, plan and give you a clear price.
               </p>
               <EnquiryButton
                 detail={ENQUIRY}
                 className="mt-8 inline-flex items-center justify-center gap-2 min-h-[52px] px-7 rounded-full bg-[#B8923A] hover:bg-[#C99E4B] text-slate-950 font-semibold transition-colors active:scale-[0.98]"
               >
-                Talk to our team <ArrowUpRight className="w-4 h-4" />
+                Start My Kitchen Plan <ArrowUpRight className="w-4 h-4" />
               </EnquiryButton>
             </div>
           </div>

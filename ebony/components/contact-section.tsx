@@ -100,7 +100,7 @@ export function ContactSection() {
       if (res.ok && data.success) {
         setSubmitted(true)
       } else {
-        setErrorMessage(data.error || "Unable to send enquiry. Please try again.")
+        setErrorMessage(data.error || "We could not save your details just now. Please try again.")
       }
     } catch {
       setErrorMessage("Network error. Please try again or reach us on WhatsApp.")
@@ -121,11 +121,11 @@ export function ContactSection() {
           <span className="font-mono text-[13px] uppercase tracking-[0.12em] text-[#B8923A] font-semibold block mb-3">
             PRIVATE CONSULTATION · RAIPUR FLAGSHIP & PAN-INDIA
           </span>
-          <h2 className="font-serif italic text-3xl sm:text-4xl md:text-5xl text-slate-950 font-normal">
-            Commission Your Space With <span className="text-[#855E15] not-italic font-medium">EBONY</span>
+          <h2 className="font-serif text-3xl sm:text-4xl md:text-5xl text-slate-950 font-normal">
+            Commission Your Space With <span className="text-[#855E15] font-medium">EBONY</span>
           </h2>
           <p className="text-slate-600 mt-4 text-xs sm:text-sm font-normal leading-relaxed">
-            Schedule an appointment with our senior design architects. We bring your vision to life with 0.1mm German precision and lifetime care.
+            Arrange a visit with our senior design architects. We bring your vision to life with careful German-engineered precision and lifetime care.
           </p>
           <div className="w-12 h-0.5 bg-gradient-to-r from-transparent via-[#B8923A] to-transparent mx-auto mt-6" />
         </div>
@@ -152,11 +152,11 @@ export function ContactSection() {
                         />
                       </svg>
                     </div>
-                    <h3 className="font-serif italic text-3xl text-slate-900 mb-3">
+                    <h3 className="font-serif text-3xl text-slate-900 mb-3">
                       Consultation Requested
                     </h3>
                     <p className="text-slate-600 text-sm max-w-md mx-auto leading-relaxed">
-                      Thank you for contacting EBONY. Our principal architect will review your project requirements and connect within 24 hours.
+                      Thank you for contacting EBONY. Our principal architect will review your project requirements and ring you soon.
                     </p>
                   </div>
                 ) : (
@@ -318,7 +318,7 @@ export function ContactSection() {
                       disabled={loading}
                       className="w-full py-4 px-8 rounded-full bg-[#B8923A] hover:bg-[#C99E4B] text-slate-950 font-mono text-xs uppercase tracking-wider font-bold transition-all duration-300 shadow-xl flex items-center justify-center gap-3 disabled:opacity-70 disabled:cursor-not-allowed cursor-pointer active:scale-95 group"
                     >
-                      <span>{loading ? "Submitting Request..." : "Request Architectural Consultation"}</span>
+                      <span>{loading ? "One moment..." : "Start My Design Journey"}</span>
                       <span className="w-6 h-6 rounded-full bg-slate-950/15 flex items-center justify-center transition-transform duration-300 group-hover:translate-x-0.5">
                         <svg
                           className={`w-3.5 h-3.5 ${loading ? "animate-spin" : ""}`}
@@ -371,7 +371,7 @@ export function ContactSection() {
                   </p>
                   <a
                     href={`tel:${BRAND.phone.replace(/\s+/g, "")}`}
-                    className="font-serif italic text-xl text-slate-900 hover:text-[#855E15] transition-colors"
+                    className="font-serif text-xl text-slate-900 hover:text-[#855E15] transition-colors"
                   >
                     {BRAND.phone}
                   </a>
@@ -404,11 +404,11 @@ export function ContactSection() {
                   </p>
                   <a
                     href={`mailto:${BRAND.email}`}
-                    className="font-serif italic text-xl text-slate-900 hover:text-[#855E15] transition-colors"
+                    className="font-serif text-xl text-slate-900 hover:text-[#855E15] transition-colors"
                   >
                     {BRAND.email}
                   </a>
-                  <p className="font-mono text-xs text-slate-500 mt-1">Typical response within 4 hours</p>
+                  <p className="font-mono text-xs text-slate-500 mt-1">We reply as soon as we can</p>
                 </div>
               </div>
             </div>
@@ -440,7 +440,7 @@ export function ContactSection() {
                   <p className="font-mono text-xs tracking-widest uppercase text-slate-500 mb-0.5">
                     Flagship Studio & Experience Lab
                   </p>
-                  <p className="font-serif italic text-xl text-slate-900">
+                  <p className="font-serif text-xl text-slate-900">
                     Raipur, Chhattisgarh 492001
                   </p>
                   <p className="font-mono text-xs text-slate-500 mt-1">India · Private visits by reservation</p>

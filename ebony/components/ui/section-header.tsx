@@ -10,7 +10,7 @@ interface SectionHeaderProps {
   className?: string
 }
 
-/** One header style for every homepage section: gold kicker, serif title with a gold italic accent, plain subtitle. */
+/** One header style for every homepage section: gold kicker, serif title with a gold accent, plain subtitle. */
 export function SectionHeader({
   kicker,
   title,
@@ -32,7 +32,7 @@ export function SectionHeader({
             dark ? "text-white" : "text-slate-950"
           )}
         >
-          {title} {accent && <span className={cn("italic", dark ? "text-[#D8B97F]" : "text-[#9A7637]")}>{accent}</span>}
+          {title} {accent && <span className={dark ? "text-[#D8B97F]" : "text-[#9A7637]"}>{accent}</span>}
         </h2>
         {subtitle && (
           <p className={cn("text-base sm:text-lg leading-relaxed mt-5", dark ? "text-white/80" : "text-slate-600")}>
@@ -58,7 +58,7 @@ export function SectionHeader({
             dark ? "text-white" : "text-slate-950"
           )}
         >
-          {title} {accent && <span className={cn("italic", dark ? "text-[#D8B97F]" : "text-[#9A7637]")}>{accent}</span>}
+          {title} {accent && <span className={dark ? "text-[#D8B97F]" : "text-[#9A7637]"}>{accent}</span>}
         </h2>
       </div>
       {subtitle && (

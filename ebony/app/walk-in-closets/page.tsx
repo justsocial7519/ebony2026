@@ -2,6 +2,7 @@ import Image from "next/image"
 import Link from "next/link"
 import { Navbar } from "@/components/navbar"
 import { Footer } from "@/components/footer"
+import { EnquiryModal } from "@/components/enquiry-modal"
 import { WalkInClosetsSection } from "@/components/walk-in-closets-section"
 import { ArrowUpRight, CheckCircle2, Sparkles, Gem, Sliders } from "lucide-react"
 
@@ -37,10 +38,10 @@ export default function WalkInClosetsPage() {
               </span>
               <h1 className="font-serif text-4xl sm:text-6xl lg:text-7xl text-white font-normal leading-[1.1] tracking-tight mb-6">
                 Walk-In Closets, <br />
-                <span className="italic">The Art of Dressing.</span>
+                <span>The Art of Dressing.</span>
               </h1>
               <p className="font-sans text-sm sm:text-base text-white/80 font-normal leading-relaxed mb-8 max-w-2xl">
-                Architectural enclosures featuring smoked bronze glass vitrines, slim anodised aluminium uprights, 3000K vertical sensor illumination, and velvet jewelry islands.
+                Architectural enclosures featuring smoked bronze glass vitrines, slim anodised aluminium uprights, vertical sensor illumination, and velvet jewelry islands.
               </p>
 
               <div className="flex flex-wrap items-center gap-4">
@@ -54,14 +55,14 @@ export default function WalkInClosetsPage() {
                   href="/contact"
                   className="px-6 py-3.5 rounded-full bg-white/10 hover:bg-white/20 border border-white/20 text-white font-mono text-xs uppercase tracking-wider font-semibold transition-all duration-300 backdrop-blur-md"
                 >
-                  Book Private Studio Consultation
+                  Plan My Dressing Room
                 </Link>
               </div>
             </div>
           </div>
         </section>
 
-        {/* 3 Pillars */}
+        {/* Pillars */}
         <section className="py-16 bg-[#FAFAFA] border-b border-slate-200">
           <div className="max-w-7xl mx-auto px-5 sm:px-8 lg:px-12">
             <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
@@ -88,7 +89,7 @@ export default function WalkInClosetsPage() {
                     Integrated Vertical Lighting
                   </h3>
                   <p className="font-sans text-xs text-slate-600 font-normal leading-relaxed">
-                    Color-accurate CRI 95+ warm LED channels flush-recessed into aluminum profiles ensure accurate fabric color reflection.
+                    Colour-accurate warm LED channels flush-recessed into aluminum profiles ensure accurate fabric color reflection.
                   </p>
                 </div>
               </div>
@@ -121,8 +122,8 @@ export default function WalkInClosetsPage() {
             <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
               <div className="lg:col-span-6 relative h-[420px] sm:h-[500px] rounded-3xl overflow-hidden shadow-xl">
                 <Image
-                  src="/img/master-suite-luxury.jpg"
-                  alt="EBONY luxury dressing suite and master bedroom walk-in"
+                  src="/img/collections/wardrobe-bag-display-lit.jpg"
+                  alt="Dressing room with mirrored wardrobe doors and lit glass niches displaying handbags"
                   fill
                   className="object-cover"
                   sizes="(max-width: 1024px) 100vw, 50vw"
@@ -145,7 +146,7 @@ export default function WalkInClosetsPage() {
                     "Angled shoe shelves with front anodised bronze retention lips",
                     "Backlit frosted glass shelves with diffuse shadowless illumination",
                     "Automatic opening sensor lighting with smooth dimming curves",
-                    "Integrated full-length 360° rotating dressing mirror with vanity shelf",
+                    "Integrated full-length rotating dressing mirror with vanity shelf",
                   ].map((item, i) => (
                     <li key={i} className="flex items-center gap-3 text-xs sm:text-sm text-slate-700">
                       <CheckCircle2 className="w-4 h-4 text-[#B8923A] shrink-0" />
@@ -158,7 +159,7 @@ export default function WalkInClosetsPage() {
                   href="/contact"
                   className="inline-flex items-center gap-2 px-7 py-3.5 rounded-full bg-slate-950 hover:bg-[#B8923A] text-white font-mono text-xs uppercase tracking-wider font-bold transition-all duration-300"
                 >
-                  <span>Request Closet Consultation</span>
+                  <span>Start My Closet Plan</span>
                   <ArrowUpRight className="w-4 h-4" />
                 </Link>
               </div>
@@ -176,18 +177,20 @@ export default function WalkInClosetsPage() {
               Plan Your Dream Walk-In Suite.
             </h2>
             <p className="font-sans text-sm sm:text-base text-white/70 font-normal leading-relaxed mb-8 max-w-xl mx-auto">
-              Schedule an exclusive design review at our Raipur flagship studio. We craft spaces that elevate daily rituals.
+              Visit our Raipur flagship studio for a relaxed design review. We craft spaces that make daily rituals a pleasure.
             </p>
             <Link
               href="/contact"
               className="inline-flex items-center gap-2 px-8 py-4 rounded-full bg-[#B8923A] hover:bg-[#C99E4B] text-slate-950 font-mono text-xs uppercase tracking-wider font-bold transition-all duration-300 shadow-xl"
             >
-              <span>Book Studio Closet Consult</span>
+              <span>Reserve My Design Visit</span>
               <ArrowUpRight className="w-4 h-4" />
             </Link>
           </div>
         </section>
       </main>
+
+      <EnquiryModal />
 
       <Footer />
     </div>

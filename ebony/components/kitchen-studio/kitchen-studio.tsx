@@ -244,7 +244,7 @@ export function KitchenStudio() {
           <div>
             <span className="kicker">Kitchen Studio</span>
             <h1 className="font-serif font-normal text-[clamp(30px,3.2vw,42px)] leading-[1.08] text-[#0B1020] mt-3 mb-1.5 text-balance">
-              Design your <em className="text-[#8A6A2F]">dream kitchen</em>
+              Design your <span className="text-[#8A6A2F]">dream kitchen</span>
             </h1>
             <p className="text-[15px] text-[#5A5F6D] max-w-[44ch]">
               Tap a dot on the kitchen or a part below, then choose its finish. Drag the picture to look around.
@@ -375,7 +375,7 @@ export function KitchenStudio() {
             rel="noopener noreferrer"
             className="flex items-center justify-center gap-2.5 min-h-[56px] rounded-full bg-[#0B1020] hover:bg-[#1A2238] text-white text-base font-semibold transition-colors active:scale-[0.99]"
           >
-            Get this design <ArrowRight className="w-[18px] h-[18px]" />
+            Bring This Kitchen Home <ArrowRight className="w-[18px] h-[18px]" />
           </a>
           <p className="-mt-2 text-center text-sm text-[#5A5F6D]">
             or call <a href={`tel:${BRAND.phoneRaw}`} className="font-semibold text-[#0B1020]">{BRAND.phone}</a>
