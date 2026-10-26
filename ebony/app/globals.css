@@ -445,20 +445,24 @@ img {
 }
 
 .hero-gold-shimmer {
-  background: linear-gradient(
-    90deg,
-    #D8B97F 0%,
-    #FFF4D9 35%,
-    #E8CB94 50%,
-    #D8B97F 70%,
-    #C5A572 100%
-  );
-  background-size: 200% auto;
   color: #D8B97F;
-  -webkit-background-clip: text;
-  background-clip: text;
-  -webkit-text-fill-color: transparent;
-  animation: heroGoldShimmer 8s ease-in-out infinite;
+}
+@supports (-webkit-background-clip: text) {
+  .hero-gold-shimmer {
+    background: linear-gradient(
+      90deg,
+      #D8B97F 0%,
+      #FFF4D9 35%,
+      #E8CB94 50%,
+      #D8B97F 70%,
+      #C5A572 100%
+    );
+    background-size: 200% auto;
+    -webkit-background-clip: text;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+    animation: heroGoldShimmer 8s ease-in-out infinite;
+  }
 }
 
 @keyframes titleGlowPulse {

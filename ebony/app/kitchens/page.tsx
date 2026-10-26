@@ -4,6 +4,7 @@ import { Navbar } from "@/components/navbar"
 import { Footer } from "@/components/footer"
 import { KitchenConfigurationsSection } from "@/components/kitchen-configurations-section"
 import { KitchenStylesSection } from "@/components/kitchen-styles-section"
+import { StainlessSteelKitchenSection } from "@/components/stainless-steel-kitchen-section"
 import { ComfortSection } from "@/components/comfort-section"
 import { EnquiryButton } from "@/components/enquiry-button"
 import { EnquiryModal } from "@/components/enquiry-modal"
@@ -237,6 +238,9 @@ export default function KitchensPage() {
 
         {/* Design Styles */}
         <KitchenStylesSection />
+
+        {/* Stainless Steel (SS) Kitchens */}
+        <StainlessSteelKitchenSection />
 
         {/* Consultation Call to Action */}
         <section className="py-20 bg-[#0B0F19] text-white text-center">

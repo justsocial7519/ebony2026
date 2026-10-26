@@ -39,31 +39,7 @@ function TrustPillar({
   )
 }
 
-/** Splits a line into words that rise in one after another with smooth blur and motion. */
-function RisingWords({
-  text,
-  startDelay,
-  className,
-}: {
-  text: string
-  startDelay: number
-  className?: string
-}) {
-  return (
-    <span className={className}>
-      {text.split(" ").map((word, i) => (
-        <span
-          key={`${word}-${i}`}
-          className="rise-word inline-block"
-          style={{ animationDelay: `${startDelay + i * 110}ms` }}
-        >
-          {word}
-          {" "}
-        </span>
-      ))}
-    </span>
-  )
-}
+
 
 export function HeroSection() {
   const { eyebrow, title, accent, subtitle, primaryCta, secondaryCta } = HOME_CONTENT.hero
@@ -107,7 +83,7 @@ export function HeroSection() {
     setIsMuted(next)
   }
 
-  const titleWords = title.split(" ").length
+
 
   return (
     <div className="relative w-full overflow-hidden bg-[#0A0D14] text-white">
@@ -143,13 +119,13 @@ export function HeroSection() {
             <div className="absolute -inset-x-8 -top-10 -bottom-10 bg-[#D8B97F]/10 blur-3xl rounded-full hero-glow-pulse pointer-events-none" />
 
             <h1 className="relative font-serif text-[2.6rem] leading-[1.08] sm:text-6xl md:text-7xl lg:text-[5.25rem] font-normal tracking-tight text-balance">
-              <RisingWords text={title} startDelay={300} className="text-white font-normal not-italic" />
+              <span className="text-white font-normal not-italic">
+                {title}{" "}
+              </span>
               <br className="hidden sm:block" />
-              <RisingWords
-                text={accent}
-                startDelay={300 + titleWords * 110}
-                className="hero-gold-shimmer font-normal not-italic"
-              />
+              <span className="text-[#D8B97F] font-normal not-italic">
+                {accent}
+              </span>
             </h1>
           </div>
 

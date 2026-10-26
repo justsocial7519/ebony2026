@@ -4,6 +4,7 @@ import { WhatWeMakeSection } from "@/components/what-we-make-section"
 import { KitchenConfigurationsSection } from "@/components/kitchen-configurations-section"
 import { CustomKitchensSection } from "@/components/custom-kitchens-section"
 import { KitchenStylesSection } from "@/components/kitchen-styles-section"
+import { StainlessSteelKitchenSection } from "@/components/stainless-steel-kitchen-section"
 import { SurfaceFinishesSection } from "@/components/surface-finishes-section"
 import { WardrobesSection } from "@/components/wardrobes-section"
 import { InternalFittingsSection } from "@/components/internal-fittings-section"
@@ -53,6 +54,10 @@ export default function Page() {
           <KitchenStylesSection />
         </FadeReveal>
 
+        {/* Section 6: WE FOCUS ON DEALING IN Stainless Steel (SS) Kitchens (100% Water & Termite Proof) */}
+        <FadeReveal>
+          <StainlessSteelKitchenSection />
+        </FadeReveal>
 
         {/* Section 7: Colours & Finishes You'll Love (8 Friendly Swatches) */}
         <FadeReveal>

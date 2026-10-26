@@ -13,6 +13,7 @@ import { openEnquiryModal } from "@/components/enquiry-modal"
 const NAV_ITEMS = [
   { label: "Home", href: "/", menuOnly: true },
   { label: "Kitchens", href: "/kitchens" },
+  { label: "SS Kitchens", href: "/#stainless-steel" },
   { label: "Wardrobes", href: "/wardrobes" },
   { label: "Collections", href: "/collections" },
   { label: "Chef's Corner", href: "/chefs-favourite-corner" },
