@@ -39,8 +39,8 @@ export default function KitchensPage() {
         <section className="relative bg-[#0B0F19] text-white py-20 sm:py-28 overflow-hidden">
           <div className="absolute inset-0 z-0">
             <Image
-              src="/img/kitchen-island-real.jpg"
-              alt="EBONY luxury island kitchen with fluted detailing"
+              src="/img/kitchen-metallic-surface-brass.jpg"
+              alt="EBONY luxury metallic surface kitchen with champagne brass island"
               fill
               className="object-cover opacity-35 brightness-75 filter"
               priority
@@ -191,8 +191,8 @@ export default function KitchensPage() {
             <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
               <div className="lg:col-span-6 relative h-[400px] sm:h-[500px] rounded-3xl overflow-hidden shadow-xl">
                 <Image
-                  src="/img/kitchen-small-spaces.jpg"
-                  alt="Compact kitchen with a tall pull-out grocery pantry open beside the built-in oven"
+                  src="/img/kitchen-pantry-crimson.jpg"
+                  alt="Pantry kitchen with tall pull-out grocery pantry open beside the built-in oven"
                   fill
                   className="object-cover"
                   sizes="(max-width: 1024px) 100vw, 50vw"

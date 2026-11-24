@@ -20,13 +20,12 @@ const EXPLORE = [
 ]
 
 const MAKE = [
-  { label: "Modular Kitchens", href: "/kitchens" },
-  { label: "Island Kitchens", href: "/kitchens#island" },
-  { label: "L-Shaped Kitchens", href: "/kitchens#l-shape" },
-  { label: "Wardrobes", href: "/wardrobes" },
-  { label: "Walk-in Closets", href: "/walk-in-closets" },
-  { label: "Bar & TV Units", href: "/collections#tv-bar" },
-  { label: "Commercial Kitchens", href: "/chefs-favourite-corner" },
+  { label: "Modular Kitchen", href: "/kitchens" },
+  { label: "Walk In Closet", href: "/walk-in-closets" },
+  { label: "Loose Furnitures", href: "/collections#loose-furniture" },
+  { label: "Commercial Furnitures", href: "/collections#commercial" },
+  { label: "Bar Unit", href: "/collections#tv-bar" },
+  { label: "Book Shelf", href: "/collections#book-shelf" },
 ]
 
 export function Footer() {
@@ -106,7 +105,7 @@ export function Footer() {
               <ul className="space-y-4 text-[15px] text-white/80">
                 <li className="flex items-start gap-3">
                   <MapPin className="w-[18px] h-[18px] text-[#D8B97F] shrink-0 mt-0.5" />
-                  <span>VIP Road / Shankar Nagar, Raipur, Chhattisgarh 492001</span>
+                  <span>Sapphire Green, Ring Road, 03, Vidhan Sabha Rd, Chhattisgarh 492014</span>
                 </li>
                 <li className="flex items-start gap-3">
                   <Clock className="w-[18px] h-[18px] text-[#D8B97F] shrink-0 mt-0.5" />

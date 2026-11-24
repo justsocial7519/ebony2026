@@ -46,6 +46,42 @@ export const COLLECTION_CATEGORIES: {
 export const COLLECTION_ITEMS: CollectionItem[] = [
   // Kitchens
   {
+    id: "metallic-surface-kitchen",
+    name: "Metallic Surface Brass Kitchen",
+    line: "Curved champagne brass metallic island, illuminated vitrine cabinetry, and sculpted marble finishes.",
+    category: "kitchens",
+    type: "Modern",
+    image: "/img/kitchen-metallic-surface-brass.jpg",
+    alt: "Luxury metallic surface kitchen with curved champagne brass island and illuminated vitrine display",
+  },
+  {
+    id: "green-marble-island",
+    name: "Fluted Walnut & Green Marble Island",
+    line: "Fluted dark timber island, deep green veined marble worktop and gold ribbon chandelier.",
+    category: "kitchens",
+    type: "Warm Wood",
+    image: "/img/kitchen-green-marble-island.jpg",
+    alt: "Luxury island kitchen with fluted walnut panelling and green marble countertop",
+  },
+  {
+    id: "curved-travertine-island",
+    name: "Curved Travertine Island with Breakfast Bar",
+    line: "Sculpted fluted stone island with integrated cantilevered wooden dining table.",
+    category: "kitchens",
+    type: "Modern",
+    image: "/img/kitchen-curved-travertine.jpg",
+    alt: "Curved travertine island kitchen with wooden dining extension and brass chandelier",
+  },
+  {
+    id: "travertine-monolith-island",
+    name: "Monolithic Travertine Island Kitchen",
+    line: "Sculpted curved travertine workstation with fluted timber barstools and dark cabinetry.",
+    category: "kitchens",
+    type: "Warm Wood",
+    image: "/img/kitchen-island-travertine-stools.jpg",
+    alt: "Monolithic travertine curved island with fluted bar stools and dark wood cabinets",
+  },
+  {
     id: "fluted-oak-island",
     name: "Fluted Oak Island Kitchen",
     line: "Light oak fluting, open shelves and a warm stone top.",
@@ -199,13 +235,13 @@ export const COLLECTION_ITEMS: CollectionItem[] = [
     alt: "Corner kitchen with matte blue cabinets and light wood details",
   },
   {
-    id: "compact-white",
-    name: "Compact White Kitchen",
-    line: "Tall pull-out pantry and smart storage for small homes.",
+    id: "pantry-kitchen",
+    name: "Pantry Kitchen",
+    line: "Tall pull-out pantry, crimson lower units, and integrated modern appliances.",
     category: "kitchens",
     type: "Modern",
-    image: "/img/kitchen-small-spaces.jpg",
-    alt: "Compact white kitchen with a tall pull-out pantry",
+    image: "/img/kitchen-pantry-crimson.jpg",
+    alt: "Pantry kitchen with tall pull-out pantry, crimson lower units and built-in oven",
   },
   {
     id: "two-tone",
@@ -245,6 +281,42 @@ export const COLLECTION_ITEMS: CollectionItem[] = [
   },
 
   // Wardrobes
+  {
+    id: "wardrobe-with-island",
+    name: "Wardrobe with Island Suite",
+    line: "Expansive luxury dark wood dressing suite with central fluted drawer island and arched mirror.",
+    category: "wardrobes",
+    type: "Walk-in",
+    image: "/img/wardrobe-with-island-suite.jpg",
+    alt: "Dark luxury timber dressing room with central fluted drawer island and arched vanity mirror",
+  },
+  {
+    id: "pole-wardrobe-system",
+    name: "Architectural Pole Wardrobe",
+    line: "Floor-to-ceiling modular black pole wardrobe system with illuminated open hanging and drawer island.",
+    category: "wardrobes",
+    type: "Walk-in",
+    image: "/img/wardrobe-pole-system.jpg",
+    alt: "Floor-to-ceiling modular black pole wardrobe system with illuminated open hanging and drawer island",
+  },
+  {
+    id: "fluted-profile-shutter",
+    name: "Profile Shutter Wardrobe",
+    line: "Precision fluted wood profile shutters opening to reveal illuminated accessories and shoe galleries.",
+    category: "wardrobes",
+    type: "Hinged",
+    image: "/img/wardrobe-fluted-profile-shutter.jpg",
+    alt: "Fluted wood profile shutter wardrobe opening to illuminated shoe and accessory shelving",
+  },
+  {
+    id: "walk-in-shoe-gallery",
+    name: "Walk-In Dressing Room with Shoe Gallery",
+    line: "Floor-to-ceiling angled shoe display galleries, marble feature wall and upholstered central bench.",
+    category: "wardrobes",
+    type: "Walk-in",
+    image: "/img/walk-in-closet-luxury-dressing.jpg",
+    alt: "Floor-to-ceiling luxury closet with integrated illuminated shoe shelves and central upholstered bench",
+  },
   {
     id: "ivory-sliding",
     name: "Ivory Sliding Wardrobe",
@@ -292,12 +364,12 @@ export const COLLECTION_ITEMS: CollectionItem[] = [
   },
   {
     id: "luxury-walk-in",
-    name: "Lit Glass Walk-in Closet",
-    line: "Glass-front cabinets, an island of drawers and warm light.",
+    name: "Glass Walk-In Closet",
+    line: "Glass-front profile shutters, an island of drawers and warm vertical lighting.",
     category: "wardrobes",
     type: "Walk-in",
-    image: "/img/walk-in-closet-luxury.jpg",
-    alt: "Walk-in closet with lit glass cabinets and a central drawer island",
+    image: "/img/wardrobe-profile-shutter-glass.jpg",
+    alt: "Walk-in closet with dark glass profile cabinets and integrated lighting",
   },
   {
     id: "white-tall-handles",
@@ -328,6 +400,42 @@ export const COLLECTION_ITEMS: CollectionItem[] = [
   },
 
   // TV & bar units
+  {
+    id: "fluted-tv-fireplace-hero",
+    name: "Architectural TV Unit with Linear Fireplace",
+    line: "Fluted acoustic wood paneling, curved burgundy alcoves, and integrated linear flame fireplace.",
+    category: "tv-bar",
+    type: "TV Units",
+    image: "/img/tv-unit-fluted-fireplace.jpg",
+    alt: "Luxury architectural TV unit with fluted timber, curved burgundy feature wall and linear fireplace",
+  },
+  {
+    id: "exotic-marble-bar",
+    name: "Exotic Swirl Marble Bar Unit",
+    line: "Sculptural curved zebra marble counter, champagne gold metallic cabinetry and integrated wine storage.",
+    category: "tv-bar",
+    type: "Bar Units",
+    image: "/img/bar-unit-exotic-marble.jpg",
+    alt: "Sculptural bar counter in dramatic swirling exotic marble with champagne gold metallic cabinetry",
+  },
+  {
+    id: "commercial-lounge-bar",
+    name: "Commercial Executive Lounge Bar",
+    line: "Bronze metallic curved island table, marble counter extension and commercial-grade backlit display shelving.",
+    category: "tv-bar",
+    type: "Bar Units",
+    image: "/img/commercial-furniture-lounge.jpg",
+    alt: "Bronze metallic curved island counter table with dark wood shelving bar display",
+  },
+  {
+    id: "loose-furniture-dining",
+    name: "Sculptural Fluted Dining Table & Stools",
+    line: "Artisanal fluted timber dining table with cylindrical pedestal base and matching handcrafted occasional stools.",
+    category: "tv-bar",
+    type: "Bar Units",
+    image: "/img/loose-furniture-dining.jpg",
+    alt: "Fluted solid wood dining table with organic sculptural pedestal and custom fluted stools",
+  },
   {
     id: "walnut-tv-wall",
     name: "Walnut TV Wall with Display Cabinets",
@@ -365,13 +473,13 @@ export const COLLECTION_ITEMS: CollectionItem[] = [
     alt: "Bar unit with glass shelves in a floral wallpaper niche between carved wooden columns",
   },
   {
-    id: "sage-floating-tv",
-    name: "Sage Floating TV Unit",
-    line: "A low floating console with open shelves above.",
+    id: "fluted-tv-fireplace",
+    name: "Architectural TV Unit with Linear Fireplace",
+    line: "Fluted acoustic wood paneling, curved burgundy alcoves, and integrated linear flame fireplace.",
     category: "tv-bar",
     type: "TV Units",
-    image: "/img/collections/tv-unit-sage-floating.jpg",
-    alt: "Floating TV console with open shelves on a sage green wall",
+    image: "/img/tv-unit-fluted-fireplace.jpg",
+    alt: "Luxury architectural TV unit with fluted timber, curved burgundy feature wall and linear fireplace",
   },
   {
     id: "wine-rack-bar",
@@ -421,4 +529,10 @@ export const COLLECTION_ITEMS: CollectionItem[] = [
 ]
 
 // Large slides for the "trending now" carousel
-export const TRENDING_IDS = ["pendant-wood-island", "walnut-tv-wall", "wood-walk-in", "charcoal-handleless", "black-glass-bar"]
+export const TRENDING_IDS = [
+  "metallic-surface-kitchen",
+  "wardrobe-with-island",
+  "fluted-tv-fireplace-hero",
+  "exotic-marble-bar",
+  "pole-wardrobe-system",
+]

@@ -27,9 +27,9 @@ function InlinePhoto({ src }: { src: string }) {
 }
 
 const HEADLINE_PHOTOS = [
-  "/img/collections/kitchen-island-breakfast-bar.jpg",
-  "/img/collections/wardrobe-sliding-ivory.jpg",
-  "/img/collections/tv-unit-walnut-display.jpg",
+  "/img/kitchen-metallic-surface-brass.jpg",
+  "/img/wardrobe-with-island-suite.jpg",
+  "/img/tv-unit-fluted-fireplace.jpg",
 ]
 
 // Short teasers (no numbers) shown under each category name in the hero

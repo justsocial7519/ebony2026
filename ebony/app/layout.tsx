@@ -67,10 +67,10 @@ const jsonLd = {
   priceRange: "₹₹₹₹",
   address: {
     "@type": "PostalAddress",
-    streetAddress: "EBONY Design Studio",
+    streetAddress: "Sapphire Green, Ring Road, 03, Vidhan Sabha Rd",
     addressLocality: "Raipur",
     addressRegion: "Chhattisgarh",
-    postalCode: "492001",
+    postalCode: "492014",
     addressCountry: "IN",
   },
   openingHoursSpecification: [

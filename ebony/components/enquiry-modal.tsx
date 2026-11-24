@@ -247,10 +247,12 @@ export function EnquiryModal() {
                 >
                   {designName && <option value={`Kitchen Style: ${designName}`}>{designName} Kitchen</option>}
                   <option value="Modular Kitchen">Modular Kitchen</option>
-                  <option value="Bespoke Wardrobe">Bespoke Wardrobe</option>
-                  <option value="Walk-in Closet">Walk-in Closet</option>
-                  <option value="Bar & TV Unit">Bar & TV Unit</option>
-                  <option value="Full Home Joinery">Full Home Woodwork</option>
+                  <option value="Walk In Closet">Walk In Closet</option>
+                  <option value="Loose Furnitures">Loose Furnitures</option>
+                  <option value="Commercial Furnitures">Commercial Furnitures</option>
+                  <option value="Bar Unit">Bar Unit</option>
+                  <option value="Book Shelf">Book Shelf</option>
+                  <option value="Full Residence Joinery">Full Home Woodwork</option>
                   <option value="Not Sure Yet">Not sure yet (Need guidance)</option>
                 </select>
               </div>
@@ -278,7 +280,7 @@ export function EnquiryModal() {
                     <span>Curating Your Vision...</span>
                   ) : (
                     <>
-                      <span>Reserve Design Session</span>
+                      <span>GET IN TOUCH WITH US</span>
                       <Sparkles className="w-3.5 h-3.5" />
                     </>
                   )}

@@ -135,7 +135,7 @@ export default function FinishesPage() {
               href="/contact"
               className="inline-flex items-center gap-2 px-8 py-4 rounded-full bg-[#B8923A] hover:bg-[#C99E4B] text-slate-950 font-mono text-xs uppercase tracking-wider font-bold transition-all duration-300 shadow-xl"
             >
-              <span>Reserve Design Session</span>
+              <span>GET IN TOUCH WITH US</span>
               <ArrowUpRight className="w-4 h-4" />
             </Link>
           </div>

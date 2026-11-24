@@ -194,7 +194,7 @@ export function ContactForm() {
         disabled={loading}
         className="group w-full py-4 px-8 rounded-full bg-[#C5A572] hover:bg-[#D4B582] text-slate-950 text-base font-semibold transition-colors shadow-lg shadow-amber-500/20 flex items-center justify-center gap-2 disabled:opacity-60 cursor-pointer active:scale-[0.99]"
       >
-        {loading ? "Sending…" : "Reserve Design Session"}
+        {loading ? "Sending…" : "GET IN TOUCH WITH US"}
         {!loading && <ArrowRight className="w-4 h-4 transition-transform duration-300 group-hover:translate-x-1" />}
       </button>
 

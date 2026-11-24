@@ -157,7 +157,7 @@ export function ProcessTimelineSection() {
             <ArrowRight className="w-4 h-4" />
           </button>
           <p className="text-white/65 text-xs mt-3 font-normal">
-            Visit our studio at Shankar Nagar Corridor, Raipur · No pushy sales, just honest advice.
+            Visit our studio at Sapphire Green, Ring Road, 03, Vidhan Sabha Rd, Chhattisgarh 492014 · No pushy sales, just honest advice.
           </p>
         </div>
       </div>

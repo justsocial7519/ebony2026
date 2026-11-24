@@ -3,7 +3,7 @@
 ## 1. Executive Summary
 - **Brand Name**: EBONY Modular Kulture / EBONY Luxury Modular Interiors
 - **Established**: 2009 (15+ years of excellence)
-- **Headquarters & Studio**: Raipur, Chhattisgarh (C.G. 492001), India
+- **Headquarters & Studio**: Sapphire Green, Ring Road, 03, Vidhan Sabha Rd, Chhattisgarh 492014, India
 - **Core Product Lines**: 
   1. Modular Kitchens (300+ designs)
   2. Wardrobes (100+ configurations)

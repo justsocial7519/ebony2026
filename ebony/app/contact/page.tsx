@@ -36,7 +36,7 @@ const QUICK = [
   },
   {
     label: "Visit our studio",
-    value: "VIP Road, Raipur",
+    value: "Sapphire Green, Vidhan Sabha Rd",
     note: "See and touch the finishes",
     href: BRAND.googleMapsUrl,
     icon: MapPin,
@@ -136,7 +136,7 @@ export default function ContactPage() {
                   <ul className="mt-4 space-y-3 text-[15px] text-slate-700">
                     <li className="flex items-start gap-3">
                       <MapPin className="w-5 h-5 text-[#8E6D38] shrink-0 mt-0.5" />
-                      VIP Road / Shankar Nagar, Raipur, Chhattisgarh 492001
+                      Sapphire Green, Ring Road, 03, Vidhan Sabha Rd, Chhattisgarh 492014
                     </li>
                     <li className="flex items-start gap-3">
                       <Clock className="w-5 h-5 text-[#8E6D38] shrink-0 mt-0.5" />

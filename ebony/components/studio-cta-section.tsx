@@ -79,7 +79,7 @@ export function StudioCtaSection() {
             <ul className="space-y-4 text-[15px] text-white/90">
               <li className="flex items-start gap-3">
                 <MapPin className="w-5 h-5 text-[#D8B97F] shrink-0 mt-0.5" />
-                <span>VIP Road / Shankar Nagar, Raipur, Chhattisgarh</span>
+                <span>Sapphire Green, Ring Road, 03, Vidhan Sabha Rd, Chhattisgarh 492014</span>
               </li>
               <li className="flex items-start gap-3">
                 <Clock className="w-5 h-5 text-[#D8B97F] shrink-0 mt-0.5" />

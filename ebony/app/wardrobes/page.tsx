@@ -23,8 +23,8 @@ export default function WardrobesPage() {
         <section className="relative bg-[#0B0F19] text-white py-20 sm:py-28 overflow-hidden">
           <div className="absolute inset-0 z-0">
             <Image
-              src="/img/wardrobe-bespoke-real.jpg"
-              alt="EBONY bespoke wardrobe with integrated lighting"
+              src="/img/wardrobe-with-island-suite.jpg"
+              alt="EBONY luxury wardrobe with central fluted island and integrated lighting"
               fill
               className="object-cover opacity-35 brightness-75 filter"
               priority
@@ -123,8 +123,8 @@ export default function WardrobesPage() {
             <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
               <div className="lg:col-span-6 relative h-[420px] sm:h-[520px] rounded-3xl overflow-hidden shadow-xl">
                 <Image
-                  src="/img/collections/dressing-room-full-mirror.jpg"
-                  alt="Dressing room with a tall full-length mirror panel beside the storage units"
+                  src="/img/wardrobe-fluted-profile-shutter.jpg"
+                  alt="Fluted profile shutter wardrobe with integrated shoe and accessory illumination"
                   fill
                   className="object-cover"
                   sizes="(max-width: 1024px) 100vw, 50vw"

@@ -7,8 +7,15 @@ import { HOME_CONTENT } from "@/lib/home-content"
 import { SectionHeader } from "@/components/ui/section-header"
 import { cn } from "@/lib/utils"
 
-// Bento rhythm: wide, narrow / narrow, wide
-const SPANS = ["lg:col-span-7", "lg:col-span-5", "lg:col-span-5", "lg:col-span-7"]
+// Bento rhythm: wide, narrow / narrow, wide / balanced pair
+const SPANS = [
+  "lg:col-span-7",
+  "lg:col-span-5",
+  "lg:col-span-5",
+  "lg:col-span-7",
+  "lg:col-span-6",
+  "lg:col-span-6",
+]
 
 export function WhatWeMakeSection() {
   const { kicker, title, accent, subtitle, cards } = HOME_CONTENT.exploreDesigns

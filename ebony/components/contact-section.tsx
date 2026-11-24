@@ -266,25 +266,30 @@ export function ContactSection() {
                       >
                         Space of Interest
                       </label>
-                      <div className="grid grid-cols-2 sm:grid-cols-4 gap-2.5">
-                        {["Modular Kitchen", "Bespoke Wardrobe", "Master Bedroom", "Entire Residence"].map(
-                          (option) => (
-                            <button
-                              key={option}
-                              type="button"
-                              onClick={() =>
-                                setFormState((s) => ({ ...s, interest: option }))
-                              }
-                              className={`px-3 py-2.5 rounded-xl border text-xs font-mono tracking-wider uppercase transition-all duration-300 text-center cursor-pointer ${
-                                formState.interest === option
-                                  ? "bg-slate-950 text-white border-slate-950 font-semibold shadow-sm"
-                                  : "bg-slate-50/60 text-slate-700 border-slate-200 hover:border-[#B8923A] hover:text-[#855E15]"
-                              }`}
-                            >
-                              {option}
-                            </button>
-                          )
-                        )}
+                      <div className="grid grid-cols-2 sm:grid-cols-3 gap-2.5">
+                        {[
+                          "Modular Kitchen",
+                          "Walk In Closet",
+                          "Loose Furnitures",
+                          "Commercial Furnitures",
+                          "Bar Unit",
+                          "Book Shelf",
+                        ].map((option) => (
+                          <button
+                            key={option}
+                            type="button"
+                            onClick={() =>
+                              setFormState((s) => ({ ...s, interest: option }))
+                            }
+                            className={`px-3 py-2.5 rounded-xl border text-xs font-mono tracking-wider uppercase transition-all duration-300 text-center cursor-pointer ${
+                              formState.interest === option
+                                ? "bg-slate-950 text-white border-slate-950 font-semibold shadow-sm"
+                                : "bg-slate-50/60 text-slate-700 border-slate-200 hover:border-[#B8923A] hover:text-[#855E15]"
+                            }`}
+                          >
+                            {option}
+                          </button>
+                        ))}
                       </div>
                     </div>
 
@@ -440,8 +445,8 @@ export function ContactSection() {
                   <p className="font-mono text-xs tracking-widest uppercase text-slate-500 mb-0.5">
                     Flagship Studio & Experience Lab
                   </p>
-                  <p className="font-serif text-xl text-slate-900">
-                    Raipur, Chhattisgarh 492001
+                  <p className="font-serif text-lg text-slate-900 leading-snug">
+                    Sapphire Green, Ring Road, 03, Vidhan Sabha Rd, Chhattisgarh 492014
                   </p>
                   <p className="font-mono text-xs text-slate-500 mt-1">India · Private visits by reservation</p>
                 </div>

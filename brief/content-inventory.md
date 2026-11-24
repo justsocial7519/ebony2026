@@ -103,7 +103,7 @@ All content below is verified directly from https://ebony.co.in.
 ---
 
 ## 8. Contact & Legal
-- **Studio Address**: Raipur, C.G. 492001, India
+- **Studio Address**: Sapphire Green, Ring Road, 03, Vidhan Sabha Rd, Chhattisgarh 492014, India
 - **Phone**: +91 76669 02365 / +91 70890 44424
 - **Email**: info@ebony.co.in / kitchenebony84@gmail.com
 - **Copyright**: © 2026 EBONY Modular Kulture. All rights reserved.

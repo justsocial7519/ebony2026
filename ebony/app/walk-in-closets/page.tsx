@@ -23,8 +23,8 @@ export default function WalkInClosetsPage() {
         <section className="relative bg-[#0B0F19] text-white py-20 sm:py-28 overflow-hidden">
           <div className="absolute inset-0 z-0">
             <Image
-              src="/img/walk-in-closet-luxury.jpg"
-              alt="EBONY luxury walk-in closet suite"
+              src="/img/wardrobe-profile-shutter-glass.jpg"
+              alt="EBONY luxury glass walk-in closet suite with profile shutters"
               fill
               className="object-cover opacity-35 brightness-75 filter"
               priority
@@ -123,8 +123,8 @@ export default function WalkInClosetsPage() {
             <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
               <div className="lg:col-span-6 relative h-[420px] sm:h-[500px] rounded-3xl overflow-hidden shadow-xl">
                 <Image
-                  src="/img/collections/wardrobe-bag-display-lit.jpg"
-                  alt="Dressing room with mirrored wardrobe doors and lit glass niches displaying handbags"
+                  src="/img/walk-in-closet-luxury-dressing.jpg"
+                  alt="Dressing room with mirrored wardrobe doors and glass niches displaying shoes and accessories"
                   fill
                   className="object-cover"
                   sizes="(max-width: 1024px) 100vw, 50vw"

@@ -27,7 +27,7 @@ Do not turn this into a different brand. Same logo, same colours, same pages, sa
 - Inspect the repo first (stack, where copy lives, image folder, fonts, animation libraries already installed). Reuse what exists. The site is a Next.js project and may already use Framer Motion and/or GSAP.
 - Put all homepage text and the kitchen designs in data/content files (e.g. `src/content/home.ts`, `src/content/kitchenDesigns.ts`) so the owner can edit words without touching components.
 - Keep every route working: `/kitchens`, `/wardrobes`, `/walk-in-closets`, `/finishes`, `/hardware`, `/projects`, `/about`, `/contact`, `/privacy`, `/terms`.
-- Keep the real facts already on the site: phone **+91 76669 02365**, email **info@ebony.co.in**, studio in **VIP Road / Shankar Nagar Corridor, Raipur, Chhattisgarh 492001**, **15+ years**, **500+ finishes**, **installed in 3 days**, **10-year warranty**, **48-point quality check**, hardware brands **Blum, Häfele, Hettich, Salice, Ebco**.
+- Keep the real facts already on the site: phone **+91 79742 09352**, email **info@ebony.co.in**, studio in **Sapphire Green, Ring Road, 03, Vidhan Sabha Rd, Chhattisgarh 492014**, **15+ years**, **500+ finishes**, **installed in 3 days**, **10-year warranty**, **48-point quality check**, hardware brands **Blum, Häfele, Hettich, Salice, Ebco**.
 - Work mobile-first. Most visitors will be on phones.
 
 **Do not**

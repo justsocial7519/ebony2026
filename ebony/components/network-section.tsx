@@ -24,7 +24,7 @@ const CITIES_DATA: CityNode[] = [
     x: 58,
     y: 50,
     dealers: "Headquarters & Experience Center",
-    address: "EBONY Studio, Raipur, Chhattisgarh 492001",
+    address: "Sapphire Green, Ring Road, 03, Vidhan Sabha Rd, Chhattisgarh 492014",
     phone: "+91 79742 09352",
     isHeadquarters: true,
   },
@@ -275,7 +275,7 @@ export function NetworkSection() {
                   href="/contact"
                   className="btn-primary w-full justify-center text-xs py-3.5"
                 >
-                  <span>Reserve My Design Visit</span>
+                  <span>GET IN TOUCH WITH US</span>
                   <ArrowUpRight className="w-3.5 h-3.5 relative z-10" />
                 </Link>
 
